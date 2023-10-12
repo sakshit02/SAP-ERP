@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header> Plant  &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Plant</label>
+                            <input  name="vid" type="text"  style="margin-right: 600px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Name 1</label>
+                            <input name="loc_code" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+                     
+                        <div class="title">Detailed Information </div>
+    
+                       
+    
+                        <div class="input-field">
+                            <label>House number</label>
+                            <input name="area" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+                        <div class="input-field">
+                            <label>street</label>
+                            <input name="area" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>street</label>
+                            <input name="area" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+    
+                        <div class="input-field">
+                            <label>PO Box</label>
+                            <input name="landmark" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Postal Code</label>
+                            <input name="pincode" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+    
+                        <div class="input-field">
+                            <label>City</label>
+                            <input name="pincode" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+                        <div class="input-field">
+                            <label>State</label>
+                            <input name="pincode" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Factory Calendar</label>
+                            <input name="longitude" type="text" placeholder="" style="margin-right: 600px;">
+                        </div>
+    
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>
+
+

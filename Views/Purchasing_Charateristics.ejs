@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    /* itp.css */
+
+.container {
+  width: 1000px;
+  margin:0px;
+
+}
+
+header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 1000px;
+  background-color: #fff;
+}
+
+.input-field {
+  display: flex;
+}
+
+label {
+  font-weight: bold;
+  flex: 2;
+  
+}
+
+input {
+  flex: 4; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px; 
+  padding: 2px 2px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+      * {box-sizing: border-box}
+      /* Style tab links */
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 5px;
+        width: 180px;
+        overflow: hidden;
+      }
+      
+      .tablink:hover {
+        background-color: #777;
+      }
+      
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: rgb(8, 8, 8);
+        display: none;
+        
+        height: 100%;
+        background-color: #fff;
+
+      }
+      table, th, td {
+          border:1px solid black;
+      }
+      .container1 {
+          width: 160vh;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+          width: 900px;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      th, td {
+          padding: 12px;
+          text-align: center;
+          border-bottom: 1px solid #ddd;
+      }
+
+      th {
+          background-color: #333;
+          color: white;
+      }
+
+      input[type="text"], input[type="checkbox"] {
+          width: 100%;
+          
+          border: 1px solid #ddd;
+          border-radius: 4px;
+      }
+
+      #addRowButton, #saveDataButton {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin-top: 10px;
+          cursor: pointer;
+          border-radius: 4px;
+      }
+
+      #addRowButton:hover, #saveDataButton:hover {
+          background-color: #45a049;
+      }
+
+      h2 {
+          font-size: 24px;
+          margin-top: 20px;
+      }
+      
+      
+      </style>
+</head>
+<body>
+    
+<div>
+    <%-include ('partials/sidepanel'); %>
+    <h1>Release Procedure</h1>
+    <h2>Edit Charcterics</h2>
+    <form>
+      <div class="input-field">
+        <label>Charcteric</label>
+        <input class="input" type="text" name="Charcteric" placeholder="" />
+      </div>
+
+      <div class="input-field">
+        <label>Change Number</label>
+        <input class="input" type="text" name="ChangeNumber" placeholder="" />
+      </div>
+      <br>
+      <div class="input-field">
+        <label>Valid From</label>
+        <input class="input" type="date" name="Valid" placeholder="" />
+    </form>
+</div>
+<br>
+<button class="tablink" onclick="openPage('Sales', this, 'red' )" id="defaultOpen">Basic Data</button>
+<button class="tablink" onclick="openPage('Item Overview', this, 'green')" >Description</button>
+<button class="tablink" onclick="openPage('Item detail', this, 'blue')"> Values </button>
+<button class="tablink" onclick="openPage('Ordering Party', this, 'orange')">Additional Data</button>
+<button class="tablink" onclick="openPage('Procurement', this, 'olive')">Restrictions</button>
+
+
+
+
+<!-- first tab --><br>
+<div id="Sales" class="tabcontent"><br><br>
+  <h3>Item Overview</h3>
+
+    <Form class="form" style="height: 400px;">
+      <h3>Basic Data</h3>
+    <div class="input-field">
+      <label for="Description">Description</label>
+      <input class="input" type="text" name="Description" id="" placeholder="" style="margin-right: 700px;">
+    </div>
+  
+    <div class="input-field">
+      <label for="Chars" >Chars Group</label>
+      <select name="chars" id="" style="margin-right: 700px; width: 250px;">
+          <option value="">CU_GEN    CU General Characterics</option>
+          <option value="">CU_STD    CU Standard Characterics</option>
+          <option value="">FKL_ALM   Characterics for ALM</option>
+          <option value="">LOBM_DIST Local Characterics</option>
+          <option value="">PPPI_01   Process Message Characterics</option>
+          <option value="">PPPI_02   Process Instruction Characterics</option>
+          <option value="">PPPI_03   Characterics for Material Flow Between Orders</option>
+          <option value="">PPPI_04   Special Application</option>
+      </select>
+    </div>
+  
+    <div class="input-field">
+      <label for="Status">Status</label>
+      <select name="Status" id="" style="margin-right: 700px; width: 250px;">
+          <option value="in preparation">0 In Preparation</option>
+          <option value="Release">1 Released</option>
+          <option value="locked">2 Locked</option>
+      </select>
+    </div>
+  
+      <div style="width: 100%;">
+        <div style="width: 50%; height: 100px; float: left;">
+          <h3>Format</h3> 
+          <div class="input-field">
+              <label for="DataType">Data Type</label>
+              <select name="DataType" id="" style="margin-right: 170px; width: 250px;">
+                  <option value="CHAR">CHAR Character Format</option>
+                  <option value="CURR">CURR Currency Format</option>
+                  <option value="DATE">DATE Date Format</option>
+                  <option value="NUM">NUM Numeric Format</option>
+                  <option value="TIME">TIME Time Format</option>
+              </select>
+            </div>
+          
+            <div class="input-field">
+              <label for="Chars">Number Of Chars</label>
+              <input class="input" type="text" name="chars" placeholder="" size="2px" style="margin-right: 170px; width: 250px;">
+            </div>
+  
+            <div class="input-field">
+              <label for="Case">Case Sensitive</label>
+              <input class="input" type="checkbox" name="case" id="" style="margin-right: 270px; height: 20px;">
+            </div>   
+            <div class="input-field">
+              <label for="Template">Template</label>
+              <input class="input" type="text" name="Template" id="" placeholder="" style="margin-right: 170px; width: 250px;">            
+      </div> 
+    </div>
+    <div  style="margin-left: 50%; height: 100px;">
+      <h3>Value Assignment</h3>
+      <div class="input-field">
+        <label for="single">Single Value</label>
+          <input class="input" type="radio" name="single" id="" style="margin-right: 170px; height: 20px;">
+      </div>
+      
+      <div class="input-field">
+        <label for="Multile">Multiple Values </label>
+          <input class="input" type="radio" name="Multile" id="" style="margin-right: 170px; height: 20px;">
+      </div>
+  
+      <div class="input-field">
+        <label for="Restrictable">Restrictable </label>
+          <input class="input" type="checkbox" name="Restrictable" id="" style="margin-right: 170px; height: 20px;">
+      </div>
+  
+      <div class="input-field">
+        <label for="Entry">Entry Required</label>
+          <input class="input" type="checkbox" name="Entry" id="" style="margin-right: 170px; height: 20px;">
+      </div>
+    </div>
+    </div>
+  </div>
+  </Form>
+
+</div>
+</div>
+<!-- second tab -->
+<div id="Item Overview" class="tabcontent"><br><br>
+    <h3>Description and Headings</h3>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Language Code</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <button id="addRowButton">Add Row</button>
+            <button id="saveDataButton">Save Data</button>
+        </div>
+
+        <div class="container">
+            <!-- <h2>Second Table</h2> -->
+            <table id="secondTable">
+                <thead>
+                    <tr>
+                        <th>Language Code</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="secondTableBody">
+                    <!-- Data will be transferred here -->
+                </tbody>
+            </table>
+        </div>
+</div>
+</div>
+<!-- third tab -->
+<div id="Item detail" class="tabcontent"><br><br>
+    <h3>Allowed Values</h3>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Character Value</th>
+                    <th>Description</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody3">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <button id="addRowButton3">Add Row</button>
+        <button id="saveDataButton3">Save Data</button>
+    </div>
+
+    <div class="container">
+        <!-- <h2>Second Table</h2> -->
+        <table id="secondTable3">
+            <thead>
+                <tr>
+                    <th>Character Value</th>
+                    <th>Description</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody id="secondTableBody3">
+                <!-- Data will be transferred here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- fourth tab -->
+<div id="Ordering Party" class="tabcontent"><br><br>
+    <div class="container1">
+        <form class="form">
+        
+          <h3>Reference to Table Field</h3>
+          <div class="input-field">
+            <label for="tablename" >Table Name</label>
+            <input class="input" type="text" name="tablename" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+          <h3>Document</h3>
+          <div class="input-field">
+            <label for="Document" >Document</label>
+            <input class="input" type="text" name="Document" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+          <div class="input-field">
+            <label for="part" >Document Part</label>
+            <input class="input" type="text" name="part" id="" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+          <h3>Procedure for Value Assignment</h3>
+          <div class="input-field" >
+            <label>No Ready For Point</label>
+            <input class="input" type="checkbox" style="margin-right: 700px; height: 20px;">
+           </div>
+      
+          <div class="input-field" >
+            <label>No Display</label>
+            <input class="input" type="checkbox" style="margin-right: 700px; height: 20px;">
+           </div>
+      
+          <div class="input-field" >
+           <label>Dispaly Allowed Values</label>
+           <input class="input" type="checkbox" style="margin-right: 700px; height: 20px;">
+          </div>
+        
+          
+          
+          <div class="input-field" >
+            <label for="Fieldname">Field Name</label>
+            <input class="input" type="text" name="Fieldname" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+        
+      
+          <div class="input-field" >
+            <label for="type">Document Type</label>
+            <input class="input" type="text" name="type" id="" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+          <div class="input-field" >
+            <label for="type">Document Version</label>
+            <input class="input" type="text" name="type" id="" placeholder="" style="margin-right: 700px;">
+          </div>
+      
+         
+          <h3>User Entry Handling</h3>
+          <div class="input-field" >
+            <label>unformatted Entry</label>
+            <input class="input" type="checkbox" style="margin-right: 700px; height: 20px;">
+           </div>
+        </form>
+        </div>
+    
+</div>
+
+<!-- Fifth tab -->
+<div id="Procurement" class="tabcontent"><br><br>
+    <h3>Valid Class Types</h3>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Class Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody1">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <button id="addRowButton1">Add Row</button>
+        <button id="saveDataButton1">Save Data</button>
+    </div>
+
+    <div class="container">
+        <!-- <h2>Second Table</h2> -->
+        <table id="secondTable1">
+            <thead>
+                <tr>
+                    <th>Class Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="secondTableBody1">
+                <!-- Data will be transferred here -->
+            </tbody>
+        </table>
+    </div>
+
+  </div>
+
+
+  </section>
+
+  <script>
+
+    
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+document.getElementById("defaultOpen").click();
+
+
+
+
+
+// second table tab script
+
+
+        document.getElementById("addRowButton").addEventListener("click", function() {
+            const tableBody = document.getElementById("tableBody");
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+
+            for (let i = 0; i < 2; i++) {
+                const cell = newRow.insertCell(i);
+                // if (i === 4 || i === 5 || i === 6) {
+                //     const checkbox = document.createElement("input");
+                //     checkbox.type = "checkbox";
+                //     cell.appendChild(checkbox);
+                // } else {
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    cell.appendChild(input);
+                // }
+            }
+        });
+
+        document.getElementById("saveDataButton").addEventListener("click", function() {
+            const firstTableBody = document.getElementById("tableBody");
+            const secondTableBody = document.getElementById("secondTableBody");
+
+            // Transfer data from the first table to the second table
+            for (let i = 0; i < firstTableBody.rows.length; i++) {
+                const newRow = secondTableBody.insertRow(secondTableBody.rows.length);
+
+                for (let j = 0; j < 2; j++) {
+                    const cell = newRow.insertCell(j);
+                    // if (j === 4 || j === 5 || j === 6) {
+                    //     const checkbox = document.createElement("input");
+                    //     checkbox.type = "checkbox";
+                    //     checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+                    //     cell.appendChild(checkbox);
+                    // } else {
+                        cell.textContent = firstTableBody.rows[i].cells[j].querySelector("input[type='text']").value;
+                    }
+                // }
+            }
+
+            // Remove all rows from the first table
+            while (firstTableBody.rows.length > 0) {
+                firstTableBody.deleteRow(0);
+            }
+        });
+
+        //script of values tab
+        document.getElementById("addRowButton3").addEventListener("click", function() {
+            const tableBody = document.getElementById("tableBody3");
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+
+            for (let i = 0; i < 3; i++) {
+                const cell = newRow.insertCell(i);
+                if (i === 2) {
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    cell.appendChild(checkbox);
+                } else {
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    cell.appendChild(input);
+                }
+            }
+        });
+
+        document.getElementById("saveDataButton3").addEventListener("click", function() {
+            const firstTableBody = document.getElementById("tableBody3");
+            const secondTableBody = document.getElementById("secondTableBody3");
+
+            // Transfer data from the first table to the second table
+            for (let i = 0; i < firstTableBody.rows.length; i++) {
+                const newRow = secondTableBody.insertRow(secondTableBody.rows.length);
+
+                for (let j = 0; j < 3; j++) {
+                    const cell = newRow.insertCell(j);
+                    if (j === 2) {
+                        const checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+                        checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+                        cell.appendChild(checkbox);
+                    } else {
+                        cell.textContent = firstTableBody.rows[i].cells[j].querySelector("input[type='text']").value;
+                    }
+                }
+            }
+
+            // Remove all rows from the first table
+            while (firstTableBody.rows.length > 0) {
+                firstTableBody.deleteRow(0);
+            }
+        });
+// fifth tab script
+
+
+document.getElementById("addRowButton1").addEventListener("click", function() {
+            const tableBody = document.getElementById("tableBody1");
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+
+            for (let i = 0; i < 2; i++) {
+                const cell = newRow.insertCell(i);
+                // if (i === 2) {
+                //     const checkbox = document.createElement("input");
+                //     checkbox.type = "checkbox";
+                //     cell.appendChild(checkbox);
+                // } else {
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    cell.appendChild(input);
+                // }
+            }
+        });
+
+        document.getElementById("saveDataButton1").addEventListener("click", function() {
+            const firstTableBody = document.getElementById("tableBody1");
+            const secondTableBody = document.getElementById("secondTableBody1");
+
+            // Transfer data from the first table to the second table
+            for (let i = 0; i < firstTableBody.rows.length; i++) {
+                const newRow = secondTableBody.insertRow(secondTableBody.rows.length);
+
+                for (let j = 0; j < 2; j++) {
+                    const cell = newRow.insertCell(j);
+                    // if (j === 2) {
+                    //     const checkbox = document.createElement("input");
+                    //     checkbox.type = "checkbox";
+                    //     checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+                    //     cell.appendChild(checkbox);
+                    // } else {
+                        cell.textContent = firstTableBody.rows[i].cells[j].querySelector("input[type='text']").value;
+                    }
+                // }
+            }
+
+            // Remove all rows from the first table
+            while (firstTableBody.rows.length > 0) {
+                firstTableBody.deleteRow(0);
+            }
+        });
+
+
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <div id="popupForm" class="popup">
+        <form id="entryForm">
+          <label for="releaseId">Release ID:</label>
+          <input type="text" id="releaseId" name="releaseId" maxlength="1" required>
+          <br>
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" maxlength="40" required>
+          
+          <h3>Details</h3>
+          
+          <div class="input-field">
+            <label>
+              <input type="checkbox" name="Firmed"> Firmed for Requisition Planning
+            </label>
+          </div>
+      
+          <div class="input-field">
+            <label>
+              <input type="checkbox" name="quotation"> Released for Quotation
+            </label>
+          </div>
+      
+          <div class="input-field">
+            <label>
+              <input type="checkbox" name="issue"> Released for issue of PO
+            </label>
+          </div>
+      
+          <div class="input-field">
+            <label for="fieldSelectionKey">Field Selection Key:</label>
+            <input type="text" name="fieldSelectionKey" maxlength="4">
+          </div>
+          
+          <h3>Changes after start of release of process</h3>
+          
+          <div class="input-field">
+            <label for="changeAbility">Change Ability:</label>
+            <select name="changeAbility">
+              <option value="">Changeable, new release in case of new strategy</option>
+              <option value="">Cannot be changed</option>
+              <option value="">Changeable, no new determination of strategy</option>
+              <option value="">Changeable, new release in case of new strategy</option>
+              <option value="">Changeable, new release in case of strategy or value change</option>
+            </select>
+          </div>
+          
+          <div class="input-field">
+            <label for="valueChange">Value Change:</label>
+            <input type="text" name="valueChange" size="2">
+          </div>
+      
+          <br><br>
+          <button type="button" class="btn" onclick="submitForm()">Submit</button>
+          <button type="button" class="btn cancel-btn" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+      
+      <div class="overlay" onclick="closeForm()"></div>
+      
+      <button class="btn" onclick="openForm()">New Entry</button>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Release ID</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Table entries will be added dynamically here -->
+        </tbody>
+      </table>
+      
+      <script>
+        function openForm() {
+          document.getElementById("popupForm").style.display = "block";
+          document.querySelector(".overlay").style.display = "block";
+        }
+      
+        function closeForm() {
+          document.getElementById("popupForm").style.display = "none";
+          document.querySelector(".overlay").style.display = "none";
+        }
+      
+        function submitForm() {
+          var releaseId = document.getElementById("releaseId").value;
+          var description = document.getElementById("description").value;
+      
+          if (!releaseId || !description) {
+            alert("Please fill in all fields");
+            return;
+          }
+      
+          var tableBody = document.getElementById("tableBody");
+          var newRow = tableBody.insertRow(tableBody.rows.length);
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          cell1.innerHTML = releaseId;
+          cell2.innerHTML = description;
+      
+          document.getElementById("releaseId").value = "";
+          document.getElementById("description").value = "";
+      
+          closeForm();
+        }
+      </script>
+      
+      </body>
+</html>
+
+

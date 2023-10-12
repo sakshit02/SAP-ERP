@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        body {
+           font-family: Arial, sans-serif;
+           background-color: #f4f4f4;
+           margin: 0;
+           padding: 0;
+       }
+   
+       h1 {
+           text-align: center;
+           background-color: #333;
+           color: white;
+           padding: 20px 0;
+           margin: 0;
+       }
+   
+       .container {
+           max-width: 800px;
+           margin: 20px auto;
+           padding: 20px;
+           background-color: white;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 20px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       th, td {
+           padding: 12px;
+           text-align: center;
+           border-bottom: 1px solid #ddd;
+       }
+   
+       th {
+           background-color: #333;
+           color: white;
+       }
+   
+       td {
+           cursor: pointer;
+       }
+   
+       input[type="text"] {
+           width: 80%;
+           padding: 8px;
+           border: 1px solid #ddd;
+           border-radius: 4px;
+           box-sizing: border-box;
+       }
+   
+       .edit-mode {
+           background-color: #f5f5f5;
+       }
+   
+       .edit-input {
+           width: 100%;
+       }
+   
+       .button-container {
+           display: flex;
+           justify-content: space-between;
+           margin-top: 20px;
+       }
+   
+       .add-button, .delete-button {
+           background-color: #4CAF50;
+           color: white;
+           border: none;
+           padding: 10px 20px;
+           cursor: pointer;
+           border-radius: 4px;
+       }
+   
+       .delete-button {
+           background-color: #f44336;
+       }
+   
+       .add-button:hover, .delete-button:hover {
+           background-color: #45a049;
+       }
+   </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+    <div>
+        <button onclick="window.location.href='/Languagetable'">Language</button>
+      <button onclick="window.location.href='/Countrytable'">Country</button>
+      <button onclick="window.location.href='/Currencytable'">Currency</button>
+      <button onclick="window.location.href='/Unittable'">Unit & Measurment</button>
+      <button onclick="window.location.href='/Statetable'">State</button>
+    </div>
+    <div class="container">
+        <table id="myTable">
+            <h1>Language Table</h1>
+    <thead>
+        <tr>
+            <th>Lang Code</th>
+            <th>Lang Name</th>
+        </tr>
+    </thead>
+    
+
+    <tbody id="tableBody">
+        <tr>
+            <td>AF</td>
+            <td>Afrikaans</td>
+        </tr>
+        <tr>
+            <td>AR</td>
+            <td>Arabic</td>
+        </tr>
+        <tr>
+            <td>BG</td>
+            <td>Bulgarian</td>
+        </tr>
+        <tr>
+            <td>CA</td>
+            <td>Catalan</td>
+        </tr>
+        <tr>
+            <td>CS</td>
+            <td>Czech</td>
+        </tr>
+        <tr>
+            <td>DA</td>
+            <td>Danish</td>
+        </tr>
+        <tr>
+            <td>DE</td>
+            <td>German</td>
+        </tr>
+        <tr>
+            <td>EL</td>
+            <td>Greek</td>
+        </tr>
+        <tr>
+            <td>EN</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>ES</td>
+            <td>Spanish</td>
+        </tr>
+        <tr>
+            <td>ET</td>
+            <td>Estonian</td>
+        </tr>
+        <tr>
+            <td>FI</td>
+            <td>Finnish</td>
+        </tr>
+        <tr>
+            <td>FR</td>
+            <td>French</td>
+        </tr>
+        <tr>
+            <td>HE</td>
+            <td>Hebrew</td>
+        </tr>
+        <tr>
+            <td>HR</td>
+            <td>Croatian</td>
+        </tr>
+        <tr>
+            <td>HU</td>
+            <td>Hungarian</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>Indonesian</td>
+        </tr>
+        <tr>
+            <td>IS</td>
+            <td>Icelandic</td>
+        </tr>
+        <tr>
+            <td>IT</td>
+            <td>Italian</td>
+        </tr>
+        <tr>
+            <td>JA</td>
+            <td>Japanese</td>
+        </tr>
+        <tr>
+            <td>KO</td>
+            <td>Korean</td>
+        </tr>
+        <tr>
+            <td>LT</td>
+            <td>Lithuanian</td>
+        </tr>
+        <tr>
+            <td>LV</td>
+            <td>Latvian</td>
+        </tr>
+        <tr>
+            <td>MS</td>
+            <td>Malaysian</td>
+        </tr>
+        <tr>
+            <td>NL</td>
+            <td>Dutch</td>
+        </tr>
+        <tr>
+            <td>NO</td>
+            <td>Norwegian</td>
+        </tr>
+        <tr>
+            <td>PL</td>
+            <td>Polish</td>
+        </tr>
+        <tr>
+            <td>PT</td>
+            <td>Portuguese</td>
+        </tr>
+        <tr>
+            <td>RO</td>
+            <td>Romanian</td>
+        </tr>
+        <tr>
+            <td>RU</td>
+            <td>Russian</td>
+        </tr>
+        <tr>
+            <td>SH</td>
+            <td>Serbian (Latin)</td>
+        </tr>
+        <tr>
+            <td>SK</td>
+            <td>Slovakian</td>
+        </tr>
+        <tr>
+            <td>SL</td>
+            <td>Slovenian</td>
+        </tr>
+        <tr>
+            <td>SR</td>
+            <td>Serbian</td>
+        </tr>
+        <tr>
+            <td>SV</td>
+            <td>Swedish</td>
+        </tr>
+        <tr>
+            <td>TH</td>
+            <td>Thai</td>
+        </tr>
+        <tr>
+            <td>TR</td>
+            <td>Turkish</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>Ukrainian</td>
+        </tr>
+        <tr>
+            <td>ZH</td>
+            <td>Chinese</td>
+        </tr>
+    </tbody>
+    </table>
+  </section>
+
+ 
+
+</body>
+</html>
