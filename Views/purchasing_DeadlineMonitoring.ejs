@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/home.css">
+     <link rel="stylesheet" href="css/companyform.css">
+     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+   </head>
+<body>
+
+  
+  <%-include ('partials/sidepanel'); %>
+  <h1>Maintain Table T162: Fields for field Selection Group</h1>
+  <div class="input-field">
+    <label>Field Selection Key</label>
+    <input type="text" name="key" />
+    <label>Without prices</label>
+  </div>
+  <div class="input-field">
+    <label>Selection Group</label>
+    <input type="text" name="Selection" value="Deadline Monitoring">
+  </div>
+
+  <div id="body">
+      <table class="datatable">
+          <thead>
+              <tr>
+                  <th>Field Label</th>
+                  <th>Reqd.entry<input id="check_all1" type="checkbox" class="Reqd.entry-checkbox"></th>
+                  <th>Opt.entry<input id="check_all2" type="checkbox" class="Opt.entry-checkbox"></th>
+                  <th>Display<input id="check_all3" type="checkbox" class="Display-checkbox"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="odd_col">
+                  <td>Requisition (request) date</td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Delivery date</td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Statistics-relev. deliv. date</td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Order acknowledgement reqt.</td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Schedule line time spot</td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Release date</td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Order acknowledgement</td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Reminder control</td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Shipping dates/supplying plant</td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Route schedule</td>
+                  <td><input type="checkbox" name="row-check" value="10" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="10" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="10" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Goods receipt processing time</td>
+                  <td><input type="checkbox" name="row-check" value="11" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="11" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="11" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Confirmation control key</td>
+                  <td><input type="checkbox" name="row-check" value="12" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="12" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="12" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Indicator: requisition closed</td>
+                  <td><input type="checkbox" name="row-check" value="13" class="Reqd.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="13" class="Opt.entry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="13" class="Display-checkbox"></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+<script>
+  $(function() {
+      // If check_all1 (Reqd.entry-checkbox) checked then check all checkboxes in the Create column
+      $("#check_all1").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Reqd.entry-checkbox").prop("checked", true);
+          } else {
+              $(".Reqd.entry-checkbox").prop("checked", false);
+          }
+      });
+
+      // If check_all2 (Opt.entry-checkbox) checked then check all checkboxes in the Change column
+      $("#check_all2").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Opt.entry-checkbox").prop("checked", true);
+          } else {
+              $(".Opt.entry-checkbox").prop("checked", false);
+          }
+      });
+
+      // If check_all3 (Display-checkbox) checked then check all checkboxes in the Delete column
+      $("#check_all3").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Display-checkbox").prop("checked", true);
+          } else {
+              $(".Display-checkbox").prop("checked", false);
+          }
+      });
+
+
+      // Check each table row checkbox
+      $("input:checkbox[name='row-check']").on("change", function () {
+          var total_check_boxes = $("input:checkbox[name='row-check']").length;
+          var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+
+          // If all checked manually then check check_all checkbox
+          if (total_check_boxes === total_checked_boxes) {
+              $("#check_all").prop("checked", true);
+          } else {
+              $("#check_all").prop("checked", false);
+          }
+      });
+  });
+</script>
+</body>
+</html>
