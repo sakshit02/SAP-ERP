@@ -410,6 +410,99 @@ app.get("/Account_assignmentGrpNewEntry", (req, res) => {
   res.render('Account_assignmentGrpNewEntry')
 })
 
+app.get("/Inco_Terms", (req, res) => {
+  res.render('Inco_Terms')
+})
+
+app.get("/Inco_TermsNewEntry", (req, res) => {
+  res.render('Inco_TermsNewEntry')
+})
+
+app.get("/accountgrp_SalesData", (req, res) => {
+  res.render('accountgrp_SalesData')
+})
+app.get("/accountgrp_GeneralData", (req, res) => {
+  res.render('accountgrp_GeneralData')
+})
+app.get("/accountgrp_CC", (req, res) => {
+  res.render('accountgrp_CC')
+})
+
+// acc grp gen data
+app.get("/account_Gen_Add", (req, res) => {
+  res.render('account_Gen_Add')
+})
+
+app.get("/account_Gen_Comm", (req, res) => {
+  res.render('account_Gen_Comm')
+})
+
+app.get("/account_Gen_Cont", (req, res) => {
+  res.render('account_Gen_Cont')
+})
+
+app.get("/account_Gen_Marketing", (req, res) => {
+  res.render('account_Gen_Marketing')
+})
+
+app.get("/aaccount_Gen_Pay", (req, res) => {
+  res.render('aaccount_Gen_Pay')
+})
+
+app.get("/account_Gen_Unloading", (req, res) => {
+  res.render('account_Gen_Unloading')
+})
+
+app.get("/account_Gen_Contact", (req, res) => {
+  res.render('account_Gen_Contact')
+})
+
+app.get("/account_Gen_Foreign", (req, res) => {
+  res.render('account_Gen_Foreign')
+})
+
+// acc grp company code
+app.get("/account_CC_AccMng", (req, res) => {
+  res.render('account_CC_AccMng')
+})
+
+app.get("/account_Cc_Pay", (req, res) => {
+  res.render('account_Cc_Pay')
+})
+
+app.get("/account_Cc_Corr", (req, res) => {
+  res.render('account_Cc_Corr')
+})
+
+app.get("/account_Cc_Insurence", (req, res) => {
+  res.render('account_Cc_Insurence')
+})
+
+app.get("/account_Cc_WH", (req, res) => {
+  res.render('account_Cc_WH')
+})
+
+
+// acc grp sales
+
+
+app.get("/account_Sales_Sales", (req, res) => {
+  res.render('account_Sales_Sales')
+})
+app.get("/account_Sales_Shipping", (req, res) => {
+  res.render('account_Sales_Shipping')
+})
+app.get("/account_Sales_Billing", (req, res) => {
+  res.render('account_Sales_Billing')
+})
+app.get("/account_Sales_Partner", (req, res) => {
+  res.render('account_Sales_Partner')
+})
+app.get("/account_Sales_Documents", (req, res) => {
+  res.render('account_Sales_Documents')
+})
+
+
 
 
 app.get("/VendorAccountGroup", (req, res) => {

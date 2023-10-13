@@ -16,6 +16,9 @@
      <style>
 
 
+button:hover {
+    background-color: #58ece5;
+}
 .divvv{
     
     margin-top:60px ;
@@ -40,40 +43,39 @@ h1,h3{
     <%-include ('partials/sidepanel'); %>
 
    
-    <h2>Maintain Field Status Group:Foreign Trade</h2>
+    <h2>Maintain Field Status Group</h2>
+ 
         <div class="input-field">
+            
             <table>
                 <thead>
-                    <th></th>
-                    <th>Suppress</th>
-                    <th>Required Entry</th>
-                    <th>Optional Entry</th>
-                    <th>Display</th>
+                    <th>Select Group</th>
+                    
                 </thead>
                 <tbody>
+
                     <tr>
-                        <td>Foreign Trade</td>
-                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
-                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
-                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
-                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                        <td onclick="window.location.href='/account_Cc_AccMng'" >Account Managment</td>
+                    </tr>
+                     <tr>
+                            <td onclick="window.location.href='/account_Cc_Pay'" >Payment Transactions</td>
+                     </tr>
+                    <tr>
+                        <td onclick="window.location.href='/account_Cc_Corr'" >Correspondence</td>
+    
+                    </tr>
+                    <tr>
+                        <td onclick="window.location.href='/account_Cc_Insurence'" >Insurence</td>
+                     </tr>
+                    <tr>
+                        <td onclick="window.location.href='/account_Cc_WH'" > W/holding tax data, w/h tax 2</td>
+                    </tr>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-</body> 
-<script>
-    function toggleRadio(element) {
-        // Uncheck other radio buttons in the same row
-        var rowRadios = document.querySelectorAll('input[name="' + element.name + '"]');
-        rowRadios.forEach(function(radio) {
-            if (radio !== element) {
-                radio.checked = false;
-            }
-        });
-    }
-</script>         
+</body>
 </html>
 
 
