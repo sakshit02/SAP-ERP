@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+
+
+    <h2>Field Selection Group</h2>
+ 
+        <div class="input-field">
+          
+            <table>
+                <thead>
+                    <th>Field Selection</th>
+    
+                    
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_BasicData'"> Basic Data Item </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_Terms'"> Terms Of Delivery & Payment </td>
+                    </tr>
+
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_RefHeader'"> Refrence Data, Header </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_AdmHeader'"> Administrative Data,header </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_SuplyingPlant'"> Supplying Plant </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_Q&P'"> Quantity & Price </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_DeadlineMonitoring'"> Deadline Monitoring </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_GR_IR'"> GR/IR Control </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_RefItem'"> Refrence Data,item </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_AdmItem'"> Administrative Data,item </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_ScControl'"> Scheduling Control </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_AdmData'"> Administrative Data </td>
+                    </tr>
+                    
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_DelMonitoring'"> Delivering Monitoring </td>
+                    </tr>
+
+                    <tr>
+                        <td onclick="window.location.href='/PurchaseOrder_Enjoy'"> Enjoy Fields</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+

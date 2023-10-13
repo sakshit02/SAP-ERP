@@ -1074,7 +1074,7 @@ app.get("/Purch_ReleaseProcedure_ReleaseStratigies", (req, res) => {
 
 
 
-
+//Purchasing
 app.get("/PurchaseOrder_DocumentTypes", (req, res) => {
   res.render('PurchaseOrder_DocumentTypes')
 })
@@ -1084,11 +1084,129 @@ app.get("/PurchaseOrder_NumberRange", (req, res) => {
 })
 
 
+app.get("/PurchaseOrder_Classes", (req, res) => {
+  res.render('PurchaseOrder_Classes')
+})
+app.get("/PurchaseOrder_Classification", (req, res) => {
+  res.render('PurchaseOrder_Classification')
+})
+app.get("/PurchaseOrder_Charateristics", (req, res) => {
+  res.render('PurchaseOrder_Charateristics')
+})
 
 
 
 
+app.get("/PurchaseOrder_ScreenLayout", (req, res) => {
+  res.render('PurchaseOrder_ScreenLayout')
+})
+app.get("/Purchasing_ScreenLayout", (req, res) => {
+  res.render('Purchasing_ScreenLayout')
+})
+app.get("/PurchasingScreenLayoutNewEntry", (req, res) => {
+  res.render('PurchasingScreenLayoutNewEntry')
+})
+app.get("/PurchaseOrderScreenLayoutNewEntry", (req, res) => {
+  res.render('PurchaseOrderScreenLayoutNewEntry')
+})
 
+
+app.get("/PurchaseOrderFieldSelection", (req, res) => {
+  res.render('PurchaseOrderFieldSelection')
+})
+app.get("/PurchasingFieldSelection", (req, res) => {
+  res.render('PurchasingFieldSelection')
+})
+
+
+// Field Selection - Purchase Requisition
+app.get("/Purchasing_BasicData", (req, res) => {
+  res.render('Purchasing_BasicData')
+})
+app.get("/Purchasing_Terms", (req, res) => {
+  res.render('Purchasing_Terms')
+})
+app.get("/Purchasing_RefHeader", (req, res) => {
+  res.render('Purchasing_RefHeader')
+})
+app.get("/Purchasing_AdmHeader", (req, res) => {
+  res.render('Purchasing_AdmHeader')
+})
+app.get("/Purchasing_SuplyingPlant", (req, res) => {
+  res.render('Purchasing_SuplyingPlant')
+})
+app.get("/Purchasing_Q&P", (req, res) => {
+  res.render('Purchasing_Q&P')
+})
+app.get("/Purchasing_DeadlineMonitoring", (req, res) => {
+  res.render('Purchasing_DeadlineMonitoring')
+})
+app.get("/Purchasing_GR_IR", (req, res) => {
+  res.render('Purchasing_GR_IR')
+})
+app.get("/Purchasing_RefItem", (req, res) => {
+  res.render('Purchasing_RefItem')
+})
+app.get("/Purchasing_AdmItem", (req, res) => {
+  res.render('Purchasing_AdmItem')
+})
+app.get("/Purchasing_ScControl", (req, res) => {
+  res.render('Purchasing_ScControl')
+})
+app.get("/Purchasing_AdmData", (req, res) => {
+  res.render('Purchasing_AdmData')
+})
+app.get("/Purchasing_DelMonitoring", (req, res) => {
+  res.render('Purchasing_DelMonitoring')
+})
+app.get("/Purchasing_Enjoy", (req, res) => {
+  res.render('Purchasing_Enjoy')
+})
+
+
+// Field Selection - Purchase Order
+app.get("/PurchaseOrder_BasicData", (req, res) => {
+  res.render('PurchaseOrder_BasicData')
+})
+app.get("/PurchaseOrder_Terms", (req, res) => {
+  res.render('PurchaseOrder_Terms')
+})
+app.get("/PurchaseOrder_RefHeader", (req, res) => {
+  res.render('PurchaseOrder_RefHeader')
+})
+app.get("/PurchaseOrder_AdmHeader", (req, res) => {
+  res.render('PurchaseOrder_AdmHeader')
+})
+app.get("/PurchaseOrder_SuplyingPlant", (req, res) => {
+  res.render('PurchaseOrder_SuplyingPlant')
+})
+app.get("/PurchaseOrder_Q&P", (req, res) => {
+  res.render('PurchaseOrder_Q&P')
+})
+app.get("/PurchaseOrder_DeadlineMonitoring", (req, res) => {
+  res.render('PurchaseOrder_DeadlineMonitoring')
+})
+app.get("/PurchaseOrder_GR_IR", (req, res) => {
+  res.render('PurchaseOrder_GR_IR')
+})
+app.get("/PurchaseOrder_RefItem", (req, res) => {
+  res.render('PurchaseOrder_RefItem')
+})
+app.get("/PurchaseOrder_AdmItem", (req, res) => {
+  res.render('PurchaseOrder_AdmItem')
+})
+app.get("/PurchaseOrder_ScControl", (req, res) => {
+  res.render('PurchaseOrder_ScControl')
+})
+app.get("/PurchaseOrder_AdmData", (req, res) => {
+  res.render('PurchaseOrder_AdmData')
+})
+app.get("/PurchaseOrder_DelMonitoring", (req, res) => {
+  res.render('PurchaseOrder_DelMonitoring')
+})
+app.get("/PurchaseOrder_Enjoy", (req, res) => {
+  res.render('PurchaseOrder_Enjoy')
+})
 
 
 app.get("/html", (req, res) => {
