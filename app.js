@@ -387,6 +387,31 @@ app.get("/Price_ListNewEntry", (req, res) => {
   res.render('Price_ListNewEntry')
 })
 
+app.get("/Delivery_Priorities", (req, res) => {
+  res.render('Delivery_Priorities')
+})
+
+app.get("/Delivery_PrioritiesNewEntry", (req, res) => {
+  res.render('Delivery_PrioritiesNewEntry')
+})
+app.get("/Shipping_Condition", (req, res) => {
+  res.render('Shipping_Condition')
+})
+
+app.get("/Shipping_ConditionNewEntry", (req, res) => {
+  res.render('Shipping_ConditionNewEntry')
+})
+
+app.get("/Account_assignmentGrp", (req, res) => {
+  res.render('Account_assignmentGrp')
+})
+
+app.get("/Account_assignmentGrpNewEntry", (req, res) => {
+  res.render('Account_assignmentGrpNewEntry')
+})
+
+
+
 app.get("/VendorAccountGroup", (req, res) => {
   res.render('VendorAccountGroup')
 })
