@@ -1075,6 +1075,13 @@ app.get("/Purch_ReleaseProcedure_ReleaseStratigies", (req, res) => {
 
 
 
+app.get("/PurchaseOrder_DocumentTypes", (req, res) => {
+  res.render('PurchaseOrder_DocumentTypes')
+})
+
+app.get("/PurchaseOrder_NumberRange", (req, res) => {
+  res.render('PurchaseOrder_NumberRange')
+})
 
 
 
