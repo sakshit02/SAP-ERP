@@ -562,11 +562,100 @@ app.get("/PurchaseInfo_ScLayout_ME15_Texts", (req, res) => {
 
 
 
+// sourcelist
+
+app.get("/Purchasing_Sourcelist", (req, res) => {
+  res.render('Purchasing_Sourcelist')
+})
+
 app.get("/PurchaseInfo_ScreenLayout", (req, res) => {
   res.render('PurchaseInfo_ScreenLayout')
 })
 app.get("/PurchaseInfo_NumberRange", (req, res) => {
   res.render('PurchaseInfo_NumberRange')
+})
+
+//Quota Arrangment
+app.get("/Purchasing_Quota_NumRange", (req, res) => {
+  res.render('Purchasing_Quota_NumRange')
+})
+app.get("/Purchasing_Quota_Define", (req, res) => {
+  res.render('Purchasing_Quota_Define')
+})
+app.get("/Purchasing_Quota_DefineNewEntry", (req, res) => {
+  res.render('Purchasing_Quota_DefineNewEntry')
+})
+
+
+// RFQ
+app.get("/Purchasing_RFQ_NumRange", (req, res) => {
+  res.render('Purchasing_RFQ_NumRange')
+})
+app.get("/Purchasing_RFQ_ScLayout", (req, res) => {
+  res.render('Purchasing_RFQ_ScLayout')
+})
+
+app.get("/Purchasing_RFQ_ScLayoutNewEntry", (req, res) => {
+  res.render('Purchasing_RFQ_ScLayoutNewEntry')
+})
+
+app.get("/Purchasing_RFQ_ScLayout_FieldSelection", (req, res) => {
+  res.render('Purchasing_RFQ_ScLayout_FieldSelection')
+})
+
+// Field Selection - RFQ
+app.get("/Purchasing_RFQ_BasicData", (req, res) => {
+  res.render('Purchasing_RFQ_BasicData')
+})
+app.get("/Purchasing_RFQ_Terms", (req, res) => {
+  res.render('Purchasing_RFQ_Terms')
+})
+app.get("/Purchasing_RFQ_RefHeader", (req, res) => {
+  res.render('Purchasing_RFQ_RefHeader')
+})
+app.get("/Purchasing_RFQ_AdmHeader", (req, res) => {
+  res.render('Purchasing_RFQ_AdmHeader')
+})
+app.get("/Purchasing_RFQ_SuplyingPlant", (req, res) => {
+  res.render('Purchasing_RFQ_SuplyingPlant')
+})
+app.get("/Purchasing_RFQ_Q&P", (req, res) => {
+  res.render('Purchasing_RFQ_Q&P')
+})
+app.get("/Purchasing_RFQ_DeadlineMonitoring", (req, res) => {
+  res.render('Purchasing_RFQ_DeadlineMonitoring')
+})
+app.get("/Purchasing_RFQ_GR_IR", (req, res) => {
+  res.render('Purchasing_RFQ_GR_IR')
+})
+app.get("/Purchasing_RFQ_RefItem", (req, res) => {
+  res.render('Purchasing_RFQ_RefItem')
+})
+app.get("/Purchasing_RFQ_AdmItem", (req, res) => {
+  res.render('Purchasing_RFQ_AdmItem')
+})
+app.get("/Purchasing_RFQ_ScControl", (req, res) => {
+  res.render('Purchasing_RFQ_ScControl')
+})
+app.get("/Purchasing_RFQ_AdmData", (req, res) => {
+  res.render('Purchasing_RFQ_AdmData')
+})
+app.get("/Purchasing_RFQ_DelMonitoring", (req, res) => {
+  res.render('Purchasing_RFQ_DelMonitoring')
+})
+app.get("/Purchasing_RFQ_Enjoy", (req, res) => {
+  res.render('Purchasing_RFQ_Enjoy')
+})
+
+
+
+
+
+app.get("/Purchasing_RFQ_Rel", (req, res) => {
+  res.render('Purchasing_RFQ_Rel')
+})
+app.get("/Purchasing_RFQ_Doc", (req, res) => {
+  res.render('Purchasing_RFQ_Doc')
 })
 
 // acc grp gen data
