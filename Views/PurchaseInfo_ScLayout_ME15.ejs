@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>ME15 Delete Flag</h2>
+ 
+        <div class="input-field">
+            
+            <table>
+                <thead>
+                    <th>Feild Select</th>
+         
+                    
+                </thead>
+                <tbody>
+
+                    
+                     <tr>
+                            <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_GR'" >GR/IR Control</td>
+                            
+                     </tr>
+                     
+                     <tr>
+                        <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Basic'" >Basic Data</td>
+                        
+                 </tr>
+                 
+                 <tr>
+                    <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Ref'" >Refrence Data</td>
+                    
+             </tr>
+             
+             <tr>
+                <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Adm'" >Administration Data</td>
+                
+         </tr>
+         <tr>
+            <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Qnt'" >Quantities</td>
+            
+     </tr>
+     <tr>
+        <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Cond'" >Conditions</td>
+        
+ </tr>
+ <tr>
+    <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Del'" >Delivery Monitoring</td>
+    
+</tr>
+<tr>
+    <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15_Texts'" >Texts</td>
+    
+</tr>
+                   
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+

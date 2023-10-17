@@ -428,6 +428,147 @@ app.get("/accountgrp_CC", (req, res) => {
   res.render('accountgrp_CC')
 })
 
+// purchaseinfo
+app.get("/PurchaseInfo_ScLayout", (req, res) => {
+  res.render('PurchaseInfo_ScLayout')
+})
+
+app.get("/PurchaseInfo_ScLayout_ME11", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11')
+})
+app.get("/PurchaseInfo_ScLayout_ME12", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12')
+})
+app.get("/PurchaseInfo_ScLayout_ME13", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13')
+})
+app.get("/PurchaseInfo_ScLayout_ME15", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15')
+})
+
+// ME11
+
+app.get("/PurchaseInfo_ScLayout_ME11_GR", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_GR')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Basic", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Basic')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Ref", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Ref')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Adm", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Adm')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Qnt", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Qnt')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Cond", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Cond')
+})
+app.get("/PurchaseInfo_ScLayout_ME11_Del", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Del')
+})
+
+app.get("/PurchaseInfo_ScLayout_ME11_Texts", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME11_Texts')
+})
+
+
+// ME12
+
+app.get("/PurchaseInfo_ScLayout_ME12_GR", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_GR')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Basic", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Basic')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Ref", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Ref')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Adm", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Adm')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Qnt", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Qnt')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Cond", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Cond')
+})
+app.get("/PurchaseInfo_ScLayout_ME12_Del", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Del')
+})
+
+app.get("/PurchaseInfo_ScLayout_ME12_Texts", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME12_Texts')
+})
+
+// ME13
+
+app.get("/PurchaseInfo_ScLayout_ME13_GR", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_GR')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Basic", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Basic')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Ref", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Ref')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Adm", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Adm')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Qnt", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Qnt')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Cond", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Cond')
+})
+app.get("/PurchaseInfo_ScLayout_ME13_Del", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Del')
+})
+
+app.get("/PurchaseInfo_ScLayout_ME13_Texts", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME13_Texts')
+})
+
+
+// ME15
+
+app.get("/PurchaseInfo_ScLayout_ME15_GR", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_GR')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Basic", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Basic')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Ref", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Ref')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Adm", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Adm')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Qnt", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Qnt')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Cond", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Cond')
+})
+app.get("/PurchaseInfo_ScLayout_ME15_Del", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Del')
+})
+
+app.get("/PurchaseInfo_ScLayout_ME15_Texts", (req, res) => {
+  res.render('PurchaseInfo_ScLayout_ME15_Texts')
+})
+
+
+
+app.get("/PurchaseInfo_ScreenLayout", (req, res) => {
+  res.render('PurchaseInfo_ScreenLayout')
+})
+app.get("/PurchaseInfo_NumberRange", (req, res) => {
+  res.render('PurchaseInfo_NumberRange')
+})
+
 // acc grp gen data
 app.get("/account_Gen_Add", (req, res) => {
   res.render('account_Gen_Add')

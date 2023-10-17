@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/home.css">
+     <link rel="stylesheet" href="css/companyform.css">
+     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+   </head>
+<body>
+
+  
+  <%-include ('partials/sidepanel'); %>
+  <h1>Maintain Table T162: Fields for field Selection Group</h1>
+  <div class="form" style="width: 600px;">
+    <div class="input-field">
+        <label>Field Selection Key</label>
+        <input style="margin-left: 85px;" type="text" name="key" />
+        <input type="text" name="key" />
+        
+      </div>
+      <div class="input-field">
+        <label>Selection Group</label>
+        <input type="text" name="Selection" >
+      </div>
+</div>
+
+  <div id="body">
+      <table class="datatable">
+          <thead>
+              <tr>
+                  <th>Field Label</th>
+                  <th>Reqd.entry<input id="check_all1" type="checkbox" class="Reqdentry-checkbox"></th>
+                  <th>Opt.entry<input id="check_all2" type="checkbox" class="Optentry-checkbox"></th>
+                  <th>Display<input id="check_all3" type="checkbox" class="Display-checkbox"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="odd_col">
+                  <td>Request for quotation</td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="1" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Material Group</td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="2" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Quotation no., date</td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="3" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Origin data</td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="4" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Purchasing group</td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="5" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Reference, salesperson etc.</td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="6" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>Vendor material</td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="7" class="Display-checkbox"></td>
+              </tr>
+              <tr class="even_col">
+                  <td>Last purchase order</td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="8" class="Display-checkbox"></td>
+              </tr>
+              <tr class="odd_col">
+                  <td>VSR</td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Reqdentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Optentry-checkbox"></td>
+                  <td><input type="checkbox" name="row-check" value="9" class="Display-checkbox"></td>
+              </tr>
+           </tbody>
+      </table>
+  </div>
+</div>
+
+
+<script>
+  $(function() {
+      // If check_all1 (Reqdentry-checkbox) checked then check all checkboxes in the Create column
+      $("#check_all1").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Reqdentry-checkbox").prop("checked", true);
+          } else {
+              $(".Reqdentry-checkbox").prop("checked", false);
+          }
+      });
+
+      // If check_all2 (Optentry-checkbox) checked then check all checkboxes in the Change column
+      $("#check_all2").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Optentry-checkbox").prop("checked", true);
+          } else {
+              $(".Optentry-checkbox").prop("checked", false);
+          }
+      });
+
+      // If check_all3 (Display-checkbox) checked then check all checkboxes in the Delete column
+      $("#check_all3").on("click", function () {
+          if ($(this).prop("checked")) {
+              $(".Display-checkbox").prop("checked", true);
+          } else {
+              $(".Display-checkbox").prop("checked", false);
+          }
+      });
+
+
+      // Check each table row checkbox
+      $("input:checkbox[name='row-check']").on("change", function () {
+          var total_check_boxes = $("input:checkbox[name='row-check']").length;
+          var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+
+          // If all checked manually then check check_all checkbox
+          if (total_check_boxes === total_checked_boxes) {
+              $("#check_all").prop("checked", true);
+          } else {
+              $("#check_all").prop("checked", false);
+          }
+      });
+  });
+</script>
+</body>
+</html>

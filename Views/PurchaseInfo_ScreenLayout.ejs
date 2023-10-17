@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>Maintain Field Status Group</h2>
+ 
+        <div class="input-field">
+            
+            <table>
+                <thead>
+                    <th>Feild Select</th>
+                    <th>Description</th>
+                    
+                </thead>
+                <tbody>
+
+                    
+                     <tr>
+                            <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME11'" >ME11</td>
+                            <td>Create Purchasing Info Record</td>
+                     </tr>
+                     
+                     <tr>
+                        <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME12'" >ME12</td>
+                        <td>Change Purchasing Info Record</td>
+                 </tr>
+                 
+                 <tr>
+                    <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME13'" >ME13</td>
+                    <td>Display Purchasing Info Record</td>
+             </tr>
+             
+             <tr>
+                <td onclick="window.location.href='/PurchaseInfo_ScLayout_ME15'" >ME15</td>
+                <td>Delete Flag Purchasing Info</td>
+         </tr>
+                   
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
