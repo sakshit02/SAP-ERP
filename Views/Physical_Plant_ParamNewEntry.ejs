@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header> General plant settings in Inventory Management   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Plant</label>
+                            <input  name="vid" type="text"  style="margin-left: 60px;">
+                            <input  name="des" type="text"  style="margin-right: 500px;">
+                        </div>
+
+                        <div class="title">Goods movements </div>
+                        <div class="input-field">
+
+                            <label>Create.SLoc. automat. </label>
+                            <input name="Sloc" type="checkbox" placeholder="" style="margin-right: 200px;">
+                            
+                            <label>BBD/Prod. Date</label>
+                            <input name="BBD" type="checkbox" placeholder="" style="margin: 0px 60px;">
+
+                            <label>Del.compl. default </label>
+                            <input name="default" type="checkbox" placeholder="" style="margin-left: 70px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>BOM Usage</label>
+                            <input name="Usage" type="text" placeholder="" style="margin-right: 180px;">
+                          
+                            <label>Miss. parts active </label>
+                            <input name="parts" type="checkbox" placeholder="" style="margin: 0px 50px">
+                          
+                            <label>BOM Application</label>
+                            <input name="Application" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Summarize miss.parts </label>
+                            <input name="miss" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Trans./Event Type</label>
+                            <input name="Event" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>BaWU deactivated</label>
+                            <input name="deactivated" type="checkbox" placeholder="" style="margin-left: 60px;">
+                        </div>
+
+                        <div class="input-field">
+                            
+                            <label>GR/GI slip number</label>
+                            <input name="Sloc" type="checkbox" placeholder="" style="margin-right: 200px;">
+                            
+                            <label>BaWU syn. postng</label>
+                            <input name="BBD" type="checkbox" placeholder="" style="margin: 0px 60px;">
+
+                            <label>BchNo.auto. GRAcAsst</label>
+                            <input name="default" type="checkbox" placeholder="" style="margin-left: 50px;">
+                        </div>
+    
+                     
+                        <div class="title">Physical Inventory </div>
+                            
+                        <div class="input-field">
+                            <label>Stock type</label>
+                            <input name="Stock" type="text" placeholder="" style="margin-right: 200px;">
+
+                            <label>Alternative Unit </label>
+                            <input name="unit" type="checkbox" placeholder="" style="margin: 0px 50px;">
+                          
+                            <label>Batch in Background </label>
+                            <input name="Batch" type="checkbox" placeholder="" style="margin-left: 60px;">
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Change Document</label>
+                            <input name="change" type="checkbox" placeholder="" style="margin-right: 200px;">
+
+                            <label>Adj. Book Inventory </label>
+                            <input name="Book" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Reason f. difference</label>
+                            <input name="Reason" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="title">Reservations</div>
+
+                        <div class="input-field">
+                           
+                            <label>Movement Allowed</label>
+                            <input name="Movement" type="checkbox" placeholder="" style="margin-right: 200px;">
+
+                            <label>Days mvt. allowed </label>
+                            <input name="Days" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Retention period</label>
+                            <input name="Retention" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="title">Negative stocks</div>
+    
+                        <div class="input-field">
+                            <label>Vendor consig.gds</label>
+                            <input name="consignment" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Customer Consig.</label>
+                            <input name="Consignment" type="checkbox" placeholder="" style="margin: 0px 60px;">
+
+                            <label>RTP stocks </label>
+                            <input name="RTP" type="checkbox" placeholder="" style="margin-left: 50px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Return.pack. at.cust. </label>
+                            <input name="Return" type="checkbox" placeholder="" style="margin-right: 200px;">
+
+                            <label>Stocks of mat.w.vendor</label>
+                            <input name="mat" type="checkbox" placeholder="" style="margin: 0px 60px;">
+                          
+                            <label>Sales.order stock </label>
+                            <input name="Sales" type="checkbox" placeholder="" style="margin-left: 65px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Project stock</label>
+                            <input name="Project" type="checkbox" placeholder="" style="margin-right: 850px;">
+                          
+                        </div>
+
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

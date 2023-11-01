@@ -1557,6 +1557,101 @@ app.get("/PurchaseOrder_Enjoy", (req, res) => {
 })
 
 
+
+// Physical inventory
+app.get("/Physical_Plant_Param", (req, res) => {
+  res.render('Physical_Plant_Param')
+})
+app.get("/Physical_Plant_ParamNewEntry", (req, res) => {
+  res.render('Physical_Plant_ParamNewEntry')
+})
+app.get("/Physical_Number_Assgn", (req, res) => {
+  res.render('Physical_Number_Assgn')
+})
+app.get("/Physical_MIGO", (req, res) => {
+  res.render('Physical_MIGO')
+})
+app.get("/Physical_MIGO_Field", (req, res) => {
+  res.render('Physical_MIGO_Field')
+})
+app.get("/Physical_MIGO_Movement", (req, res) => {
+  res.render('Physical_MIGO_Movement')
+})
+
+app.get("/Physical_Number_Assgn_Accounting", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting')
+})
+app.get("/Physical_Number_Assgn_Material", (req, res) => {
+  res.render('Physical_Number_Assgn_Material')
+})
+app.get("/Physical_Number_Assgn_Reservation", (req, res) => {
+  res.render('Physical_Number_Assgn_Reservation')
+})
+app.get("/Physical_Number_Assgn_Goods", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods')
+})
+
+app.get("/Physical_Number_Assgn_Accounting_Doc", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Doc')
+})
+app.get("/Physical_Number_Assgn_Accounting_Doc_NewEntry", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Doc_NewEntry')
+})
+
+app.get("/Physical_Number_Assgn_Accounting_Num", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Num')
+})
+app.get("/Physical_Number_Assgn_Accounting_Issue", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Issue')
+})
+app.get("/Physical_Number_Assgn_Accounting_Automatic", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Automatic')
+})
+app.get("/Physical_Number_Assgn_Accounting_Physical", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Physical')
+})
+app.get("/Physical_Number_Assgn_Accounting_Receipt", (req, res) => {
+  res.render('Physical_Number_Assgn_Accounting_Receipt')
+})
+
+app.get("/Physical_Number_Assgn_Reservation_Interval", (req, res) => {
+  res.render('Physical_Number_Assgn_Reservation_Interval')
+})
+app.get("/Physical_Number_Assgn_Reservation_Num", (req, res) => {
+  res.render('Physical_Number_Assgn_Reservation_Num')
+})
+
+
+app.get("/Physical_Number_Assgn_Goods_Plant", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Plant')
+})
+app.get("/Physical_Number_Assgn_Goods_Num", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Num')
+})
+app.get("/Physical_Number_Assgn_Goods_Interval", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Interval')
+})
+app.get("/Physical_Number_Assgn_Goods_Object", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Object')
+})
+app.get("/Physical_Number_Assgn_Goods_Num_NewEntry", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Num_NewEntry')
+})
+
+app.get("/Physical_Number_Assgn_Goods_Object", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Object')
+})
+app.get("/Physical_Number_Assgn_Goods_Object_NewEntry", (req, res) => {
+  res.render('Physical_Number_Assgn_Goods_Object_NewEntry')
+})
+
+
+app.get("/Physical_Number_Assgn_MoveInitials", (req, res) => {
+  res.render('Physical_Number_Assgn_MoveInitials')
+})
+
+
+
 app.get("/html", (req, res) => {
   let query = "select * from Country";
 

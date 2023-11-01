@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header>Document Type Details    &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Document Type</label>
+                            <input  name="vid" type="text"  style="margin-left: 60px;">
+                            <input  name="des" type="text"  style="margin-right: 500px;">
+                        </div>
+
+                        <div class="title">Properties</div>
+                        <div class="input-field">
+                            <label>Number range</label>
+                            <input name="Number" type="text" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Reverse DocumentType</label>
+                            <input name="Reverse" type="text" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Authorization Group</label>
+                            <input name="parts" type="text" placeholder="" style="margin-right: 820px;">
+                          
+                        </div>
+
+
+                        <div class="title">Account types allowed</div>
+                        <div class="input-field">
+                            <label>Assets</label>
+                            <input name="Assets" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Customer</label>
+                            <input name="Customer" type="checkbox" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Vendor</label>
+                            <input name="Vendor" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Material</label>
+                            <input name="Material" type="checkbox" placeholder="" style="margin-right: -40px;">
+
+                            <label>G/L account</label>
+                            <input name="G/L" type="checkbox" placeholder="" style="margin-right: 30px;">
+                        </div>
+
+                        <div class="input-field">
+
+                          
+                        </div>
+
+                        <div class="title">Special usage</div>
+                        <div class="input-field">
+                            <label>Btch input only</label>
+                            <input name="Btch" type="checkbox" placeholder="" style="margin-right: 810px;">
+                          
+                        </div>
+
+
+                        <div class="title">Control data</div>
+                        <div class="input-field">
+                            <label>Net document type</label>
+                            <input name="Net" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Cust/vend check</label>
+                            <input name="check" type="checkbox" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Negative Postings Permitted</label>
+                            <input name="Postings" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Inter-company postgs</label>
+                            <input name="postgs" type="checkbox" placeholder="" style="margin-right: -40px;">
+
+                            <label>Enter trading partner</label>
+                            <input name="trading" type="checkbox" placeholder="" style="margin-right: 30px;">
+                        </div>
+
+                     
+                        <div class="title">Default values</div>
+
+                        <div class="input-field">
+                            <label>Ex.rate type for forgn crcny docs</label>
+                            <input name="Exrate" type="text" placeholder="" style="margin-right: 400px; width: 50px;">
+                          
+                        </div>
+
+
+                        <div class="title">Required during document entry</div>
+                        <div class="input-field">
+                            <label>Reference number </label>
+                            <input name="Reference" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Document header text</label>
+                            <input name="Batch" type="checkbox" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="title">Joint venture</div>
+                        <div class="input-field">
+                            <label>Debit Rec.Indic</label>
+                            <input name="change" type="text" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Rec.Ind. Credit</label>
+                            <input name="Book" type="text" placeholder="" style="margin-right: 300px;">
+                        </div>
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
