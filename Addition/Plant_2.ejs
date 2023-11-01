@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header>Plant Details    &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Valuation Area</label>
+                            <input  name="vid" type="text"  style="margin-left: 60px;">
+                        </div>
+                        <hr />
+
+                        <div class="input-field">
+                            <label>Plant</label>
+                            <input name="Plant" type="text" style="margin-left: 60px;">
+                            <input name="Plant" type="text" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="title">Negative Special Stocks</div>
+                        <div class="input-field">
+                            <label>Vendor Consignment gds</label>
+                            <input name="Number" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Customer Consignment</label>
+                            <input name="Reverse" type="checkbox" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>RTP Stocks</label>
+                            <input name="Assets" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Return.pack.at.cust.</label>
+                            <input name="Customer" type="checkbox" placeholder="" style="margin-right: 300px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Stcks of mat.w. vendor</label>
+                            <input name="Vendor" type="checkbox" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Project Stock</label>
+                            <input name="Material" type="checkbox" placeholder="" style="margin-right: -40px;">
+
+                            <label>Sales Order Stock</label>
+                            <input name="G/L" type="checkbox" placeholder="" style="margin-right: 30px;">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
