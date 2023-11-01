@@ -15,20 +15,7 @@
 
      <style>
 
-button {
-    margin-top: 10px; 
-    padding: 2px 2px;
-    background-color: white;
-    width: 460px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
-button:hover {
-    background-color: #58ece5;
-}
 .divvv{
     
     margin-top:60px ;
@@ -53,7 +40,7 @@ h1,h3{
     <%-include ('partials/sidepanel'); %>
 
    
-    <h2>Maintain Field Status Group:Foreign Payments (FI only)</h2>
+    <h2>Maintain Field Status Group: Transfer Postings</h2>
         <div class="input-field">
             <table>
                 <thead>
@@ -64,17 +51,45 @@ h1,h3{
                 </thead>
                 <tbody>
                     <tr>
-                        <td>SCB / Supplying cntry (FI only)</td>
+                        <td>Receiving Material</td>
                         <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
                         <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
                         <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
                     </tr>
 
                     <tr>
-                        <td>Customs Data (FI only)</td>
+                        <td>Receiving Plant</td>
                         <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
                         <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
                         <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Receiving Storage Location</td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sales Order</td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Project</td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Receiving Batch</td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
                     </tr>
                 </tbody>
             </table>

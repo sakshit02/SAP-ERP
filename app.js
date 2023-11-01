@@ -1652,6 +1652,89 @@ app.get("/Physical_Number_Assgn_MoveInitials", (req, res) => {
 
 
 
+// goods issue/transfer postings
+
+app.get("/Physical_Postings", (req, res) => {
+  res.render('Physical_Postings')
+})
+app.get("/Physical_Postings_Storage", (req, res) => {
+  res.render('Physical_Postings_Storage')
+})
+app.get("/Physical_Postings_Assignment", (req, res) => {
+  res.render('Physical_Postings_Assignment')
+})
+app.get("/Physical_Postings_ScLayout", (req, res) => {
+  res.render('Physical_Postings_ScLayout')
+})
+app.get("/Physical_Postings_Storage_Plant", (req, res) => {
+  res.render('Physical_Postings_Storage_Plant')
+})
+app.get("/Physical_Postings_Storage_Mvt", (req, res) => {
+  res.render('Physical_Postings_Storage_Mvt')
+})
+app.get("/Physical_Postings_Goods", (req, res) => {
+  res.render('Physical_Postings_Goods')
+})
+app.get("/Physical_Postings_Goods_Plant", (req, res) => {
+  res.render('Physical_Postings_Goods_Plant')
+})
+app.get("/Physical_Postings_Goods_Mvt", (req, res) => {
+  res.render('Physical_Postings_Goods_Mvt')
+})
+app.get("/Physical_Postings_Negative", (req, res) => {
+  res.render('Physical_Postings_Negative')
+})
+
+
+// Physical_Postings_ScLayout_Overview
+
+app.get("/Physical_Postings_ScLayout_Overview", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Gen", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Gen')
+})
+
+app.get("/Physical_Postings_ScLayout_Overview_Acc", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Acc')
+})
+
+app.get("/Physical_Postings_ScLayout_Overview_Add", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Add')
+})
+app.get("/Physical_Postings_ScLayout_Overview_MM", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_MM')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Real", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Real')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Transfer", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Transfer')
+})
+app.get("/Physical_Postings_ScLayout_Overview_War", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_War')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Pay", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Pay')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Tax", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Tax')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Foreign", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Foreign')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Cons", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Cons')
+})
+app.get("/Physical_Postings_ScLayout_Overview_Fin", (req, res) => {
+  res.render('Physical_Postings_ScLayout_Overview_Fin')
+})
+
+
+
+
+
+
 app.get("/html", (req, res) => {
   let query = "select * from Country";
 
