@@ -1686,6 +1686,12 @@ app.get("/Physical_Postings_Negative", (req, res) => {
 })
 
 
+app.get("/Physical_Postings_Negative_Stock_Plant_Loc", (req, res) => {
+  res.render('Physical_Postings_Negative_Stock_Plant_Loc')
+})
+app.get("/Physical_Postings_Negative_Stock_Plant", (req, res) => {
+  res.render('Physical_Postings_Negative_Stock_Plant')
+})
 // Physical_Postings_ScLayout_Overview
 
 app.get("/Physical_Postings_ScLayout_Overview", (req, res) => {
@@ -1730,8 +1736,34 @@ app.get("/Physical_Postings_ScLayout_Overview_Fin", (req, res) => {
   res.render('Physical_Postings_ScLayout_Overview_Fin')
 })
 
+//Physical receipt
+app.get("/Physical_Receipt", (req, res) => {
+  res.render('Physical_Receipt')
+})
+
+app.get("/Physical_Receipt_Loc", (req, res) => {
+  res.render('Physical_Receipt_Loc')
+})
+app.get("/Physical_Receipt_Storage_Plant", (req, res) => {
+  res.render('Physical_Receipt_Storage_Plant')
+})
+app.get("/Physical_Receipt_Storage_Mvt", (req, res) => {
+  res.render('Physical_Receipt_Storage_Mvt')
+})
 
 
+
+
+
+app.get("/Physical_Receipt_Purchase", (req, res) => {
+  res.render('Physical_Receipt_Purchase')
+})
+app.get("/Physical_Receipt_Assignment", (req, res) => {
+  res.render('Physical_Receipt_Assignment')
+})
+app.get("/Physical_Receipt_ScLayout", (req, res) => {
+  res.render('Physical_Receipt_ScLayout')
+})
 
 
 
