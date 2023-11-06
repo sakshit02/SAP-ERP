@@ -77,11 +77,12 @@
 
      </style>
    </head>
-<body >
+<body style="margin-left:276px ;">
     
     <%-include ('partials/sidepanel'); %>
-    <button onclick="window.location.href='/AccessTable_NewEntry'">New Entry +</button>
-    <h2>Access Table</h2>
+
+    <button onclick="window.location.href='/FreeGoods_ControldataTable_NewEntry'">New Entry +</button>
+    <h2>Control Data</h2>
     <form action="/parkingformsent" method="POST">
         <div class="form first">
 
@@ -89,7 +90,7 @@
             <div class="details ID">
                 <div class="fields">
                     <div class="input-field">
-                        <label>Access Sequence</label>
+                        <label>Procedure</label>
                         <input  name="vid" type=""  >
                     </div>
    
@@ -99,72 +100,171 @@
         </div>
     </form>
 
-    <div class="container1" style="overflow-y: scroll; height: 400px;">
+    <div class="container1" style="overflow-y: scroll;">
 
       <table>
+        <h3>Refrence Step Overview </h3>
         <tr>
-            <th>Access Number</th>
-            <th>Table Number</th>
+           
+            <th>Step</th>
+            <th>Counter</th>
+            <th>Condition Type</th>
             <th>Description</th>
-            <th>Requirement</th>
-            <th>Exclusive</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Manaul</th>
+            <th>Required</th>
+            <th>Statistics</th>
+            <th>Print</th>
+            <th>Sub total</th>
+            <th>Requirment</th>
+            <th>Cal. Type</th>
+            <th>Base Type</th>
+            <th>Account Key</th>
+            <th>Accruals</th>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
             <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            <td></td>
+            
         </tr>
+       
         
     </table>
     
@@ -175,7 +275,7 @@
     </div>
     </div>
 
-    <button onclick="window.location.href='/AccessFields'">Access Field</button>
+
     
 
 </body>

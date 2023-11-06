@@ -77,11 +77,11 @@
 
      </style>
    </head>
-<body >
+<body style="margin-left:276px ;">
     
     <%-include ('partials/sidepanel'); %>
-    <button onclick="window.location.href='/AccessTable_NewEntry'">New Entry +</button>
-    <h2>Access Table</h2>
+
+    <h2>Access Field</h2>
     <form action="/parkingformsent" method="POST">
         <div class="form first">
 
@@ -89,7 +89,7 @@
             <div class="details ID">
                 <div class="fields">
                     <div class="input-field">
-                        <label>Access Sequence</label>
+                        <label>Access Field</label>
                         <input  name="vid" type=""  >
                     </div>
    
@@ -99,71 +99,96 @@
         </div>
     </form>
 
-    <div class="container1" style="overflow-y: scroll; height: 400px;">
+    <div class="container1" style="overflow-y: scroll; height: 430px;">
 
       <table>
         <tr>
-            <th>Access Number</th>
-            <th>Table Number</th>
-            <th>Description</th>
-            <th>Requirement</th>
-            <th>Exclusive</th>
+            <th>Condition</th>
+            <th>I/O</th>
+            <th>Document Structure</th>
+            <th>Document Field</th>
+            <th>Long Field Label</th>
+            <th>Spec. Val. Source</th>
+            <th>Initial value allowed</th>
+            <th>Access Type</th>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
             <td><input type="checkbox"></td>
+            <td></td>
+            
         </tr>
         
     </table>
@@ -175,7 +200,7 @@
     </div>
     </div>
 
-    <button onclick="window.location.href='/AccessFields'">Access Field</button>
+
     
 
 </body>
