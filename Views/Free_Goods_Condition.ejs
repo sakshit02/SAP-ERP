@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header> Create Condition Table (Free Goods)   &nbsp;&nbsp;   
+            <button type="submit">Submit</button>
+            <button onclick="window.location.href='/Free_Goods_ConditionTable'">Table</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first" style="width: 500px;">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Table</label>
+                            <input  name="vid" type="text"  style="margin-right: 250px;">
+                        </div>
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -175,8 +175,14 @@ app.get("/Countrytable", (req, res) => {
 app.get("/accessSequence", (req, res) => {
   res.render('accessSequence')
 })
+app.get("/AccessSequence_NewEntry", (req, res) => {
+  res.render('AccessSequence_NewEntry')
+})
 app.get("/AccessTable", (req, res) => {
   res.render('AccessTable')
+})
+app.get("/AccessTable_NewEntry", (req, res) => {
+  res.render('AccessTable_NewEntry')
 })
 app.get("/AccessFields", (req, res) => {
   res.render('AccessFields')
@@ -185,7 +191,9 @@ app.get("/ConditionTypes", (req, res) => {
   res.render('ConditionTypes')
 })
 
-
+app.get("/Condition", (req, res) => {
+  res.render('Condition')
+})
 app.get("/ConditionTable", (req, res) => {
   res.render('ConditionTable')
 })
@@ -229,6 +237,9 @@ app.get("/Activity", (req, res) => {
 
 app.get("/ControldataTable", (req, res) => {
   res.render('ControldataTable')
+})
+app.get("/ControldataTable_NewEntry", (req, res) => {
+  res.render('ControldataTable_NewEntry')
 })
 
 app.get("/MaintainPricingNewEntry", (req, res) => {
@@ -1848,18 +1859,106 @@ app.get("/Physical_Movements_Goods_Mvt", (req, res) => {
 })
 
 
+// SD output
 
+              app.get("/Output_Determination_NumRange", (req, res) => {
+                res.render('Output_Determination_NumRange')
+              })
+              app.get("/Output_Determination_Condition", (req, res) => {
+                res.render('Output_Determination_Condition')
+              })
+              app.get("/Output_Determination_ConditionTable", (req, res) => {
+                res.render('Output_Determination_ConditionTable')
+              })
+              app.get("/Output_Determination_accessSequenc", (req, res) => {
+                res.render('Output_Determination_accessSequenc')
+              })
+              app.get("/Output_Determination_ConditionTypes", (req, res) => {
+                res.render('Output_Determination_ConditionTypes')
+              })
+              app.get("/Output_Determination_Pricingprocedure", (req, res) => {
+                res.render('Output_Determination_Pricingprocedure')
+              })
+              app.get("/Output_Determination_Determination", (req, res) => {
+                res.render('Output_Determination_Determination')
+              })
 
+              app.get("/Output_Determination_DeterminationNewEntry", (req, res) => {
+                res.render('Output_Determination_DeterminationNewEntry')
+              })
 
+              app.get("/Output_Determination_AccessSequence_NewEntry", (req, res) => {
+                res.render('Output_Determination_AccessSequence_NewEntry')
+              })
+              app.get("/Output_Determination_AccessTable", (req, res) => {
+                res.render('Output_Determination_AccessTable')
+              })
+              app.get("/Output_Determination_AccessTable_NewEntry", (req, res) => {
+                res.render('Output_Determination_AccessTable_NewEntry')
+              })
+              app.get("/Output_Determination_AccessFields", (req, res) => {
+                res.render('Output_Determination_AccessFields')
+              })
+              app.get("/Output_Determination_PricingNewEntry", (req, res) => {
+                res.render('Output_Determination_PricingNewEntry')
+              })
+              app.get("/Output_Determination_ControldataTable", (req, res) => {
+                res.render('Output_Determination_ControldataTable')
+              })
+              app.get("/Output_Determination_ControldataTable_NewEntry", (req, res) => {
+                res.render('Output_Determination_ControldataTable_NewEntry')
+              })
+              
+// 
+// SD Free goods
 
+app.get("/Free_Goods_NumRange", (req, res) => {
+  res.render('Free_Goods_NumRange')
+})
+app.get("/Free_Goods_Condition", (req, res) => {
+  res.render('Free_Goods_Condition')
+})
+app.get("/Free_Goods_ConditionTable", (req, res) => {
+  res.render('Free_Goods_ConditionTable')
+})
+app.get("/Free_Goods_accessSequenc", (req, res) => {
+  res.render('Free_Goods_accessSequenc')
+})
+app.get("/Free_Goods_ConditionTypes", (req, res) => {
+  res.render('Free_Goods_ConditionTypes')
+})
+app.get("/Free_Goods_Pricingprocedure", (req, res) => {
+  res.render('Free_Goods_Pricingprocedure')
+})
+app.get("/Free_Goods_Determination", (req, res) => {
+  res.render('Free_Goods_Determination')
+})
 
+app.get("/Free_Goods_DeterminationNewEntry", (req, res) => {
+  res.render('Free_Goods_DeterminationNewEntry')
+})
 
-
-
-
-
-
-
+app.get("/FreeGoods_AccessSequence_NewEntry", (req, res) => {
+  res.render('FreeGoods_AccessSequence_NewEntry')
+})
+app.get("/FreeGoods_AccessTable", (req, res) => {
+  res.render('FreeGoods_AccessTable')
+})
+app.get("/FreeGoods_AccessTable_NewEntry", (req, res) => {
+  res.render('FreeGoods_AccessTable_NewEntry')
+})
+app.get("/FreeGoods_AccessFields", (req, res) => {
+  res.render('FreeGoods_AccessFields')
+})
+app.get("/FreeGoods_PricingNewEntry", (req, res) => {
+  res.render('FreeGoods_PricingNewEntry')
+})
+app.get("/FreeGoods_ControldataTable", (req, res) => {
+  res.render('FreeGoods_ControldataTable')
+})
+app.get("/FreeGoods_ControldataTable_NewEntry", (req, res) => {
+  res.render('FreeGoods_ControldataTable_NewEntry')
+})
 
 
 
