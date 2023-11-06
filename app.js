@@ -1751,10 +1751,6 @@ app.get("/Physical_Receipt_Storage_Mvt", (req, res) => {
   res.render('Physical_Receipt_Storage_Mvt')
 })
 
-
-
-
-
 app.get("/Physical_Receipt_Purchase", (req, res) => {
   res.render('Physical_Receipt_Purchase')
 })
@@ -1764,6 +1760,106 @@ app.get("/Physical_Receipt_Assignment", (req, res) => {
 app.get("/Physical_Receipt_ScLayout", (req, res) => {
   res.render('Physical_Receipt_ScLayout')
 })
+
+
+
+
+
+// Movements Physical
+
+app.get("/Physical_Movements", (req, res) => {
+  res.render('Physical_Movements')
+})
+
+
+app.get("/Physical_Movements_Storage", (req, res) => {
+  res.render('Physical_Movements_Storage')
+})
+app.get("/Physical_Movements_Storage_Plant", (req, res) => {
+  res.render('Physical_Movements_Storage_Plant')
+})
+app.get("/Physical_Movements_Storage_Mvt", (req, res) => {
+  res.render('Physical_Movements_Storage_Mvt')
+})
+
+
+
+app.get("/Physical_Movements_Assignment", (req, res) => {
+  res.render('Physical_Movements_Assignment')
+})
+
+
+app.get("/Physical_Movements_ScLayout", (req, res) => {
+  res.render('Physical_Movements_ScLayout')
+})
+app.get("/Physical_Movements_ScLayout_Overview", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Gen", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Gen')
+})
+
+app.get("/Physical_Movements_ScLayout_Overview_Acc", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Acc')
+})
+
+app.get("/Physical_Movements_ScLayout_Overview_Add", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Add')
+})
+app.get("/Physical_Movements_ScLayout_Overview_MM", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_MM')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Real", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Real')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Transfer", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Transfer')
+})
+app.get("/Physical_Movements_ScLayout_Overview_War", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_War')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Pay", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Pay')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Tax", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Tax')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Foreign", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Foreign')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Cons", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Cons')
+})
+app.get("/Physical_Movements_ScLayout_Overview_Fin", (req, res) => {
+  res.render('Physical_Movements_ScLayout_Overview_Fin')
+})
+
+
+
+app.get("/Physical_Movements_Goods", (req, res) => {
+  res.render('Physical_Movements_Goods')
+})
+
+app.get("/Physical_Movements_Goods_Plant", (req, res) => {
+  res.render('Physical_Movements_Goods_Plant')
+})
+app.get("/Physical_Movements_Goods_Mvt", (req, res) => {
+  res.render('Physical_Movements_Goods_Mvt')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
