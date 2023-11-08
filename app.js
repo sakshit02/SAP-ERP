@@ -62,6 +62,14 @@ app.get("/AssignShippingPoint", (req, res) => {
 app.get("/assignToCreditControl", (req, res) => {
   res.render('assignToCreditControl')
 })
+app.get("/assignbusinessareaBySales", (req, res) => {
+  res.render('assignbusinessareaBySales')
+})
+app.get("/assignSalesOffice", (req, res) => {
+  res.render('assignSalesOffice')
+})
+
+
 app.get("/business", (req, res) => {
   res.render('business')
 })
