@@ -12,13 +12,13 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 260px;
+  width: 360px;
   background: #11101d;
   z-index: 100;
   transition: all 0.5s ease;
 }
 .sidebar.close{
-  width: 78px;
+  width: 50px;
 }
 .sidebar .logo-details{
   height: 60px;
@@ -75,7 +75,7 @@
 .sidebar .nav-links li i{
   height: 50px;
   width: 78px;
-  text-align: center;
+  
   line-height: 50px;
   color: white;
   font-size: 20px;
@@ -212,7 +212,7 @@
   position: relative;
   height: 100%;
   background-color: white;
-  left: 260px;
+  
   width: calc(100% - 260px);
   transition: all 0.5s ease;
   padding: 12px;
@@ -247,7 +247,7 @@
 
 @media screen and (max-width: 400px){
   .sidebar{
-    width: 240px;
+    width: 140px;
   }
   .sidebar.close{
     width: 78px;

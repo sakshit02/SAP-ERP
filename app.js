@@ -1869,55 +1869,305 @@ app.get("/Physical_Movements_Goods_Mvt", (req, res) => {
 
 // SD output
 
-              app.get("/Output_Determination_NumRange", (req, res) => {
-                res.render('Output_Determination_NumRange')
-              })
-              app.get("/Output_Determination_Condition", (req, res) => {
-                res.render('Output_Determination_Condition')
-              })
-              app.get("/Output_Determination_ConditionTable", (req, res) => {
-                res.render('Output_Determination_ConditionTable')
-              })
-              app.get("/Output_Determination_accessSequenc", (req, res) => {
-                res.render('Output_Determination_accessSequenc')
-              })
-              app.get("/Output_Determination_ConditionTypes", (req, res) => {
-                res.render('Output_Determination_ConditionTypes')
-              })
-              app.get("/Output_Determination_Pricingprocedure", (req, res) => {
-                res.render('Output_Determination_Pricingprocedure')
-              })
-              app.get("/Output_Determination_Determination", (req, res) => {
-                res.render('Output_Determination_Determination')
-              })
+app.get("/Output_Determination", (req, res) => {
+  res.render('Output_Determination')
+})
+// Billing
+app.get("/Output_Determination_Billing", (req, res) => {
+  res.render('Output_Determination_Billing')
+})
+// condition
+app.get("/Output_Det_Billing_Condition", (req, res) => {
+  res.render('Output_Det_Billing_Condition')
+})
+app.get("/Output_Det_Billing_Condition_Table", (req, res) => {
+  res.render('Output_Det_Billing_Condition_Table')
+})
 
-              app.get("/Output_Determination_DeterminationNewEntry", (req, res) => {
-                res.render('Output_Determination_DeterminationNewEntry')
-              })
+// output
+app.get("/Output_Det_Billing_Output", (req, res) => {
+  res.render('Output_Det_Billing_Output')
+})
+app.get("/Output_Det_Billing_Output_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_Output_NewEntry')
+})
 
-              app.get("/Output_Determination_AccessSequence_NewEntry", (req, res) => {
-                res.render('Output_Determination_AccessSequence_NewEntry')
-              })
-              app.get("/Output_Determination_AccessTable", (req, res) => {
-                res.render('Output_Determination_AccessTable')
-              })
-              app.get("/Output_Determination_AccessTable_NewEntry", (req, res) => {
-                res.render('Output_Determination_AccessTable_NewEntry')
-              })
-              app.get("/Output_Determination_AccessFields", (req, res) => {
-                res.render('Output_Determination_AccessFields')
-              })
-              app.get("/Output_Determination_PricingNewEntry", (req, res) => {
-                res.render('Output_Determination_PricingNewEntry')
-              })
-              app.get("/Output_Determination_ControldataTable", (req, res) => {
-                res.render('Output_Determination_ControldataTable')
-              })
-              app.get("/Output_Determination_ControldataTable_NewEntry", (req, res) => {
-                res.render('Output_Determination_ControldataTable_NewEntry')
-              })
-              
-// 
+app.get("/Output_Det_Billing_output_Mail", (req, res) => {
+  res.render('Output_Det_Billing_output_Mail')
+})
+app.get("/Output_Det_Billing_Output_Mail_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_Output_Mail_NewEntry')
+})
+app.get("/Output_Det_Billing_output_Processing", (req, res) => {
+  res.render('Output_Det_Billing_output_Processing')
+})
+app.get("/Output_Det_Billing_output_Processing_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_output_Processing_NewEntry')
+})
+
+app.get("/Output_Det_Billing_output_Partner", (req, res) => {
+  res.render('Output_Det_Billing_output_Partner')
+})
+app.get("/Output_Det_Billing_output_Partner_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_output_Partner_NewEntry')
+})
+
+
+
+
+
+// access
+app.get("/Output_Det_Billing_Access", (req, res) => {
+  res.render('Output_Det_Billing_Access')
+})
+app.get("/Output_Det_Billing_Access_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_Access_NewEntry')
+})
+app.get("/Output_Det_Billing_AccessTable", (req, res) => {
+  res.render('Output_Det_Billing_AccessTable')
+})
+app.get("/Output_Det_Billing_AccessTable_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_AccessTable_NewEntry')
+})
+app.get("/Output_Det_Billing_AccessFields", (req, res) => {
+  res.render('Output_Det_Billing_AccessFields')
+})
+
+
+
+//maintain procedure
+
+app.get("/Output_Det_Billing_MaintainProcedure", (req, res) => {
+  res.render('Output_Det_Billing_MaintainProcedure')
+})
+
+app.get("/Output_Det_Billing_MaintainProcedure_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_MaintainProcedure_NewEntry')
+})
+
+app.get("/Output_Det_Billing_MaintainProcedure_ControldataTable", (req, res) => {
+  res.render('Output_Det_Billing_MaintainProcedure_ControldataTable')
+})
+
+app.get("/Output_Det_Billing_MaintainProcedure_ControldataTable_NewEntry", (req, res) => {
+  res.render('Output_Det_Billing_MaintainProcedure_ControldataTable_NewEntry')
+})
+
+//Assign  procedure
+app.get("/Output_Det_Billing_AssignProcedure", (req, res) => {
+  res.render('Output_Det_Billing_AssignProcedure')
+})
+
+
+
+
+
+
+
+
+
+
+
+// sales document
+app.get("/Output_Determination_SalesDoc", (req, res) => {
+  res.render('Output_Determination_SalesDoc')
+})
+
+
+// condition
+app.get("/Output_Det_SDoc_Condition", (req, res) => {
+  res.render('Output_Det_SDoc_Condition')
+})
+app.get("/Output_Det_SDoc_Condition_Table", (req, res) => {
+  res.render('Output_Det_SDoc_Condition_Table')
+})
+
+// output
+app.get("/Output_Det_SDoc_Output", (req, res) => {
+  res.render('Output_Det_SDoc_Output')
+})
+app.get("/Output_Det_SDoc_Output_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_Output_NewEntry')
+})
+
+app.get("/Output_Det_SDoc_output_Mail", (req, res) => {
+  res.render('Output_Det_SDoc_output_Mail')
+})
+app.get("/Output_Det_SDoc_Output_Mail_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_Output_Mail_NewEntry')
+})
+app.get("/Output_Det_SDoc_output_Processing", (req, res) => {
+  res.render('Output_Det_SDoc_output_Processing')
+})
+app.get("/Output_Det_SDoc_output_Processing_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_output_Processing_NewEntry')
+})
+
+app.get("/Output_Det_SDoc_output_Partner", (req, res) => {
+  res.render('Output_Det_SDoc_output_Partner')
+})
+app.get("/Output_Det_SDoc_output_Partner_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_output_Partner_NewEntry')
+})
+
+
+
+
+
+// access
+app.get("/Output_Det_SDoc_Access", (req, res) => {
+  res.render('Output_Det_SDoc_Access')
+})
+app.get("/Output_Det_SDoc_Access_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_Access_NewEntry')
+})
+app.get("/Output_Det_SDoc_AccessTable", (req, res) => {
+  res.render('Output_Det_SDoc_AccessTable')
+})
+app.get("/Output_Det_SDoc_AccessTable_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_AccessTable_NewEntry')
+})
+app.get("/Output_Det_SDoc_AccessFields", (req, res) => {
+  res.render('Output_Det_SDoc_AccessFields')
+})
+
+
+
+//maintain procedure
+
+app.get("/Output_Det_SDoc_MaintainProcedure", (req, res) => {
+  res.render('Output_Det_SDoc_MaintainProcedure')
+})
+
+app.get("/Output_Det_SDoc_MaintainProcedure_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_MaintainProcedure_NewEntry')
+})
+
+app.get("/Output_Det_SDoc_MaintainProcedure_ControldataTable", (req, res) => {
+  res.render('Output_Det_SDoc_MaintainProcedure_ControldataTable')
+})
+
+app.get("/Output_Det_SDoc_MaintainProcedure_ControldataTable_NewEntry", (req, res) => {
+  res.render('Output_Det_SDoc_MaintainProcedure_ControldataTable_NewEntry')
+})
+
+//Assign  procedure
+app.get("/Output_Det_SDoc_AssignProcedure", (req, res) => {
+  res.render('Output_Det_SDoc_AssignProcedure')
+})
+app.get("/Output_Det_SDoc_AssignProcedure_Header", (req, res) => {
+  res.render('Output_Det_SDoc_AssignProcedure_Header')
+})
+app.get("/Output_Det_SDoc_AssignProcedure_Item", (req, res) => {
+  res.render('Output_Det_SDoc_AssignProcedure_Item')
+})
+
+
+
+
+
+
+
+
+
+// sales Activity
+
+
+app.get("/Output_Determination_SalesActivity", (req, res) => {
+  res.render('Output_Determination_SalesActivity')
+})
+// condition
+app.get("/Output_Det_SA_Condition", (req, res) => {
+  res.render('Output_Det_SA_Condition')
+})
+app.get("/Output_Det_SA_Condition_Table", (req, res) => {
+  res.render('Output_Det_SA_Condition_Table')
+})
+
+// output
+app.get("/Output_Det_SA_Output", (req, res) => {
+  res.render('Output_Det_SA_Output')
+})
+app.get("/Output_Det_SA_Output_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_Output_NewEntry')
+})
+
+app.get("/Output_Det_SA_output_Mail", (req, res) => {
+  res.render('Output_Det_SA_output_Mail')
+})
+app.get("/Output_Det_SA_Output_Mail_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_Output_Mail_NewEntry')
+})
+app.get("/Output_Det_SA_output_Processing", (req, res) => {
+  res.render('Output_Det_SA_output_Processing')
+})
+app.get("/Output_Det_SA_output_Processing_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_output_Processing_NewEntry')
+})
+
+app.get("/Output_Det_SA_output_Partner", (req, res) => {
+  res.render('Output_Det_SA_output_Partner')
+})
+app.get("/Output_Det_SA_output_Partner_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_output_Partner_NewEntry')
+})
+
+
+
+
+
+// access
+app.get("/Output_Det_SA_Access", (req, res) => {
+  res.render('Output_Det_SA_Access')
+})
+app.get("/Output_Det_SA_Access_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_Access_NewEntry')
+})
+app.get("/Output_Det_SA_AccessTable", (req, res) => {
+  res.render('Output_Det_SA_AccessTable')
+})
+app.get("/Output_Det_SA_AccessTable_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_AccessTable_NewEntry')
+})
+app.get("/Output_Det_SA_AccessFields", (req, res) => {
+  res.render('Output_Det_SA_AccessFields')
+})
+
+
+
+//maintain procedure
+
+app.get("/Output_Det_SA_MaintainProcedure", (req, res) => {
+  res.render('Output_Det_SA_MaintainProcedure')
+})
+
+app.get("/Output_Det_SA_MaintainProcedure_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_MaintainProcedure_NewEntry')
+})
+
+app.get("/Output_Det_SA_MaintainProcedure_ControldataTable", (req, res) => {
+  res.render('Output_Det_SA_MaintainProcedure_ControldataTable')
+})
+
+app.get("/Output_Det_SA_MaintainProcedure_ControldataTable_NewEntry", (req, res) => {
+  res.render('Output_Det_SA_MaintainProcedure_ControldataTable_NewEntry')
+})
+
+//Assign  procedure
+app.get("/Output_Det_SA_AssignProcedure", (req, res) => {
+  res.render('Output_Det_SA_AssignProcedure')
+})
+
+
+
+            
+
+
+
+
+
+
+
 // SD Free goods
 
 app.get("/Free_Goods_NumRange", (req, res) => {

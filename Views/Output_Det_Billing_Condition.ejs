@@ -1,49 +1,42 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title> Drop Down Sidebar</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <%-include ('partials/sidepanel'); %>
+
     <div class="container">
-        <header> Business Area   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        <header> Create Condition Table (Output Sales Activities)   &nbsp;&nbsp;   
+            <button type="submit">Submit</button>
+            <button onclick="window.location.href='/Output_Det_Billing_Condition_Table'">Table</button>
         </header>
     
         <form action="/parkingformsent" method="POST">
-            <div class="form first">
+            <div class="form first" style="width: 500px;">
     
     
                 <div class="details ID">
                     <div class="fields">
                         <div class="input-field">
-                            <label>Business Area</label>
-                            <input  name="vid" type="text"  style="margin-right: 600px;">
+                            <label>Table</label>
+                            <input  name="vid" type="text"  style="margin-right: 250px;">
                         </div>
-                        <div class="input-field">
-                            <label>Description</label>
-                            <input name="loc_code" type="text" placeholder=""  style="margin-right: 600px;">
-                        </div>
-                     
-                       
-    
                     </div>
                     
                 </div> 
             </div>
         </form>
     </div>
-  </section>
-
-
 
 </body>
 </html>
-
-

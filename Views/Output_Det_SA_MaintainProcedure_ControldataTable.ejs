@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/companyform.css">
    
-    <link rel="stylesheet" href="../public/css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
     <title>Document</title>
 
     <!-- Boxiocns CDN Link -->
@@ -81,48 +81,108 @@
     
     <%-include ('partials/sidepanel'); %>
 
-    <h2>Document Pricing Procedure</h2>
-    <button>Save</button>
+    <button onclick="window.location.href='/Output_Det_SA_MaintainProcedure_ControldataTable_NewEntry'">New Entry +</button>
+    <h2>Control Data</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
 
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Procedure</label>
+                        <input  name="vid" type=""  >
+                    </div>
+   
+                </div>
+                
+            </div> 
+        </div>
+    </form>
 
     <div class="container1" style="overflow-y: scroll;">
 
       <table>
+        <h3>Refrence Step Overview </h3>
+        <tr>
+           
+            <th>Step</th>
+            <th>Counter</th>
+            <th>Condition Type</th>
+            <th>Description</th>
+            
+            <th>Manaul</th>
+            <th>Requirement</th>
+           
+            
+        </tr>
+ 
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
         
-        <tr>
-           
-            <th>Sales Organization</th>
-            <th>Distribuation Channel</th>
-            <th>Division</th>
-            <th>Doc. Pricing Prodecure</th>
-           <th>Cust. Pricing Procedure</th>
-            <th>Pricing Procedure</th>
-           
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            
-         
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            
-         
-        </tr>
-
-
-
-
        
         
     </table>
