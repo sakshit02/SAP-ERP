@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header> Define Billing Types  &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Billing Type</label>
+                            <input  name="Billing" type="text"  style="margin-left: 60px;">
+                            <input  name="Billing" type="text"  style="margin-right: 300px;">
+
+                            <label>Created By</label>
+                            <input name="Create" type="text" placeholder="" style="margin-left: 70px;">
+                        </div>
+
+                        <div class="title">Number Systems </div>
+                        <div class="input-field">
+
+                            <label>No. Range Int. Asst</label>
+                            <input name="Range" type="Text" placeholder="" style="margin-right: 200px;">
+                            <input name="Range" type="text" placeholder="" style="margin: 0px 60px;">
+
+                            <label>Item No. Increment</label>
+                            <input name="Increment" type="text" placeholder="" style="margin-left: 70px;">
+                        </div>
+
+                        <div class="title">Physical Inventory </div>
+
+                        <div class="input-field">
+                        
+                            <label>SD Document Category</label>
+                            <input name="SD" type="text" placeholder="" style="margin-right: 180px;">
+                            <input name="SD" type="text" placeholder="" style="margin: 0px 50px">
+                          
+                            <label>Posting Block</label>
+                            <input name="Posting" type="checkbox" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Transaction Group</label>
+                            <input name="Transaction" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Transaction" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Statistics</label>
+                            <input name="deactivated" type="checkbox" placeholder="" style="margin-left: 60px;">
+                        </div>
+
+                        <div class="input-field">
+                            
+                            <label>Billing Category</label>
+                            <input name="Category" type="text" placeholder="" style="margin-right: 200px;">
+                            
+                            <label>Document Type</label>
+                            <input name="Document" type="text" placeholder="" style="margin: 0px 60px;">
+
+                            <label>Invoice List Type</label>
+                            <input name="Invoice" type="text" placeholder="" style="margin-left: 50px;">
+                        </div>
+                            
+                        <div class="input-field">
+                            <label>Negative Posting</label>
+                            <input name="Negative" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Negative" type="text" placeholder="" style="margin: 0px 50px;">
+                          
+                            <label>Rebate Settlement</label>
+                            <input name="Rebate" type="text" placeholder="" style="margin-left: 60px;">
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Branch/Head office</label>
+                            <input name="Branch" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Branch" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Rel.for rebate</label>
+                            <input name="rebate" type="checkbox" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Corr.Doc.w/ValDat</label>
+                            <input name="Corr" type="checkbox" placeholder="" style="margin-right: 200px;">
+                            <input name="Corr" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Standard text</label>
+                            <input name="Standard" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="title">Cancellation</div>
+
+                        <div class="input-field">
+                           
+                            <label>Cancel.Billing Type</label>
+                            <input name="Cancel" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Cancel" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Copying Requirements</label>
+                            <input name="Copying" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+                        
+    
+                        <div class="input-field">
+                            <label>Reference Number</label>
+                            <input name="Reference" type="text" placeholder="" style="margin-right: 200px;">
+                          
+                            <label>Assignment Number</label>
+                            <input name="Consignment" type="text" placeholder="" style="margin: 0px 60px;">
+                        </div>
+
+                        <div class="title">Account Assignment/Pricing</div>
+
+                        <div class="input-field">
+                        
+                            <label>Act.Det.G/L Act</label>
+                            <input name="Act" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Act" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Doc.Pricing Proc.</label>
+                            <input name="Copying" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Acc.det.rec.acc.</label>
+                            <input name="rec" type="text" placeholder="" style="margin-right: 200px;">
+
+                            <label>Acc.det.cash.set.</label>
+                            <input name="cash" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Acc.det.pay.cards</label>
+                            <input name="pay" type="text" placeholder="" style="margin-left: 40px;">       
+                        </div>
+
+                        <div class="title">Output/Partners/Texts</div>
+
+                        <div class="input-field">
+                        
+                            <label>Output determ.proc.</label>
+                            <input name="Output" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Output" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Delivery</label>
+                            <input name="Application" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Output Type</label>
+                            <input name="Output" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Output" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>TextDetermProcedure</label>
+                            <input name="Procedure" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Header Partners</label>
+                            <input name="Header" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Header" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Text.determ.proc.itm</label>
+                            <input name="itm" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Item Partners</label>
+                            <input name="Item" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Item" type="text" placeholder="" style="margin: 0px 40px;">
+
+                            <label>Delivery text</label>
+                            <input name="Delivery" type="text" placeholder="" style="margin-left: 40px;">
+                        </div>
+                        
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
