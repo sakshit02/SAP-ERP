@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/companyform.css">
+
+    <title>Document</title>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+
+      /* itp.css */
+
+.container {
+    width: 1000px;
+    margin:0px;
+
+}
+
+header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 1000px;
+    background-color: #fff;
+}
+
+.input-field {
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    flex: 2;
+    
+}
+
+input {
+    flex: 4; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+        * {box-sizing: border-box}
+        /* Style tab links */
+        .tablink {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-size: 14px;
+          margin-right: 5px;
+          width: 180px;
+          overflow: hidden;
+        }
+        
+        .tablink:hover {
+          background-color: #777;
+        }
+        
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+          color: rgb(8, 8, 8);
+          display: none;
+          
+          height: 100%;
+          background-color: #fff;
+
+        }
+        table, th, td {
+            border:1px solid black;
+        }
+        .container1 {
+            width: 160vh;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        
+        </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+    <div class="container">
+        <header> Sales Order   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Output Type</label>
+                            <input  name="OutputType" type="text"  ><input  name="OutputType" type="text" style="margin-right: 200px;" >
+                        </div>
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+       
+<button class="tablink" onclick="openPage('General Data', this, 'red' )" id="defaultOpen">General Data</button>
+<button class="tablink" onclick="openPage('Default Values', this, 'green')" >Default Values</button>
+<button class="tablink" onclick="openPage('Time', this, 'blue')">Time</button>
+<button class="tablink" onclick="openPage('Storage System', this, 'orange')">Storage System</button>
+<button class="tablink" onclick="openPage('Print', this, 'olive')">Print</button>
+
+
+
+
+<!-- first tab --><br>
+<div id="General Data" class="tabcontent"><br><br>
+    <div class="container">
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Access Sequence</label>
+                            <input  name="Access" type="text"  style="margin-right: 60px;">
+                        </div>
+
+                        <div class="title">Goods movements </div>
+                        <div class="input-field">
+
+                            <label>Access to Conditions</label>
+                            <input name="Condition" type="checkbox" placeholder="" style="margin-right: 200px;">
+                            
+                            <label>Cannot be changed</label>
+                            <input name="Change" type="checkbox" placeholder="" style="margin: 0px 60px;">
+
+                            <label> Multiple issuing</label>
+                            <input name="issuing" type="checkbox" placeholder="" style="margin-left: 70px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Partner-inde.output</label>
+                            <input name="partner" type="checkbox" placeholder="" style="margin-right: 180px;">
+                          
+                            <label>do not write processing log</label>
+                            <input name="processing" type="checkbox" placeholder="" style="margin: 0px 50px">
+                          
+                        </div>    
+                     
+                        <div class="title">Change Output</div>
+                            
+                        <div class="input-field">
+                            <label>Program</label>
+                            <input name="Program" type="text" placeholder="" style="margin-right: 200px;">
+
+                            <label>FORM Routine </label>
+                            <input name="Routine" type="text" placeholder="" style="margin: 0px 50px;">
+                          
+                        </div>
+
+                        <div class="title">Replacement of text symbols</div>
+
+                        <div class="input-field">
+                           
+                            <label>Program</label>
+                            <input name="Program" type="text" placeholder="" style="margin-right: 200px;">
+
+                            <label>FORM Routine </label>
+                            <input name="Routine" type="text" placeholder="" style="margin: 0px 50px;">
+                        </div>
+                    </div>            
+                </div> 
+            </div>
+        </form>
+    </div>
+</div>
+<!-- second tab -->
+<div id="Default Values" class="tabcontent"><br><br>
+  <h3>Default Values</h3>
+  <div class="container">
+    
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        
+                        <label>Dispatch Time</label>
+                        <input  name="Dispatch" type="text"  style="margin-right: 60px;">
+                    </div>
+
+                    <div class="input-field">
+
+                        <label>Transmission Medium</label>
+                        <input name="Transmission" type="checkbox" placeholder="" style="margin-right: 200px;">
+                    
+                    </div>
+
+                    <div class="input-field">
+                    
+                        <label>Partner function</label>
+                        <input name="partner" type="checkbox" placeholder="" style="margin-right: 180px;">
+                      
+                    </div>    
+                </div>            
+            </div> 
+        </div>
+    </form>
+</div>
+</div>
+<!-- third tab -->
+<div id="Time" class="tabcontent"><br><br>
+  <h3>Time</h3>
+  <div class="container">
+    
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+
+                        <label>Timing 1 (periodic job) not allowed</label>
+                        <input name="T_1" type="checkbox" placeholder="" style="margin-right: 200px;">
+                        
+                        <label>Timing 2 (job and time entry) not allowed</label>
+                        <input name="T_2" type="checkbox" placeholder="" style="margin: 0px 60px;">
+
+                    </div>
+
+                    <div class="input-field">
+                    
+                        <label>Timing 3 (application transaction) not allowed</label>
+                        <input name="T_3" type="checkbox" placeholder="" style="margin-right: 180px;">
+                      
+                        <label>Timing 4 (immediate) not allowed</label>
+                        <input name="T_4" type="checkbox" placeholder="" style="margin: 0px 50px">
+                      
+                    </div>    
+                </div>            
+            </div> 
+        </div>
+    </form>
+</div>
+</div>
+<!-- fourth tab -->
+<div id="Storage System" class="tabcontent"><br><br>
+  <h3>Storage System</h3>
+  <div class="container">
+    
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+
+                        <label>Storage Mode</label>
+                        <Select>
+                            <option value="Storage Mode">Select Storage Mode</option>
+                            <option value="1 Print only ">1 Print only</option>
+                            <option value="2 Archive only">2 Archive only</option>
+                            <option value="3 Print and Archive">3 Print and Archive</option>
+                            <option value=" "> </option>
+                        </Select>
+                    </div>
+
+                    <div class="input-field">
+                    
+                        <label>Document Type</label>
+                        <input name="Document" type="text" placeholder="" style="margin-right: 180px;">
+                      
+                    </div>    
+                </div>            
+            </div> 
+        </div>
+    </form>
+</div>
+</div>
+
+<!-- Fifth tab -->
+<div id="Print" class="tabcontent"><br><br>
+    <h3>Print</h3>
+    <div class="container">
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+    
+                            <label>Print Parameter</label>
+                            <Select>
+                                <option value="Storage Mode">Select Print Parameter</option>
+                                <option value="1 Sales organization ">1 Sales organization</option>
+                                <option value="2 Sales organization/Distribution channel/division">2 Sales organization/Distribution channel/division</option>
+                                <option value="3 Sales Office">3 Sales Office</option>
+                                <option value="4 Sales Group">4 Sales Group</option>
+                                <option value="5 Shipping Point">5 Shipping Point</option>
+                                <option value=" "> </option>
+                            </Select>
+                        </div> 
+                    </div>            
+                </div> 
+            </div>
+        </form>
+    </div>
+  </div>
+
+  </section>
+
+  <script>
+
+    
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+document.getElementById("defaultOpen").click();
+
+  </script>
+
+</body>
+</html>
+
+

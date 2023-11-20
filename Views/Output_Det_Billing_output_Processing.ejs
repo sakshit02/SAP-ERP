@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+ 
+    <title>Document</title>
+
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+  <button onclick="window.location.href='/Output_Det_Billing_output_Processing_NewEntry'">New Entry +</button>
+
+    <div class="container">
+        <header> Processing Routines   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Output Type</label>
+                            <input  name="Output" type="text"  style="margin-left: 60px;">
+                            <input  name="Output" type="text"  style="margin-right: 500px;">
+                        </div>
+
+                        <div class="input-field">
+
+                            <label>Application </label>
+                            <input name="Application" type="text" placeholder="" style="margin-right: 200px;">
+                            <input name="Application" type="text" placeholder="" style="margin: 0px 60px;">
+                        </div>
+
+                        <div class="input-field">
+                        
+                            <label>Trans. Medium</label>
+                            <select name="Trans" id="">
+                                <option value="">Select Medium</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Layput Module </label>
+                            <input name="Layput" type="text" placeholder="" style="margin-right: 200px;">
+                          
+                        </div>
+
+                        <div class="title">Processing Routines </div>
+                        <div class="title" style="font-size: medium;">Processing 1 </div>
+                        <div class="input-field">
+                            
+                            <label>Program</label>
+                            <input name="Program" type="text" placeholder="" style="margin-right: 200px;">
+                            
+                            <label>Form Routine</label>
+                            <input name="Form" type="text" placeholder="" style="margin: 0px 60px;">
+
+                        </div>
+       
+                        <div class="input-field">
+                            <label>Form</label>
+                            <input name="Form" type="text" placeholder="" style="margin-right: 200px;">
+
+                            <label>PDF/Smartform Form</label>
+                            <input name="PDF" type="checkbox" placeholder="" style="margin: 0px 50px;">
+                          
+                        </div>
+
+                        <div class="input-field">
+                            <label>Form Type</label>
+                           <select name="Form" id="">
+                            <option value="">Select form</option>
+                           </select>
+                        </div>
+                        
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+        <button onclick="window.location.href='/Output_Det_Billing_output_Partner'">Partner Functions</button>
+
+    </div>
+
+</body>
+</html>

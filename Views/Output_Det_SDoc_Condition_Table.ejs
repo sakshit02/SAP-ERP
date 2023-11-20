@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        body{
+    margin-left: 276px;
+}
+        table, th, td {
+            border:1px solid black;
+        }
+        .container1 {
+            width: 160vh;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color:bisque;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+
+        
+
+     </style>
+   </head>
+<body >
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <button>Select field</button>
+    <button>Technical view</button>
+    <button>Other Description</button>
+    <button>Field Attributes</button><br><bR>
+    <div class="container1" style="overflow-y: scroll; height: 500px;">
+      <table>
+        <tr>
+            <th>Selected Fields</th>
+            <th>FieldCatlg</th>
+        </tr>
+        <tr>
+          <td class="selectedFields" id="selectedFieldsRow1"></td>
+          <td class="fieldCatlg" data-row="1" ondblclick="copyToSelected(this)">Distribuation Channel</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow2"></td>
+          <td class="fieldCatlg" data-row="2" ondblclick="copyToSelected(this)">Division</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow3"></td>
+          <td class="fieldCatlg" data-row="3" ondblclick="copyToSelected(this)">Overall Status</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow4"></td>
+          <td class="fieldCatlg" data-row="4" ondblclick="copyToSelected(this)">Sales Group</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow5"></td>
+          <td class="fieldCatlg" data-row="5" ondblclick="copyToSelected(this)">Sales Office</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow6"></td>
+          <td class="fieldCatlg" data-row="6" ondblclick="copyToSelected(this)">Sales Organization</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow7"></td>
+          <td class="fieldCatlg" data-row="7" ondblclick="copyToSelected(this)">Sales Activ. Outcome</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow8"></td>
+          <td class="fieldCatlg" data-row="8" ondblclick="copyToSelected(this)">Sales Activ. reason</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow9"></td>
+          <td class="fieldCatlg" data-row="9" ondblclick="copyToSelected(this)">Sales Activ. Status</td>
+      </tr>
+      <tr>
+        <td class="selectedFields" id="selectedFieldsRow10"></td>
+        <td class="fieldCatlg" data-row="10" ondblclick="copyToSelected(this)">Sales Activity Type</td>
+    </tr>
+    <tr>
+        <td class="selectedFields" id="selectedFieldsRow11"></td>
+        <td class="fieldCatlg" data-row="11" ondblclick="copyToSelected(this)">Sold to party</td>
+    </tr>
+    <tr>
+        <td class="selectedFields" id="selectedFieldsRow12"></td>
+        <td class="fieldCatlg" data-row="12" ondblclick="copyToSelected(this)">Customer</td>
+    </tr>
+
+        
+    </table>
+    
+        
+
+        
+    
+    </div>
+    </div>
+
+
+  <script>
+ 
+    let selectedCells = [];
+
+function copyToSelected(cell) {
+if (!selectedCells.includes(cell)) {
+let selectedFields = document.querySelector("#selectedFieldsRow" + cell.dataset.row);
+
+let newCell = document.createElement('td');
+newCell.innerHTML = cell.innerHTML;
+
+let newRow = document.createElement('tr');
+newRow.appendChild(newCell);
+
+selectedFields.appendChild(newRow);
+
+selectedCells.push(cell);
+}
+}
+
+  </script>
+
+</body>
+</html>
+
+

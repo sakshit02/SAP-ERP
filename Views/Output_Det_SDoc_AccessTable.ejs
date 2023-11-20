@@ -77,12 +77,11 @@
 
      </style>
    </head>
-<body style="margin-left:276px ;">
+<body >
     
     <%-include ('partials/sidepanel'); %>
-
-    <button onclick="window.location.href='/Output_Determination_ControldataTable_NewEntry'">New Entry +</button>
-    <h2>Control Data</h2>
+    <button onclick="window.location.href='/Output_Det_SDoc_AccessTable_NewEntry'">New Entry +</button>
+    <h2>Access Table</h2>
     <form action="/parkingformsent" method="POST">
         <div class="form first">
 
@@ -90,7 +89,7 @@
             <div class="details ID">
                 <div class="fields">
                     <div class="input-field">
-                        <label>Procedure</label>
+                        <label>Access Sequence</label>
                         <input  name="vid" type=""  >
                     </div>
    
@@ -100,171 +99,72 @@
         </div>
     </form>
 
-    <div class="container1" style="overflow-y: scroll;">
+    <div class="container1" style="overflow-y: scroll; height: 400px;">
 
       <table>
-        <h3>Refrence Step Overview </h3>
         <tr>
-           
-            <th>Step</th>
-            <th>Counter</th>
-            <th>Condition Type</th>
+            <th>Access Number</th>
+            <th>Table Number</th>
             <th>Description</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Manaul</th>
-            <th>Required</th>
-            <th>Statistics</th>
-            <th>Print</th>
-            <th>Sub total</th>
-            <th>Requirment</th>
-            <th>Cal. Type</th>
-            <th>Base Type</th>
-            <th>Account Key</th>
-            <th>Accruals</th>
-            
+            <th>Requirement</th>
+            <th>Exclusive</th>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td></td>
-            
         </tr>
-       
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+        </tr>
         
     </table>
     
@@ -275,7 +175,7 @@
     </div>
     </div>
 
-
+    <button onclick="window.location.href='/Output_Det_SDoc_AccessFields'">Access Field</button>
     
 
 </body>

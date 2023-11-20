@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/companyform.css">
    
-    <link rel="stylesheet" href="../public/css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
     <title>Document</title>
 
     <!-- Boxiocns CDN Link -->
@@ -77,102 +77,93 @@
 
      </style>
    </head>
-<body style="margin-left:276px ;">
+<body >
     
     <%-include ('partials/sidepanel'); %>
+    <h2>Access Table</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
 
-    <h2>Document Pricing Procedure</h2>
-    <button onclick="window.location.href='/Output_Determination_DeterminationNewEntry'"> + New Entries</button>
 
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Access Sequence</label>
+                        <input  name="vid" type=""  >
+                    </div>
+   
+                </div>
+                
+            </div> 
+        </div>
+    </form>
 
-    <div class="container1" style="overflow-y: scroll;">
+    <div class="container1" style="overflow-y: scroll; height: 400px;">
 
       <table>
-        
         <tr>
-           
-            <th>Sales Organization</th>
-            <th>Distribuation Channel</th>
-            <th>Division</th>
-            <th>Doc. Pricing Prodecure</th>
-           <th>Cust. Pricing Procedure</th>
-            <th>Pricing Procedure</th>
-           
+            <th>Access Number</th>
+            <th>Table Number</th>
+            <th>Description</th>
+            <th>Requirement</th>
+            <th>Exclusive</th>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            
+            <td><input type="checkbox"></td>
         </tr>
-
-       
-        
-
-       
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+        </tr>
         
     </table>
     
