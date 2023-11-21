@@ -2219,7 +2219,30 @@ app.get("/FreeGoods_ControldataTable_NewEntry", (req, res) => {
 })
 
 
-// Billing Sales Documenty
+//Sales Distribuation
+
+app.get("/SD_MasterData", (req, res) => {
+  res.render('SD_MasterData')
+})
+
+app.get("/SD_BasicFunction", (req, res) => {
+  res.render('SD_BasicFunction')
+})
+
+app.get("/SD_Sales", (req, res) => {
+  res.render('SD_Sales')
+})
+app.get("/SD_Billing", (req, res) => {
+  res.render('SD_Billing')
+})
+
+
+
+
+
+
+
+
 app.get("/SD_BillingDoc_Types", (req, res) => {
   res.render('SD_BillingDoc_Types')
 })
@@ -2231,6 +2254,14 @@ app.get("/SD_BillingDoc_Types_NewEntry", (req, res) => {
 app.get("/SD_BillingDoc_NumRange", (req, res) => {
   res.render('SD_BillingDoc_NumRange')
 })
+
+
+
+
+
+
+
+
 
 
 

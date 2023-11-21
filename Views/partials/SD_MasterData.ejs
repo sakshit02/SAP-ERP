@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        .maindiv{
+            display: flex;
+        }
+
+body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        label {
+          display: block;
+          font-size: larger;
+          margin-bottom: 8px;
+          color: cadetblue;
+        }
+    
+        select {
+            background-color: beige;
+          padding: 5px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+.div1 , .div2{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <h1 style="color: black; margin: 0%; text-align: center;">Master Data</h1>
+<div class="maindiv">
+
+    
+    <div class="div1">
+        
+    
+        <label for="dropdown1">Define Common Distribuation Channels</label>
+      
+    
+      <label for="dropdown2">Define Common Divisions</label>
+      
+    
+      <label for="dropdown3">Business Partner</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="Output_Determination_SalesActivity">Maintain Output Determination For Sales Activities</option>
+        <option value="/Output_Determination_SalesDoc">Maintain Output Determination For Sale Documents</option>
+        <option value="/Output_Determination_Billing">Maintain Output Determination For Billing Documents</option>
+        
+      </select>
+    
+    
+      <label for="dropdown1">Material Determination</label>
+      <select id="dropdown1" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page1.html">Option 1</option>
+        <option value="page2.html">Option 2</option>
+        <option value="page3.html">Option 3</option>
+      </select>
+    
+    </div>
+    
+    <div class="div2">
+      <label for="dropdown2">Listing/Exclusion</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page4.html">Option 1</option>
+        <option value="page5.html">Option 2</option>
+        <option value="page6.html">Option 3</option>
+      </select>
+    
+      <label for="dropdown3">Text Determination</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Option 1</option>
+        <option value="page8.html">Option 2</option>
+        <option value="page9.html">Option 3</option>
+      </select>
+    
+    
+      <label for="dropdown3">Routes</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Option 1</option>
+        <option value="page8.html">Option 2</option>
+        <option value="page9.html">Option 3</option>
+      </select>
+    
+    </div>
+    
+
+
+</div>
+
+<script>
+    function redirectPage(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+      window.location.href = selectedOption;
+    }
+  </script>
+</body>
+</html>
+
+

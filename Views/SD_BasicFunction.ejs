@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        .maindiv{
+            display: flex;
+        }
+
+body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        label {
+          display: block;
+          font-size: larger;
+          margin-bottom: 8px;
+          color: cadetblue;
+        }
+    
+        select {
+            background-color: beige;
+          padding: 5px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+.div1 , .div2{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <h1 style="color: black; margin: 0%; text-align: center;">Basic Functions</h1>
+<div class="maindiv">
+
+    
+    <div class="div1">
+        
+    
+        <label for="dropdown1">Pricing</label>
+      <select id="dropdown1" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Condition">Condition table</option>
+        <option value="/accessSequence">Define Condition Types</option>
+        <option value="/ConditionTypes">Define Access Sequence</option>
+        <option value="/DefAssPricingprocedure">Define And Assign Pricing procedure</option>
+      </select>
+    
+      <label for="dropdown2">Free Goods</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Free_Goods_NumRange">Number Range</option>
+        <option value="/Free_Goods_Condition">Maintain Condition Table</option>
+        <option value="/Free_Goods_accessSequenc">Maintain Access Sequence</option>
+        <option value="/Free_Goods_ConditionTypes">Maintain Condition Types</option>
+        <option value="/Free_Goods_Pricingprocedure">Maintain Pricing Procedure</option>
+        <option value="/Free_Goods_Determination">Activate Free Goods Determination</option>
+      </select>
+    
+      <label for="dropdown3">Output Determination</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="Output_Determination_SalesActivity">Maintain Output Determination For Sales Activities</option>
+        <option value="/Output_Determination_SalesDoc">Maintain Output Determination For Sale Documents</option>
+        <option value="/Output_Determination_Billing">Maintain Output Determination For Billing Documents</option>
+        
+      </select>
+    
+    
+      <label for="dropdown2">Listing/Exclusion</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/">Activate Listing/Exclusion by Sales Document Type</option>
+        <option value="/">Maintain Listing Exclusion Type</option>
+        <option value="/">Procedure For Maintaining Listing Exclusion</option>
+        <option value="/">Maintain Access Sequence</option>
+        <option value="/">Maintain Allowed Fields For Listing Exclusion</option>
+        <option value="/">Maintain Condition Tables</option>
+
+      </select>
+    
+    </div>
+    
+    <div class="div2">
+     
+    
+      <label for="dropdown3">Text Determination</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Define Text Type</option>
+        <option value="page8.html">Define Access Sequence</option>
+        <option value="page9.html">Define And Assign Text Determination Procedure</option>
+      </select>
+    
+    
+      <label for="dropdown3">Routes</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Define Routes</option>
+        <option value="page8.html">Route Determination</option>
+      </select>
+    
+      <label for="dropdown3">Availability Check And Transfer of Requirements</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Availability Check</option>
+        <option value="page8.html">transfer Of Requirments</option>
+    
+      </select>
+
+      <label for="dropdown3">Credit Managment</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="page7.html">Credit Managment</option>
+        <option value="page8.html">Simple Credit Limit Check</option>
+        <option value="page9.html">Option 3</option>
+      </select>
+    </div>
+    
+
+
+</div>
+
+<script>
+    function redirectPage(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+      window.location.href = selectedOption;
+    }
+  </script>
+</body>
+</html>
+
+
