@@ -2256,13 +2256,79 @@ app.get("/SD_BillingDoc_NumRange", (req, res) => {
 })
 
 
+// Listing/Exclusion
 
+app.get("/Lising_Exclusion", (req, res) => {
+  res.render('Lising_Exclusion')
+})
 
+app.get("/Listing_Exclusion_Sales", (req, res) => {
+  res.render('Listing_Exclusion_Sales')
+})
 
+app.get("/Listing_Exclusion_Sales_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Sales_NewEntry')
+})
 
+app.get("/Listing_Exclusion_Maintain", (req, res) => {
+  res.render('Listing_Exclusion_Maintain')
+})
 
+app.get("/Listing_Exclusion_Maintain_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Maintain_NewEntry')
+})
 
+app.get("/Listing_Exclusion_Procedures", (req, res) => {
+  res.render('Listing_Exclusion_Procedures')
+})
 
+app.get("/Listing_Exclusion_Procedures_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Procedures_NewEntry')
+})
+
+app.get("/Listing_Exclusion_Procedures_ControlData", (req, res) => {
+  res.render('Listing_Exclusion_Procedures_ControlData')
+})
+
+app.get("/Listing_Exclusion_Procedures_ControlData_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Procedures_ControlData_NewEntry')
+})
+
+app.get("/Listing_Exclusion_Sequence", (req, res) => {
+  res.render('Listing_Exclusion_Sequence')
+})
+
+app.get("/Listing_Exclusion_Sequence_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Sequence_NewEntry')
+})
+
+app.get("/Listing_Exclusion_Sequence_Access", (req, res) => {
+  res.render('Listing_Exclusion_Sequence_Access')
+})
+
+app.get("/Listing_Exclusion_Sequence_Access_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Sequence_Access_NewEntry')
+})
+
+app.get("/Listing_Exclusion_Sequence_AccessFields", (req, res) => {
+  res.render('Listing_Exclusion_Sequence_AccessFields')
+})
+
+app.get("/Listing_Exclusion_Allowed", (req, res) => {
+  res.render('Listing_Exclusion_Allowed')
+})
+
+app.get("/Listing_Exclusion_Allowed_NewEntry", (req, res) => {
+  res.render('Listing_Exclusion_Allowed_NewEntry')
+})
+
+app.get("/Listing_Exclusion_Condition", (req, res) => {
+  res.render('Listing_Exclusion_Condition')
+})
+
+app.get("/Listing_Exclusion_ConditionTable", (req, res) => {
+  res.render('Listing_Exclusion_ConditionTable')
+})
 
 
 app.get("/html", (req, res) => {
