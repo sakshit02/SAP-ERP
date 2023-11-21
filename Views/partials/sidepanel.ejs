@@ -11,8 +11,7 @@
      <style>
 
 .container {
-  
-    
+ 
     max-width: 1200px;
     margin: 0;
     padding: 20px;
@@ -350,10 +349,11 @@ button:hover {
   padding: 12px;
 }
 .sidebar.close ~ .home-section{
-  left: 78px;
-  width: calc(100% - 78px);
+  right: 178px;
+  width: calc(70% - 178px);
   height: 100%;
 }
+/* sidebar close */
 .home-content{
   display: flex;
   height: 100%;
@@ -709,6 +709,13 @@ button:hover {
             <ul class="sub-menu">
               <li><a href="/Output_Determination">Output Determination</a></li>
              
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#">Billing Documents</a>
+            <ul class="sub-menu">
+              <li><a href="/SD_BillingDoc_Types">Define Billing Types</a></li>
+              <li><a href="/SD_BillingDoc_NumRange">Define Number Range <br> For Billing Documents </a></li>
             </ul>
           </li>
         </ul>

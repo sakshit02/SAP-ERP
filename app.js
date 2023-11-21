@@ -2219,6 +2219,20 @@ app.get("/FreeGoods_ControldataTable_NewEntry", (req, res) => {
 })
 
 
+// Billing Sales Documenty
+app.get("/SD_BillingDoc_Types", (req, res) => {
+  res.render('SD_BillingDoc_Types')
+})
+
+app.get("/SD_BillingDoc_Types_NewEntry", (req, res) => {
+  res.render('SD_BillingDoc_Types_NewEntry')
+})
+
+app.get("/SD_BillingDoc_NumRange", (req, res) => {
+  res.render('SD_BillingDoc_NumRange')
+})
+
+
 
 app.get("/html", (req, res) => {
   let query = "select * from Country";
