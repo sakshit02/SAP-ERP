@@ -2331,6 +2331,45 @@ app.get("/Listing_Exclusion_ConditionTable", (req, res) => {
 })
 
 
+
+// sd credit managment
+
+app.get("/SD_CreditManagment", (req, res) => {
+  res.render('SD_CreditManagment')
+})
+
+app.get("/SD_Credit_Group", (req, res) => {
+  res.render('SD_Credit_Group')
+})
+app.get("/SD_Credit_GroupNewEntry", (req, res) => {
+  res.render('SD_Credit_GroupNewEntry')
+})
+
+app.get("/SD_Credit_Assign", (req, res) => {
+  res.render('SD_Credit_Assign')
+})
+
+app.get("/SD_Credit_Control", (req, res) => {
+  res.render('SD_Credit_Control')
+})
+
+app.get("/SD_Credit_ControlNewEntry", (req, res) => {
+  res.render('SD_Credit_ControlNewEntry')
+})
+
+app.get("/SD_CreditLimit", (req, res) => {
+  res.render('SD_CreditLimit')
+})
+app.get("/SD_Credit_Assign_OrderType", (req, res) => {
+  res.render('SD_Credit_Assign_OrderType')
+})
+app.get("/SD_Credit_Assign_Deltype", (req, res) => {
+  res.render('SD_Credit_Assign_Deltype')
+})
+
+
+
+
 app.get("/html", (req, res) => {
   let query = "select * from Country";
 
