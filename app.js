@@ -2368,6 +2368,23 @@ app.get("/SD_Credit_Assign_Deltype", (req, res) => {
 })
 
 
+// text determination sd
+// text type
+app.get("/SD_Text_TextType", (req, res) => {
+  res.render('SD_Text_TextType')
+})
+
+// access
+app.get("/SD_Text_Access", (req, res) => {
+  res.render('SD_Text_Access')
+})
+
+
+// assign
+app.get("/SD_Text_Assign", (req, res) => {
+  res.render('SD_Text_Assign')
+})
+
 
 
 app.get("/html", (req, res) => {
