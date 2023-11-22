@@ -2507,6 +2507,223 @@ app.get("/SD_Text_TextType_Trading_Change2_NewEntry", (req, res) => {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+// Text Type ID
+app.get("/SD_Text_TextType_Agency_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change1_ID')
+})
+
+app.get("/SD_Text_TextType_Agency_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_Agency_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change2_ID')
+})
+app.get("/SD_Text_TextType_Agency_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change2_ID_New')
+})
+
+app.get("/SD_Text_TextType_billingDoc_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change1_ID')
+})
+app.get("/SD_Text_TextType_billingDoc_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_billingDoc_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change2_ID')
+})
+app.get("/SD_Text_TextType_billingDoc_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change2_ID_New')
+})
+
+app.get("/SD_Text_TextType_Cust_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change1_ID')
+})
+app.get("/SD_Text_TextType_Cust_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_Cust_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change2_ID')
+})
+app.get("/SD_Text_TextType_Cust_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change2_ID_New')
+})
+app.get("/SD_Text_TextType_Cust_Change3_ID", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change3_ID')
+})
+app.get("/SD_Text_TextType_Cust_Change3_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change3_ID_New')
+})
+app.get("/SD_Text_TextType_Delivery_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change1_ID')
+})
+app.get("/SD_Text_TextType_Delivery_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change1_ID_New')
+})
+
+app.get("/SD_Text_TextType_Delivery_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change2_ID')
+})
+app.get("/SD_Text_TextType_Delivery_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change2_ID_New')
+})
+app.get("/SD_Text_TextType_Financial_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Financial_Change1_ID')
+})
+app.get("/SD_Text_TextType_Financial_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Financial_Change1_ID_New')
+})
+
+app.get("/SD_Text_TextType_Info_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Info_Change1_ID')
+})
+app.get("/SD_Text_TextType_Info_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Info_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_Legal_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Legal_Change1_ID')
+})
+app.get("/SD_Text_TextType_Legal_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Legal_Change1_ID_New')
+})
+
+app.get("/SD_Text_TextType_Pricing_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change1_ID')
+})
+app.get("/SD_Text_TextType_Pricing_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_Pricing_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change2_ID')
+})
+app.get("/SD_Text_TextType_Pricing_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change2_ID_New')
+})
+
+app.get("/SD_Text_TextType_SalesAct_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_SalesAct_Change1_ID')
+})
+app.get("/SD_Text_TextType_SalesAct_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_SalesAct_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_SalesDoc_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change1_ID')
+})
+app.get("/SD_Text_TextType_SalesDoc_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change1_ID_New')
+})
+
+app.get("/SD_Text_TextType_SalesDoc_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change2_ID')
+})
+app.get("/SD_Text_TextType_SalesDoc_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change2_ID_New')
+})
+app.get("/SD_Text_TextType_Shipment_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Shipment_Change1_ID')
+})
+app.get("/SD_Text_TextType_Shipment_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Shipment_Change1_ID_New')
+})
+
+app.get("/SD_Text_TextType_Trading_Change1_ID", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change1_ID')
+})
+app.get("/SD_Text_TextType_Trading_Change1_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change1_ID_New')
+})
+app.get("/SD_Text_TextType_Trading_Change2_ID", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change2_ID')
+})
+app.get("/SD_Text_TextType_Trading_Change2_ID_New", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change2_ID_New')
+})
+
+
+
+// Text Assignment
+
+app.get("/SD_Text_TextType_Agency_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_Agency_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Agency_Change2_Assgn')
+})
+
+app.get("/SD_Text_TextType_billingDoc_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_billingDoc_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_billingDoc_Change2_Assgn')
+})
+
+app.get("/SD_Text_TextType_Cust_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_Cust_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change2_Assgn')
+})
+app.get("/SD_Text_TextType_Cust_Change3_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Cust_Change3_Assgn')
+})
+app.get("/SD_Text_TextType_Delivery_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_Delivery_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Delivery_Change2_Assgn')
+})
+app.get("/SD_Text_TextType_Financial_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Financial_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_Info_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Info_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_Legal_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Legal_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_Pricing_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_Pricing_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Pricing_Change2_Assgn')
+})
+
+app.get("/SD_Text_TextType_SalesAct_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_SalesAct_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_SalesDoc_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_SalesDoc_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_SalesDoc_Change2_Assgn')
+})
+app.get("/SD_Text_TextType_Shipment_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Shipment_Change1_Assgn')
+})
+
+app.get("/SD_Text_TextType_Trading_Change1_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change1_Assgn')
+})
+app.get("/SD_Text_TextType_Trading_Change2_Assgn", (req, res) => {
+  res.render('SD_Text_TextType_Trading_Change2_Assgn')
+})
+
+
+
 // text determination sd
 // text type
 app.get("/SD_Text_TextType", (req, res) => {
