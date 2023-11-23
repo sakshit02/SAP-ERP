@@ -2736,10 +2736,88 @@ app.get("/SD_Text_Access", (req, res) => {
 })
 
 
-// assign
-app.get("/SD_Text_Assign", (req, res) => {
-  res.render('SD_Text_Assign')
+
+// routes
+app.get("/SD_DefineRoutes", (req, res) => {
+  res.render('SD_DefineRoutes')
 })
+app.get("/SD_DefineRoute_Transport", (req, res) => {
+  res.render('SD_DefineRoute_Transport')
+})
+app.get("/SD_DefineRoute_Transport_New", (req, res) => {
+  res.render('SD_DefineRoute_Transport_New')
+})
+app.get("/SD_DefineRoute_Shipping", (req, res) => {
+  res.render('SD_DefineRoute_Shipping')
+})
+app.get("/SD_DefineRoute_Shipping_New", (req, res) => {
+  res.render('SD_DefineRoute_Shipping_New')
+})
+app.get("/SD_DefineRoute_Connection", (req, res) => {
+  res.render('SD_DefineRoute_Connection')
+})
+app.get("/SD_DefineRoute_Connection_New", (req, res) => {
+  res.render('SD_DefineRoute_Connection_New')
+})
+app.get("/SD_DefineRoute_Stage", (req, res) => {
+  res.render('SD_DefineRoute_Stage')
+})
+
+app.get("/SD_RouteDet", (req, res) => {
+  res.render('SD_RouteDet')
+})
+app.get("/SD_RouteDet_Transport", (req, res) => {
+  res.render('SD_RouteDet_Transport')
+})
+app.get("/SD_RouteDet_Transport_New", (req, res) => {
+  res.render('SD_RouteDet_Transport_New')
+})
+app.get("/SD_RouteDet_Shipping", (req, res) => {
+  res.render('SD_RouteDet_Shipping')
+})
+app.get("/SD_RouteDet_Transportation", (req, res) => {
+  res.render('SD_RouteDet_Transportation')
+})
+app.get("/SD_RouteDet_Transportation_New", (req, res) => {
+  res.render('SD_RouteDet_Transportation_New')
+})
+
+app.get("/SD_RouteDet_WeightGrp", (req, res) => {
+  res.render('SD_RouteDet_WeightGrp')
+})
+app.get("/SD_RouteDet_Weightgrp_New", (req, res) => {
+  res.render('SD_RouteDet_Weightgrp_New')
+})
+app.get("/SD_RouteDet_Weightgrp_Detail", (req, res) => {
+  res.render('SD_RouteDet_Weightgrp_Detail')
+})
+app.get("/SD_RouteDet_Weightgrp_Detail_New", (req, res) => {
+  res.render('SD_RouteDet_Weightgrp_Detail_New')
+})
+
+app.get("/SD_RouteDet_Determination", (req, res) => {
+  res.render('SD_RouteDet_Determination')
+})
+app.get("/SD_RouteDet_Determination_New", (req, res) => {
+  res.render('SD_RouteDet_Determination_New')
+})
+app.get("/SD_RouteDet_Determination_Order", (req, res) => {
+  res.render('SD_RouteDet_Determination_Order')
+})
+app.get("/SD_RouteDet_Determination_Order_New", (req, res) => {
+  res.render('SD_RouteDet_Determination_Order_New')
+})
+
+app.get("/SD_RouteDet_Determination_Delivery", (req, res) => {
+  res.render('SD_RouteDet_Determination_Delivery')
+})
+app.get("/SD_RouteDet_Determination_Delivery_New", (req, res) => {
+  res.render('SD_RouteDet_Determination_Delivery_New')
+})
+
+
+
+
 
 
 
