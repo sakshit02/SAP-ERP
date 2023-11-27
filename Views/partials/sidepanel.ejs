@@ -4,11 +4,15 @@
   <head>
     <meta charset="UTF-8">
     <title> Drop Down Sidebar Menu | CodingLab </title>
-    
+
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
+     <link rel="stylesheet" type="text/css" href="css/light-theme.css" id="theme-link">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Gn538+uBaj5IVxxLlHVe92+be5RVHe8W7epq6Ez1lGnpaK64jgFOzN5CkePpuL5R56RtiwzWd1eEc2tQLWUn4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+     <!-- <style>
 body{
   margin-left: 300px ;
 }
@@ -88,7 +92,7 @@ button:hover {
             width: 100;
             border-collapse: collapse;
             margin-top: 20px;
-            background-color:bisque;
+            background-color:white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -428,7 +432,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-     </style>
+     </style> -->
    </head>
 <body>
   <div class="sidebar open">
@@ -439,6 +443,9 @@ button:hover {
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search...">
       <button id="searchButton">Search</button>
+
+      
+
     </div>
     <ul class="nav-links">
 
@@ -845,8 +852,19 @@ button:hover {
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
-     
+
+
+      <div id="side-panel">
+        <!-- Use the moon icon from Font Awesome -->
+       <button class="theme" onclick="toggleTheme()">
+  🌙
+</button>
+      </div>
     </div>
+
+    
+
+
    
   </section>
 
@@ -889,7 +907,30 @@ button:hover {
   alert("No matching page found.");
 });
 
-   
+  //  dark theme
+  function toggleTheme() {
+    const themeLink = document.getElementById('theme-link');
+    const moonIcon = document.querySelector('#side-panel button i');
+
+    const currentTheme = themeLink.href.includes('light') ? 'light' : 'dark';
+
+    // Toggle the theme
+    themeLink.href = currentTheme === 'light' ? 'css/dark-theme.css' : 'css/light-theme.css';
+
+    // Toggle the moon icon
+    moonIcon.classList.toggle('fa-moon');
+    moonIcon.classList.toggle('fa-sun');
+
+    // Store the theme preference in localStorage
+    localStorage.setItem('theme', currentTheme);
+
+
+
+
+
+
+    
+}
  </script>
 
 </body>
