@@ -1,24 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drop Down Sidebar</title>
+
     <link rel="stylesheet" href="css/companyform.css">
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/table.css">
-    <title>Document</title>
 
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
 
      <style>
 
-button {
+.btn {
     margin-top: 10px; 
     padding: 2px 2px;
-    background-color: white;
+    background-color: rgb(0, 123, 255);
     width: 460px;
     border: none;
     border-radius: 4px;
@@ -54,6 +55,8 @@ h1,h3{
 
    
     <h2>Transaction Dependent Field Selection (VENDOR)</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
     <div class="details ID">
         <div class="fields">
             <div class="input-field">
@@ -61,13 +64,16 @@ h1,h3{
                 <input  name="vid" type="text"  style="margin-right: 800px;" placeholder="Create Vendor (Purchasing)" readonly>
             </div>
         </div>
+    </div>
+        </div>
+    </form>
     
 <div>
     <h2>Select Group</h2>
-    <div><button  onclick="window.location.href='/Vendor_Create_Purchasing_Gen'" style="width: 200px; margin-left: 90px;">General Data</button></div>
-    <div><button  onclick="window.location.href='/Vendor_Create_Purchasing_Purch'" style="width: 200px; margin-left: 90px;">Purchasing data</button></div>
-    <div><button  onclick="window.location.href='/Vendor_Create_Purchasing_VSR'" style="width: 200px; margin-left: 90px;">Purch. Data: VSR</button></div>
-    <div><button  onclick="window.location.href='/Vendor_Create_Purchasing_Plant'" style="width: 200px; margin-left: 90px;">Purch. Data: Plant</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_Purchasing_Gen'" style="width: 200px; margin-left: 90px;">General Data</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_Purchasing_Purch'" style="width: 200px; margin-left: 90px;">Purchasing data</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_Purchasing_VSR'" style="width: 200px; margin-left: 90px;">Purch. Data: VSR</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_Purchasing_Plant'" style="width: 200px; margin-left: 90px;">Purch. Data: Plant</button></div>
 </div>
 
 

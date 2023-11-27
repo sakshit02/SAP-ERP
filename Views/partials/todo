@@ -5,7 +5,7 @@ routes -> routes and stages
 rebate processing
 
 
-
+ergege
 
 
 
@@ -33,3 +33,12 @@ rgb(0,123,255)
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+
+
+
+  http://localhost:3300/Vendor_Create_Purchasing_Gen
+  http://localhost:3300/Vendor_Create_Purchasing_Purch
+  http://localhost:3300/Vendor_Create_Purchasing_VSR
+  http://localhost:3300/Vendor_Create_Purchasing_Plant
+
+  file Creating of vendor
