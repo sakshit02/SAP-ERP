@@ -2235,20 +2235,23 @@ app.get("/SD_Sales", (req, res) => {
 app.get("/SD_Billing", (req, res) => {
   res.render('SD_Billing')
 })
-app.get("/SD_Billing_NumRange", (req, res) => {
-  res.render('SD_Billing_NumRange')
+app.get("/SD_Billing_Processing_NumRange", (req, res) => {
+  res.render('SD_Billing_Processing_NumRange')
 })
-app.get("/SD_Billing_Pricingprocedure", (req, res) => {
-  res.render('SD_Billing_Pricingprocedure')
+app.get("/SD_Billing_Processing_Pricingprocedure", (req, res) => {
+  res.render('SD_Billing_Processing_Pricingprocedure')
 })
-app.get("/SD_Billing_ConditionTypes", (req, res) => {
-  res.render('SD_Billing_ConditionTypes')
+app.get("/SD_Billing_Processing_ConditionTypes", (req, res) => {
+  res.render('SD_Billing_Processing_ConditionTypes')
 })
-app.get("/SD_Billing_ConditionTable", (req, res) => {
-  res.render('SD_Billing_ConditionTable')
+app.get("/SD_Billing_Processing_ConditionTable", (req, res) => {
+  res.render('SD_Billing_Processing_ConditionTable')
 })
-app.get("/SD_Billing_accessSequence", (req, res) => {
-  res.render('SD_Billing_accessSequence')
+app.get("/SD_Billing_Processing_accessSequence", (req, res) => {
+  res.render('SD_Billing_Processing_accessSequence')
+})
+app.get("/SD_Billing_Processing_Activity", (req, res) => {
+  res.render('SD_Billing_Processing_Activity')
 })
 
 
