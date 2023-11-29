@@ -3054,6 +3054,9 @@ app.get("/SD_DefineRoute_Connection_New", (req, res) => {
 app.get("/SD_DefineRoute_Stage", (req, res) => {
   res.render('SD_DefineRoute_Stage')
 })
+app.get("/SD_DefineRoute_Stage_New", (req, res) => {
+  res.render('SD_DefineRoute_Stage_New')
+})
 
 app.get("/SD_RouteDet", (req, res) => {
   res.render('SD_RouteDet')
