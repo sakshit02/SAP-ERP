@@ -452,6 +452,7 @@ button:hover {
       <li>
         <a href="/home">
           <i class='bx bx-pie-chart-alt-2' ></i>
+
           <span class="link_name">Dashboard</span>
         </a>
         <ul class="sub-menu blank">
@@ -847,6 +848,9 @@ button:hover {
       <i class='bx bx-log-out' ></i>
     </div> -->
   </li>
+
+ 
+
 </ul>
   </div>
   <section class="home-section">
@@ -864,6 +868,18 @@ button:hover {
 
     
 
+<!-- for search button with Screen Code -->
+    <input type="hidden" id="GS11" value="/AccessFields">
+    <input type="hidden" id="GS2" value="/companyform">
+    <input type="hidden" id="GS3" value="/AccessTable">
+    <input type="hidden" id="GS4" value="/path/to/page4">
+    <input type="hidden" id="GS5" value="/path/to/page5">
+    <input type="hidden" id="GS6" value="/path/to/page6">
+    <input type="hidden" id="GS7" value="/path/to/page7">
+    <input type="hidden" id="GS8" value="/path/to/page8">
+    <input type="hidden" id="GS9" value="/path/to/page9">
+    <input type="hidden" id="GS10" value="/path/to/page10">
+    <input type="hidden" id="GS1" value="/path/to/page11">
 
    
   </section>
@@ -884,29 +900,27 @@ button:hover {
      sidebar.classList.toggle("close");
    });
 
+
+
    document.getElementById("searchButton").addEventListener("click", function() {
-  // Get the search query
-  var query = document.getElementById("searchInput").value.toLowerCase();
+        // Get the search query
+        var query = document.getElementById("searchInput").value.toLowerCase();
 
-  // Get all the links in the sidebar
-  var links = document.querySelectorAll(".nav-links li a");
+        // Check if the query matches any hidden input ID
+        for (var i = 1; i <= 10000; i++) {
+          var GSID = document.getElementById("GS" + i).id.toLowerCase();
 
-  // Loop through the links to find a match
-  for (var i = 0; i < links.length; i++) {
-    var linkText = links[i].innerText.toLowerCase();
+          
+          if (GSID.includes(query)) {
+            
+            window.location.href = document.getElementById("GS" + i).value;
+            return; 
+          }
+        }
 
-    // Check if the link text contains the search query
-    if (linkText.includes(query)) {
-      // Navigate to the matched page
-      window.location.href = links[i].getAttribute("href");
-      return; // Stop searching after the first match is found
-    }
-  }
-
-  // If no match is found
-  alert("No matching page found.");
-});
-
+        // If no match is found
+        alert("No matching page found.");
+      });
   //  dark theme
   function toggleTheme() {
     const themeLink = document.getElementById('theme-link');
@@ -927,10 +941,7 @@ button:hover {
 
 
 
-
-
-    
-}
+  }
  </script>
 
 </body>
