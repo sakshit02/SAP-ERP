@@ -1,6 +1,6 @@
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: rgb(25,24,44);
+    color: #ffffff;
 }
 .theme{
 
@@ -15,6 +15,7 @@ body {
     height: 25px;
     width: 35px;
 }
+
 body{
   margin-left: 300px ;
 }
@@ -37,7 +38,7 @@ header {
 }
 
 .form {
-    background-color: #c9ebf3;
+    background-color: #83898a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,7 +86,7 @@ button:hover {
             width: 160vh;
             margin: 20px auto;
             padding: 20px;
-            background-color: white;
+            background-color: rgb(61, 60, 60);
             
             
         }
@@ -94,7 +95,7 @@ button:hover {
             width: 100;
             border-collapse: collapse;
             margin-top: 20px;
-            background-color: #c9ebf3;
+            background-color:rgb(68, 67, 67);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -297,12 +298,12 @@ button:hover {
   pointer-events: none;
 }
 .sidebar .nav-links li .sub-menu.blank {
-  opacity: 1;
-  pointer-events: auto;
-  padding: 3px 20px 6px 16px;
-  opacity: 0;
-  pointer-events: none;
-}
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+  }
 .sidebar .profile-details{
   position: fixed;
   bottom: 0;
@@ -354,7 +355,7 @@ button:hover {
 .home-section{
   position: relative;
   height: 100%;
-  background-color: white;
+  background-color: rgb(63, 62, 62);
   transition: all 0.5s ease;
   padding: 12px;
 }
