@@ -35,6 +35,12 @@ rgb(0,123,255)
 
 
 
+  ASSIG DIVISION TO SALES ORG
+  assign sales area to credti control area
+  assgn purchasing org to plant
+
+
+
   http://localhost:3300/Vendor_Create_Purchasing_Gen
   http://localhost:3300/Vendor_Create_Purchasing_Purch
   http://localhost:3300/Vendor_Create_Purchasing_VSR
