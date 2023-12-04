@@ -726,16 +726,6 @@
   </section>
 
   <script>
-<<<<<<< Updated upstream
-  document.addEventListener("DOMContentLoaded", function () {
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e) => {
-      e.preventDefault(); 
-      let arrowParent = e.target.parentElement.parentElement;
-      arrowParent.classList.toggle("showMenu");
-    });
-=======
     let arrow = document.querySelectorAll(".arrow");
    for (var i = 0; i < arrow.length; i++) {
      arrow[i].addEventListener("click", (e) => {
@@ -792,46 +782,8 @@
 
 
 
->>>>>>> Stashed changes
   }
 
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-
-  sidebarBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-  });
-});
-
-document.getElementById("searchButton").addEventListener("click", function () {
-  var query = document.getElementById("searchInput").value.toLowerCase();
-
-  for (var i = 1; i <= 10000; i++) {
-    var GSID = document.getElementById("GS" + i).id.toLowerCase();
-
-    if (GSID.includes(query)) {
-      window.location.href = document.getElementById("GS" + i).value;
-      return;
-    }
-  }
-
-  alert("No matching page found.");
-});
-
-// dark theme
-function toggleTheme() {
-  const themeLink = document.getElementById('theme-link');
-  const moonIcon = document.querySelector('#side-panel button i');
-
-  const currentTheme = themeLink.href.includes('light') ? 'light' : 'dark';
-
-  themeLink.href = currentTheme === 'light' ? 'css/dark-theme.css' : 'css/light-theme.css';
-
-  moonIcon.classList.toggle('fa-moon');
-  moonIcon.classList.toggle('fa-sun');
-
-  localStorage.setItem('theme', currentTheme);
-}
  </script>
 
 </body>
