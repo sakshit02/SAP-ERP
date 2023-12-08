@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+
+   </head>
+<body >
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <h2>Define Batch Status Management</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="S_1">Inactive</label>
+                        <input  name="unique" type="radio" value="S_1">
+                    </div>
+                    <div class="input-field">
+                        <label for="S_2">Active</label>
+                        <input  name="Material" type="radio" value="S_2">
+                    </div>
+   
+                </div>
+                
+            </div> 
+        </div>
+    </form>
+
+    <script>
+        // Deselect radio buttons in other containers when one is selected
+    document.querySelectorAll('input[type="radio"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            document.querySelectorAll('input[type="radio"]').forEach(function (otherRadio) {
+                if (otherRadio !== radio) {
+                    otherRadio.checked = false;
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+
+
