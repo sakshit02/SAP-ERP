@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+.container {
+  width: 1000px;
+  margin:0px;
+
+}
+
+header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 1000px;
+  background-color: #fff;
+}
+
+.input-field {
+  display: flex;
+}
+
+label {
+  font-weight: bold;
+  flex: 2;
+  
+}
+
+input {
+  flex: 4; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px; 
+  padding: 2px 2px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+      * {box-sizing: border-box}
+      /* Style tab links */
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 5px;
+        width: 180px;
+        overflow: hidden;
+      }
+      
+      .tablink:hover {
+        background-color: #777;
+      }
+      
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: rgb(8, 8, 8);
+        display: none;
+        
+        height: 100%;
+        background-color: #fff;
+
+      }
+      table, th, td {
+          border:1px solid black;
+      }
+      .container1 {
+          width: 160vh;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+          width: 900px;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      th, td {
+          padding: 12px;
+          text-align: center;
+          border-bottom: 1px solid #ddd;
+      }
+
+      th {
+          background-color: #333;
+          color: white;
+      }
+
+      input[type="text"], input[type="checkbox"] {
+          width: 100%;
+          
+          border: 1px solid #ddd;
+          border-radius: 4px;
+      }
+
+      #addRowButton, #saveDataButton {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin-top: 10px;
+          cursor: pointer;
+          border-radius: 4px;
+      }
+
+      #addRowButton:hover, #saveDataButton:hover {
+          background-color: #45a049;
+      }
+
+      h2 {
+          font-size: 24px;
+          margin-top: 20px;
+      }
+      
+      
+      </style>
+</head>
+<body>
+    
+<div>
+    <%-include ('partials/sidepanel'); %>
+    <div>
+        <h1 class="Change">Change Class</h1>
+        <h2>Change Language</h2>
+        <form>
+          <div class="input-field">
+            <label>Class</label>
+            <input class="input" type="text" name="Class" placeholder="" />
+          </div>
+    
+          <div class="input-field">
+            <label>Class type</label>
+             <select id="objectType" name="objectType">
+                <option value=""></option>
+                <option value="001">001 - Material Class</option>
+                <option value="002">002 - Equipment Class</option>
+                <option value="003">003 - Functional Location</option>
+                <option value="004">004 - Reference Functional Location</option>
+                <option value="005">005 - Inspection Characteristics</option>
+                <option value="006">006 - Inspection Methods</option>
+                <option value="007">007 - Code Groups</option>
+                <option value="008">008 - Selected Sets</option>
+                <option value="009">009 - Production Resources and Tools</option>
+                <option value="010">010 - Vendor Class</option>
+                <option value="011">011 - Customer Class</option>
+                <option value="012">012 - Characteristics Class</option>
+                <option value="013">013 - Controlling: Orders</option>
+                <option value="014">014 - Controlling: Projects</option>
+                <option value="015">015 - Message item</option>
+                <option value="016">016 - Object Link</option>
+                <option value="017">017 - Document Management</option>
+                <option value="018">018 - Task List Class</option>
+                <option value="019">019 - Work Center Class</option>
+                <option value="020">020 - Standard Network Class</option>
+                <option value="021">021 - Network</option>
+                <option value="023">023 - Batch</option>
+                <option value="024">024 - Dependency</option>
+                <option value="025">025 - Engineering Change Management</option>
+                <option value="030">030 - Plant</option>
+                <option value="031">031 - User-Defined Data Type</option>
+                <option value="032">032 - Release Strategy</option>
+                <option value="033">033 - Investment Program Positions</option>
+                <option value="034">034 - Department</option>
+                <option value="035">035 - Site Hierarchy</option>
+                <option value="037">037 - Measuring Point</option>
+                <option value="038">038 - Activity</option>
+                <option value="039">039 - Master Warranty</option>
+                <option value="041">041 - Funds Centers</option>
+                <option value="042">042 - Fund</option>
+                <option value="043">043 - Commitment Item</option>
+                <option value="044">044 - Characteristic Value</option>
+                <option value="047">047 - Assortment</option>
+                <option value="048">048 - Object Link</option>
+                <option value="049">049 - Licenses</option>
+                <option value="050">050 - Reconciliation</option>
+                <option value="053">053 - iPPE Node</option>
+                <option value="055">055 - Contract Class</option>
+                <option value="056">056 - iPPE Variant</option>
+                <option value="060">060 - Layout Areas</option>
+                <option value="070">070 - Trial Management</option>
+                <option value="100">100 - Substance Value Assignments</option>
+                <option value="101">101 - Trial Results (Process Parameters)</option>
+                <option value="102">102 - Process Parameter Value Assignment</option>
+                <option value="103">103 - Labeling Value Assignment</option>
+                <option value="170">170 - Document Distribution</option>
+                <option value="200">200 - Material (Configurable Objects)</option>
+                <option value="201">201 - Document (Configurable Objects)</option>
+                <option value="300">300 - Variants</option>
+                <option value="301">301 - Model Service Specifications</option>
+                <option value="399">399 - HANA View Generation (VC)</option>
+                <option value="501">501 - Contact Person</option>
+                <option value="502">502 - Relations</option>
+                <option value="503">503 - Opportunities</option>
+                <option value="504">504 - Activities</option>
+                <option value="800">800 - Business Location</option>
+                <option value="AUP">AUP - Audit Partner</option>
+                <option value="CUI">CUI - Compatible Unit Instance</option>
+                <option value="CUM">CUM - Compatible Unit</option>
+                <option value="FL1">FL1 - Configuration Code</option>
+  </select>
+          </div>
+
+          <div class="input-field">
+            <label for="Change">Change Number</label>
+            <input type="text" name="Change" id="" placeholder="" />
+          </div>
+          <br>
+          <div class="input-field">
+            <label>Valid From</label>
+            <input class="input" type="date" name="Valid" placeholder="" />
+            <label for="validity">
+            <input type="button" value="Validity"></label>
+        </form>
+    </div>
+<br>
+<button class="tablink" onclick="openPage('Basicdata', this, 'red')">Basic Data</button>
+<button class="tablink" onclick="openPage('Keywords', this, 'green')" >Keywords</button>
+<button class="tablink" onclick="openPage('Charateristics', this, 'blue')">Charateristics</button>
+<button class="tablink" onclick="openPage('Texts', this, 'orange')">Texts</button>
+
+
+
+
+<!-- first tab --><br>
+<div id="Basicdata" class="tabcontent"><br><br>
+    
+        <Form>
+          <h3>Basic Data</h3>
+        <div class="input-field">
+          <label for="Description">Description</label>
+          <input class="input" type="text" name="Description" id="" placeholder="">
+        </div>
+    
+        <div class="input-field">
+            <label for="Status">Status</label>
+            <select name="Status" id="">
+                <option value="in preparation">In Preparation</option>
+                <option value="locked">Locked</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <label for="Class">Class Group</label>
+            <select name="Class" id="">
+                <option value="CU_GEN CU General Class">CU_GEN CU General Class</option>
+                <option value="CU_STD CU Standard Class">CU_STD CU Standard Class</option>
+                <option value="FKL_ALM Group">FKL_ALM Group</option>
+            </select>
+        </div>
+      
+        <div class="input-field">
+          <label for="Organizational">Organizational Area</label>
+          <input type="text" name="Organizational" id="" />
+          <label for="local">
+            <input type="checkbox" name="local" id="" />Local Class
+          </label>
+        </div>
+    
+        <div class="input-field">
+            <label for="valid">Valid From</label>
+            <input type="date" name="valid" id="">
+        </div>
+        <div class="input-field">
+            <label for="valid">Valid to</label>
+            <input type="date" name="valid" id="">
+        </div>
+      
+       
+              <h3>Same Classification</h3> 
+              <div class="input-field">
+                  <label for="check">
+                    <input type="radio" name="check" id="">Do not Check</label>
+                </div>
+              
+                <div class="input-field">
+                    <label for="warning">
+                        <input type="radio" name="warning" id="">Warning Message
+                    </label>
+                </div>
+      
+                <div class="input-field">
+                  <label for="check">
+                  <input class="input" type="radio" name="check" id="">Check with Error
+                  </label>
+                </div>   
+          <h3>Authorizations</h3>
+          <div class="input-field">
+            <label for="Class">Class maintenance
+              <input class="input" type="text" name="single" id="" size="2px">
+            </label>
+          </div>
+          
+          <div class="input-field">
+            <label for="Classification">Classification
+              <input class="input" type="text" name="Classification" id="" size="2px">
+            </label>
+          </div>
+      
+          <div class="input-field">
+            <label for="find">Find Object
+              <input class="input" type="text" name="find" id="" size="2px">
+            </label>
+          </div>
+        
+       
+            <h3>Administrative data</h3>
+            
+                <div class="input-field">
+                    <label for="assignment">
+                        <input type="checkbox" name="assignment" id="">assignment
+                    </label>
+    
+                    <div class="input-field">
+                        <label for="createdby">Created by
+                            <input type="text" name="createdby" id="" placeholder="">
+                        </label>
+                    </div>
+    
+                    <div class="input-field">
+                        <label for="changedby">Changed by
+                            <input type="text" name="changedby" id="" placeholder="" />
+                        </label>
+                    </div>
+                </div>
+            
+    
+                <div class="input-field">
+                     <label for="createdon">Created on
+                        <input type="date" name="createdon" id="" />
+                    </label>
+                </div>
+                <div class="input-field">
+                    <label for="Changedon">Changed on
+                        <input type="date" name="Changedon" id="" />
+                    </label>
+                </div>
+        </Form>
+        </div>
+<!-- second tab -->
+<div id="Keywords" class="tabcontent"><br><br>
+    <h3>Keywords</h3>
+    <div class="input-field">
+        <input type="text" name="keyword" placeholder="" />
+    </div>
+    <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  <div class="input-field">
+      <input type="text" name="keyword" placeholder="" />
+  </div>
+  </div>
+<!-- third tab -->
+<div id="Charateristics" class="tabcontent">
+    <h3>Charcterics</h3>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Characterics</th>
+            <th>Description</th>
+            <th>No. of Charactes</th>
+            <th>Decimal Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody6">
+          <!-- Rows will be dynamically added here -->
+        </tbody>
+      </table>
+
+      <button id="addRowButton6">Add Row</button>
+      <button id="saveDataButton6">Save Data</button>
+    </div>
+
+    <div class="container">
+      <!-- <h2>Second Table</h2> -->
+      <table id="secondTable6">
+        <thead>
+          <tr>
+            <th>Characterics</th>
+            <th>Description</th>
+            <th>No. of Charactes</th>
+            <th>Decimal Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody id="secondTableBody6">
+          <!-- Data will be transferred here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Fifth tab -->
+<div id="Texts" class="tabcontent">
+    <h3>Texts</h3>
+    <div class="container">
+      <table>
+          <thead>
+              <tr>
+                  <th>Text Area</th>
+                  <th>Text Type</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody id="tableBody6">
+              <!-- Rows will be dynamically added here -->
+          </tbody>
+      </table>
+  
+      <button id="addRowButton6">Add Row</button>
+      <button id="saveDataButton6">Save Data</button>
+  </div>
+  
+  <div class="container">
+      <!-- <h2>Second Table</h2> -->
+      <table id="secondTable6">
+          <thead>
+              <tr>
+                  <th>Text Area</th>
+                  <th>Text Type</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody id="secondTableBody6">
+              <!-- Data will be transferred here -->
+          </tbody>
+      </table>
+  </div>
+  
+  </div>
+
+
+
+  <script>
+
+    
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+document.getElementById("defaultOpen").click();
+
+
+
+document.getElementById("addRowButton6").addEventListener("click", function() {
+    const tableBody = document.getElementById("tableBody6");
+    const newRow = tableBody.insertRow(tableBody.rows.length);
+
+    for (let i = 0; i < 5; i++) {
+        const cell = newRow.insertCell(i);
+        // if (i === 2) {
+        //     const checkbox = document.createElement("input");
+        //     checkbox.type = "checkbox";
+        //     cell.appendChild(checkbox);
+        // } else {
+            const input = document.createElement("input");
+            input.type = "text";
+            cell.appendChild(input);
+        // }
+    }
+});
+
+document.getElementById("saveDataButton6").addEventListener("click", function() {
+    const firstTableBody = document.getElementById("tableBody6");
+    const secondTableBody = document.getElementById("secondTableBody6");
+
+    // Transfer data from the first table to the second table
+    for (let i = 0; i < firstTableBody.rows.length; i++) {
+        const newRow = secondTableBody.insertRow(secondTableBody.rows.length);
+
+        for (let j = 0; j < 5; j++) {
+            const cell = newRow.insertCell(j);
+            // if (j === 2) {
+            //     const checkbox = document.createElement("input");
+            //     checkbox.type = "checkbox";
+            //     checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+            //     cell.appendChild(checkbox);
+            // } else {
+                cell.textContent = firstTableBody.rows[i].cells[j].querySelector("input[type='text']").value;
+            }
+        // }
+    }
+
+    // Remove all rows from the first table
+    while (firstTableBody.rows.length > 0) {
+        firstTableBody.deleteRow(0);
+    }
+});
+
+
+  </script>
+
+</body>
+</html>
+
+

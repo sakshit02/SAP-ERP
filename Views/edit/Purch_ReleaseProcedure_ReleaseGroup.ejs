@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h1>"Release Group:Purchase Requisition"</h1>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Release Group</th>
+            <th>Release Object</th>
+            <th>Overall Rel. of Requisition</th>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows will be dynamically added here -->
+        </tbody>
+      </table>
+
+      <button id="addRowButton" class="button">
+        <i class="fas fa-plus icon"></i> Add Row
+      </button>
+      <button id="saveDataButton" class="button">
+        <i class="fas fa-save icon"></i> Save Data
+      </button>
+    </div>
+
+    <div class="container">
+      <h2>Second Table</h2>
+      <table id="secondTable">
+        <thead>
+          <tr>
+            <th>Release Group</th>
+            <th>Release Object</th>
+            <th>Overall Rel. of Requisition</th>
+            <th>Class</th>
+            <th>Description</th>
+            <th>Actions</th>
+            <!-- New column for delete and update icons -->
+          </tr>
+        </thead>
+        <tbody id="secondTableBody">
+          <!-- Data will be transferred here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      let editRowIndex = -1; // Initialize the index of the row being edited
+
+      // Function to delete a row in the second table
+      function deleteRow(row) {
+        const rowIndex = row.rowIndex;
+        document.getElementById("secondTable").deleteRow(rowIndex);
+      }
+
+      // Function to start editing a row in the second table
+      function editRow(row) {
+        editRowIndex = row.rowIndex;
+        const cells = row.cells;
+
+        // Replace text content with input fields for editing
+        for (let i = 0; i < cells.length - 1; i++) {
+          const cell = cells[i];
+          const text = cell.textContent;
+          cell.innerHTML = `<input type="text" value="${text}">`;
+        }
+
+        // Replace edit icon with save and cancel icons
+        const actionCell = cells[cells.length - 1];
+        actionCell.innerHTML = `
+                <i class="fas fa-save save-icon" onclick="saveRow(this.parentElement.parentElement)"></i>
+                <i class="fas fa-times cancel-icon" onclick="cancelEditRow(this.parentElement.parentElement)"></i>
+            `;
+      }
+
+      // Function to save the edited row
+      function saveRow(row) {
+        const cells = row.cells;
+
+        // Update row data with input field values
+        for (let i = 0; i < cells.length - 1; i++) {
+          const cell = cells[i];
+          const input = cell.querySelector("input");
+          cell.textContent = input.value;
+        }
+
+        // Restore the edit icon
+        const actionCell = cells[cells.length - 1];
+        actionCell.innerHTML = `<i class="fas fa-pencil-alt update-icon" onclick="editRow(this.parentElement.parentElement)"></i> <i class="fas fa-trash-alt delete-icon" onclick="deleteRow(this.parentElement.parentElement)"></i>`;
+
+        editRowIndex = -1; // Reset the edit index
+      }
+
+      // Function to cancel editing and restore the original row data
+      function cancelEditRow(row) {
+        const cells = row.cells;
+
+        // Restore the original row data
+        for (let i = 0; i < cells.length - 1; i++) {
+          const cell = cells[i];
+          const input = cell.querySelector("input");
+          cell.textContent = input.value;
+        }
+
+        // Restore the edit icon
+        const actionCell = cells[cells.length - 1];
+        actionCell.innerHTML = `<i class="fas fa-pencil-alt update-icon" onclick="editRow(this.parentElement.parentElement)"></i> <i class="fas fa-trash-alt delete-icon" onclick="deleteRow(this.parentElement.parentElement)"></i>`;
+
+        editRowIndex = -1; // Reset the edit index
+      }
+
+      document
+        .getElementById("addRowButton")
+        .addEventListener("click", function () {
+          const tableBody = document.getElementById("tableBody");
+          const newRow = tableBody.insertRow(tableBody.rows.length);
+
+          for (let i = 0; i < 5; i++) {
+            const cell = newRow.insertCell(i);
+            if (i === 2) {
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    cell.appendChild(checkbox);
+                } else {
+            const input = document.createElement("input");
+            input.type = "text";
+            cell.appendChild(input);
+          }
+        }
+        });
+
+      document
+        .getElementById("saveDataButton")
+        .addEventListener("click", function () {
+          const firstTableBody = document.getElementById("tableBody");
+          const secondTableBody = document.getElementById("secondTableBody");
+
+          // Transfer data from the first table to the second table
+          for (let i = 0; i < firstTableBody.rows.length; i++) {
+            const newRow = secondTableBody.insertRow(
+              secondTableBody.rows.length
+            );
+
+            for (let j = 0; j < 6; j++) {
+              const cell = newRow.insertCell(j);
+              if (j === 2) {
+                        const checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+                        checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+                        cell.appendChild(checkbox);
+                    } else {
+              const input = document.createElement("input");
+              input.type =
+                firstTableBody.rows[i].cells[j].querySelector("input").type;
+              input.value =
+                firstTableBody.rows[i].cells[j].querySelector("input").value;
+              cell.appendChild(input);
+            }
+        }
+
+            // Add edit and delete icons to the new row in the second table
+            const actionCell = newRow.insertCell(5);
+            const editIcon = document.createElement("i");
+            editIcon.classList.add("fas", "fa-pencil-alt", "update-icon");
+            editIcon.onclick = function () {
+              if (editRowIndex !== -1) {
+                // Cancel editing of the previously edited row
+                cancelEditRow(secondTableBody.rows[editRowIndex]);
+              }
+              editRow(newRow);
+            };
+            actionCell.appendChild(editIcon);
+
+            const deleteIcon = document.createElement("i");
+            deleteIcon.classList.add("fas", "fa-trash-alt", "delete-icon");
+            deleteIcon.onclick = function () {
+              deleteRow(newRow);
+            };
+            actionCell.appendChild(deleteIcon);
+          }
+
+          // Remove all rows from the first table
+          while (firstTableBody.rows.length > 0) {
+            firstTableBody.deleteRow(0);
+          }
+
+          // Reset the editRowIndex to avoid conflicts
+          editRowIndex = -1;
+        });
+    </script>
+  </body>
+</html>
+
+

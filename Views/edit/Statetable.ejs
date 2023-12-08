@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        body {
+           font-family: Arial, sans-serif;
+           background-color: #f4f4f4;
+           margin: 0;
+           padding: 0;
+       }
+   
+       h1 {
+           text-align: center;
+           background-color: #333;
+           color: white;
+           padding: 20px 0;
+           margin: 0;
+       }
+   
+       .container {
+           max-width: 800px;
+           margin: 20px auto;
+           padding: 20px;
+           background-color: white;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 20px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       th, td {
+           padding: 12px;
+           text-align: center;
+           border-bottom: 1px solid #ddd;
+       }
+   
+       th {
+           background-color: #333;
+           color: white;
+       }
+   
+       td {
+           cursor: pointer;
+       }
+   
+       input[type="text"] {
+           width: 80%;
+           padding: 8px;
+           border: 1px solid #ddd;
+           border-radius: 4px;
+           box-sizing: border-box;
+       }
+   
+       .edit-mode {
+           background-color: #f5f5f5;
+       }
+   
+       .edit-input {
+           width: 100%;
+       }
+   
+       .button-container {
+           display: flex;
+           justify-content: space-between;
+           margin-top: 20px;
+       }
+   
+       .add-button, .delete-button {
+           background-color: #4CAF50;
+           color: white;
+           border: none;
+           padding: 10px 20px;
+           cursor: pointer;
+           border-radius: 4px;
+       }
+   
+       .delete-button {
+           background-color: #f44336;
+       }
+   
+       .add-button:hover, .delete-button:hover {
+           background-color: #45a049;
+       }
+   </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+  <div>
+    <button onclick="window.location.href='/Languagetable'">Language</button>
+  <button onclick="window.location.href='/Countrytable'">Country</button>
+  <button onclick="window.location.href='/Currencytable'">Currency</button>
+  <button onclick="window.location.href='/Unittable'">Unit & Measurment</button>
+  <button onclick="window.location.href='/Statetable'">State</button>
+</div>
+
+
+
+
+
+  <div class="container" style="overflow-y: scroll; height: 530px;">
+
+    <table id="myTable">
+        <h1>State Table</h1>
+<thead>
+    <tr>
+      <th>State Code</th>
+      <th>State Name</th>
+    </tr>
+</thead>
+
+<tbody id="tableBody">
+    <tr>
+      <td>01</td>
+      <td>Andra Pradesh</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>Arunachal Pradesh</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>Assam</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>Bihar</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>Goa</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>Gujarat</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>Haryana</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td>Himachal Pradesh</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td>Jammu und Kashmir</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Karnataka</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Kerala</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Madhya Pradesh</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Maharashtra</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Manipur</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Megalaya</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Mizoram</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Nagaland</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Orissa</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Punjab</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Rajasthan</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Sikkim</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Tamil Nadu</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Tripura</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Uttar Pradesh</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>West Bengal</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Andaman und Nico.In.</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Chandigarh</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Dadra und Nagar Hav.</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Daman und Diu</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Delhi</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Lakshadweep</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Pondicherry</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Chhaattisgarh</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Jharkhand</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Uttaranchal</td>
+    </tr>
+    </tbody>
+  </table>
+  </section>
+
+
+
+</body>
+</html>

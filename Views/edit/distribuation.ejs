@@ -1,0 +1,573 @@
+
+    <!DOCTYPE html>
+
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="UTF-8">
+        <title> Drop Down Sidebar</title>
+    
+        <link rel="stylesheet" href="css/companyform.css">
+        <link rel="stylesheet" href="css/table.css">
+
+        <!-- Boxiocns CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+    <body>
+
+    <%-include ('partials/sidepanel'); %>
+        <button>Select field</button>
+        <button>Technical view</button>
+        <button>Other Description</button>
+        <button>Field Attributes</button><br><bR>
+        
+        <div class="body">
+            <div  style="height: 550px;width: 420px; overflow: auto">
+                <table>
+                <tr>
+                    <th>Selected Fields</th>
+                    <th>FieldCatlg</th>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow1"></td>
+                    <td class="fieldCatlg" data-row="1" ondblclick="copyToSelected(this)">Acctg Indicator</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow2"></td>
+                    <td class="fieldCatlg" data-row="2" ondblclick="copyToSelected(this)">Activity Code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow3"></td>
+                    <td class="fieldCatlg" data-row="3" ondblclick="copyToSelected(this)">Aggrement</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow4"></td>
+                    <td class="fieldCatlg" data-row="4" ondblclick="copyToSelected(this)">Base Unit</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow5"></td>
+                    <td class="fieldCatlg" data-row="5" ondblclick="copyToSelected(this)">Batch</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow6"></td>
+                    <td class="fieldCatlg" data-row="6" ondblclick="copyToSelected(this)">bill-to Party</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow7"></td>
+                    <td class="fieldCatlg" data-row="7" ondblclick="copyToSelected(this)">CAP prod. group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow8"></td>
+                    <td class="fieldCatlg" data-row="8" ondblclick="copyToSelected(this)">Campaign ID</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow9"></td>
+                    <td class="fieldCatlg" data-row="9" ondblclick="copyToSelected(this)">Catalog</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow10"></td>
+                    <td class="fieldCatlg" data-row="10" ondblclick="copyToSelected(this)">City Code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow11"></td>
+                    <td class="fieldCatlg" data-row="11" ondblclick="copyToSelected(this)">City Of delivery Plant</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow12"></td>
+                    <td class="fieldCatlg" data-row="12" ondblclick="copyToSelected(this)">Comision Group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow13"></td>
+                    <td class="fieldCatlg" data-row="13" ondblclick="copyToSelected(this)">Condition Contract</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow14"></td>
+                    <td class="fieldCatlg" data-row="14" ondblclick="copyToSelected(this)">Condition Pricing Date</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow15"></td>
+                    <td class="fieldCatlg" data-row="15" ondblclick="copyToSelected(this)">Control Code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow16"></td>
+                    <td class="fieldCatlg" data-row="16" ondblclick="copyToSelected(this)">Country</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow17"></td>
+                    <td class="fieldCatlg" data-row="17" ondblclick="copyToSelected(this)">Country</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow18"></td>
+                    <td class="fieldCatlg" data-row="18" ondblclick="copyToSelected(this)">County Code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow19"></td>
+                    <td class="fieldCatlg" data-row="19" ondblclick="copyToSelected(this)">County Of delivery Plant</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow20"></td>
+                    <td class="fieldCatlg" data-row="20" ondblclick="copyToSelected(this)">Grouping</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow21"></td>
+                    <td class="fieldCatlg" data-row="21" ondblclick="copyToSelected(this)">Customer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow22"></td>
+                    <td class="fieldCatlg" data-row="22" ondblclick="copyToSelected(this)">Customer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow23"></td>
+                    <td class="fieldCatlg" data-row="23" ondblclick="copyToSelected(this)">Customer group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow24"></td>
+                    <td class="fieldCatlg" data-row="24" ondblclick="copyToSelected(this)">Customer Group 2</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow25"></td>
+                    <td class="fieldCatlg" data-row="25" ondblclick="copyToSelected(this)">Customer Condition Group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow26"></td>
+                    <td class="fieldCatlg" data-row="26" ondblclick="copyToSelected(this)">Delivery Time</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow27"></td>
+                    <td class="fieldCatlg" data-row="27" ondblclick="copyToSelected(this)">Destination Country</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow28"></td>
+                    <td class="fieldCatlg" data-row="28" ondblclick="copyToSelected(this)">Distribuation Channel</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow29"></td>
+                    <td class="fieldCatlg" data-row="29" ondblclick="copyToSelected(this)">Distribuation Type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow30"></td>
+                    <td class="fieldCatlg" data-row="30" ondblclick="copyToSelected(this)">Division</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow31"></td>
+                    <td class="fieldCatlg" data-row="31" ondblclick="copyToSelected(this)">Document Currency</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow32"></td>
+                    <td class="fieldCatlg" data-row="32" ondblclick="copyToSelected(this)">Document Type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow33"></td>
+                    <td class="fieldCatlg" data-row="33" ondblclick="copyToSelected(this)">Key1</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow34"></td>
+                    <td class="fieldCatlg" data-row="34" ondblclick="copyToSelected(this)">key2</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow35"></td>
+                    <td class="fieldCatlg" data-row="35" ondblclick="copyToSelected(this)">key3</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow36"></td>
+                    <td class="fieldCatlg" data-row="36" ondblclick="copyToSelected(this)">EAN/UPC</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow37"></td>
+                    <td class="fieldCatlg" data-row="37" ondblclick="copyToSelected(this)">Exclusive</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow38"></td>
+                    <td class="fieldCatlg" data-row="38" ondblclick="copyToSelected(this)">ProdHeirarchy 2</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow39"></td>
+                    <td class="fieldCatlg" data-row="39" ondblclick="copyToSelected(this)">Hierarchy</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow40"></td>
+                    <td class="fieldCatlg" data-row="40" ondblclick="copyToSelected(this)">Hierarchy node</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow41"></td>
+                    <td class="fieldCatlg" data-row="41" ondblclick="copyToSelected(this)">incoterms</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow42"></td>
+                    <td class="fieldCatlg" data-row="42" ondblclick="copyToSelected(this)">Incoterms 2</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow43"></td>
+                    <td class="fieldCatlg" data-row="43" ondblclick="copyToSelected(this)">Industry</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow44"></td>
+                    <td class="fieldCatlg" data-row="44" ondblclick="copyToSelected(this)">Int. object no.</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow45"></td>
+                    <td class="fieldCatlg" data-row="45" ondblclick="copyToSelected(this)">Item</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow46"></td>
+                    <td class="fieldCatlg" data-row="46" ondblclick="copyToSelected(this)">item number</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow47"></td>
+                    <td class="fieldCatlg" data-row="47" ondblclick="copyToSelected(this)">LST-CST code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow48"></td>
+                    <td class="fieldCatlg" data-row="48" ondblclick="copyToSelected(this)">location service</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow49"></td>
+                    <td class="fieldCatlg" data-row="49" ondblclick="copyToSelected(this)">location provider</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow50"></td>
+                    <td class="fieldCatlg" data-row="50" ondblclick="copyToSelected(this)">product Hierarchy</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow51"></td>
+                    <td class="fieldCatlg" data-row="51" ondblclick="copyToSelected(this)">material group Hierarchy</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow52"></td>
+                    <td class="fieldCatlg" data-row="52" ondblclick="copyToSelected(this)">material</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow53"></td>
+                    <td class="fieldCatlg" data-row="53" ondblclick="copyToSelected(this)">material group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow54"></td>
+                    <td class="fieldCatlg" data-row="54" ondblclick="copyToSelected(this)">mat. freight group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow55"></td>
+                    <td class="fieldCatlg" data-row="55" ondblclick="copyToSelected(this)">material group 1</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow56"></td>
+                    <td class="fieldCatlg" data-row="56" ondblclick="copyToSelected(this)">material origin</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow57"></td>
+                    <td class="fieldCatlg" data-row="57" ondblclick="copyToSelected(this)">mat. pricing group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow58"></td>
+                    <td class="fieldCatlg" data-row="58" ondblclick="copyToSelected(this)">material usage</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow59"></td>
+                    <td class="fieldCatlg" data-row="59" ondblclick="copyToSelected(this)">Mnitem mat. pricing grp</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow60"></td>
+                    <td class="fieldCatlg" data-row="60" ondblclick="copyToSelected(this)">Mnitm PrcRefMatl</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow61"></td>
+                    <td class="fieldCatlg" data-row="61" ondblclick="copyToSelected(this)">number of serial no.</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow62"></td>
+                    <td class="fieldCatlg" data-row="62" ondblclick="copyToSelected(this)">order type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow63"></td>
+                    <td class="fieldCatlg" data-row="63" ondblclick="copyToSelected(this)">order reason</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow64"></td>
+                    <td class="fieldCatlg" data-row="64" ondblclick="copyToSelected(this)">payer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow65"></td>
+                    <td class="fieldCatlg" data-row="65" ondblclick="copyToSelected(this)">personnel no.</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow66"></td>
+                    <td class="fieldCatlg" data-row="66" ondblclick="copyToSelected(this)">place of deliv.-city</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow67"></td>
+                    <td class="fieldCatlg" data-row="67" ondblclick="copyToSelected(this)">place of deliv.-country</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow68"></td>
+                    <td class="fieldCatlg" data-row="68" ondblclick="copyToSelected(this)">place of receipt-country</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow69"></td>
+                    <td class="fieldCatlg" data-row="69" ondblclick="copyToSelected(this)">plant</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow70"></td>
+                    <td class="fieldCatlg" data-row="70" ondblclick="copyToSelected(this)">port of discharge</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow71"></td>
+                    <td class="fieldCatlg" data-row="71" ondblclick="copyToSelected(this)">port of loading</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow72"></td>
+                    <td class="fieldCatlg" data-row="72" ondblclick="copyToSelected(this)">postal code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow73"></td>
+                    <td class="fieldCatlg" data-row="73" ondblclick="copyToSelected(this)">preference zone</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow74"></td>
+                    <td class="fieldCatlg" data-row="74" ondblclick="copyToSelected(this)">price list</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow75"></td>
+                    <td class="fieldCatlg" data-row="75" ondblclick="copyToSelected(this)">price group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow76"></td>
+                    <td class="fieldCatlg" data-row="76" ondblclick="copyToSelected(this)">prod. in house</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow77"></td>
+                    <td class="fieldCatlg" data-row="77" ondblclick="copyToSelected(this)">prod. Hierarchy</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow78"></td>
+                    <td class="fieldCatlg" data-row="78" ondblclick="copyToSelected(this)">profit center</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow79"></td>
+                    <td class="fieldCatlg" data-row="79" ondblclick="copyToSelected(this)">promotion</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow80"></td>
+                    <td class="fieldCatlg" data-row="80" ondblclick="copyToSelected(this)">promotion</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow81"></td>
+                    <td class="fieldCatlg" data-row="81" ondblclick="copyToSelected(this)">reason for zero vat</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow82"></td>
+                    <td class="fieldCatlg" data-row="82" ondblclick="copyToSelected(this)">reference document</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow83"></td>
+                    <td class="fieldCatlg" data-row="83" ondblclick="copyToSelected(this)">reference item</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow84"></td>
+                    <td class="fieldCatlg" data-row="84" ondblclick="copyToSelected(this)">reference delivery plant</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow85"></td>
+                    <td class="fieldCatlg" data-row="85" ondblclick="copyToSelected(this)">Sales document</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow86"></td>
+                    <td class="fieldCatlg" data-row="86" ondblclick="copyToSelected(this)">Sales document Item</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow87"></td>
+                    <td class="fieldCatlg" data-row="87" ondblclick="copyToSelected(this)">Sales document Type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow88"></td>
+                    <td class="fieldCatlg" data-row="88" ondblclick="copyToSelected(this)">Sales group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow89"></td>
+                    <td class="fieldCatlg" data-row="89" ondblclick="copyToSelected(this)">Sales office</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow90"></td>
+                    <td class="fieldCatlg" data-row="90" ondblclick="copyToSelected(this)">Sales Organization</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow91"></td>
+                    <td class="fieldCatlg" data-row="91" ondblclick="copyToSelected(this)">Sales deal</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow92"></td>
+                    <td class="fieldCatlg" data-row="92" ondblclick="copyToSelected(this)">Sales district</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow93"></td>
+                    <td class="fieldCatlg" data-row="93" ondblclick="copyToSelected(this)">Sales Organization of Order
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow94"></td>
+                    <td class="fieldCatlg" data-row="94" ondblclick="copyToSelected(this)">Sales Unit</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow95"></td>
+                    <td class="fieldCatlg" data-row="95" ondblclick="copyToSelected(this)">Scale base Value</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow96"></td>
+                    <td class="fieldCatlg" data-row="96" ondblclick="copyToSelected(this)">Season</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow97"></td>
+                    <td class="fieldCatlg" data-row="97" ondblclick="copyToSelected(this)">Season Year</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow98"></td>
+                    <td class="fieldCatlg" data-row="98" ondblclick="copyToSelected(this)">Ship From</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow99"></td>
+                    <td class="fieldCatlg" data-row="99" ondblclick="copyToSelected(this)">Ship To</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow100"></td>
+                    <td class="fieldCatlg" data-row="100" ondblclick="copyToSelected(this)">Ship to party</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow101"></td>
+                    <td class="fieldCatlg" data-row="101" ondblclick="copyToSelected(this)">Shipping Condition</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow102"></td>
+                    <td class="fieldCatlg" data-row="102" ondblclick="copyToSelected(this)">Sold To Party</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow103"></td>
+                    <td class="fieldCatlg" data-row="103" ondblclick="copyToSelected(this)">State</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow104"></td>
+                    <td class="fieldCatlg" data-row="104" ondblclick="copyToSelected(this)">State</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow105"></td>
+                    <td class="fieldCatlg" data-row="105" ondblclick="copyToSelected(this)">Subtrib Group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow106"></td>
+                    <td class="fieldCatlg" data-row="106" ondblclick="copyToSelected(this)">Prod.Hierarchy 3</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow107"></td>
+                    <td class="fieldCatlg" data-row="107" ondblclick="copyToSelected(this)">Supply Plant</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow108"></td>
+                    <td class="fieldCatlg" data-row="108" ondblclick="copyToSelected(this)">Text Code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow109"></td>
+                    <td class="fieldCatlg" data-row="109" ondblclick="copyToSelected(this)">Text Group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow110"></td>
+                    <td class="fieldCatlg" data-row="110" ondblclick="copyToSelected(this)">Tax Jurisdiction</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow111"></td>
+                    <td class="fieldCatlg" data-row="111" ondblclick="copyToSelected(this)">Tax Base</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow112"></td>
+                    <td class="fieldCatlg" data-row="112" ondblclick="copyToSelected(this)">Tax class material</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow113"></td>
+                    <td class="fieldCatlg" data-row="113" ondblclick="copyToSelected(this)">Tax code</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow114"></td>
+                    <td class="fieldCatlg" data-row="114" ondblclick="copyToSelected(this)">Tax relevant classification
+                    </td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow115"></td>
+                    <td class="fieldCatlg" data-row="115" ondblclick="copyToSelected(this)">tax type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow116"></td>
+                    <td class="fieldCatlg" data-row="116" ondblclick="copyToSelected(this)">Taxclass1-customer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow117"></td>
+                    <td class="fieldCatlg" data-row="117" ondblclick="copyToSelected(this)">Taxclass2-customer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow118"></td>
+                    <td class="fieldCatlg" data-row="118" ondblclick="copyToSelected(this)">Taxclass2-material</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow119"></td>
+                    <td class="fieldCatlg" data-row="119" ondblclick="copyToSelected(this)">Taxclass3-customer</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow120"></td>
+                    <td class="fieldCatlg" data-row="120" ondblclick="copyToSelected(this)">Trading Contract</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow121"></td>
+                    <td class="fieldCatlg" data-row="121" ondblclick="copyToSelected(this)">Usage</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow122"></td>
+                    <td class="fieldCatlg" data-row="122" ondblclick="copyToSelected(this)">Valuation type</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow123"></td>
+                    <td class="fieldCatlg" data-row="123" ondblclick="copyToSelected(this)">Varient</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow124"></td>
+                    <td class="fieldCatlg" data-row="124" ondblclick="copyToSelected(this)">Vendor</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow125"></td>
+                    <td class="fieldCatlg" data-row="125" ondblclick="copyToSelected(this)">Volume Rebate group</td>
+                </tr>
+                <tr>
+                    <td class="selectedFields" id="selectedFieldsRow126"></td>
+                    <td class="fieldCatlg" data-row="126" ondblclick="copyToSelected(this)">Sales document</td>
+                </tr>
+
+
+                </table>
+            </div>
+
+
+
+
+        </div>
+        
+    </section>
+
+        <script>
+
+            let selectedCells = [];
+
+            function copyToSelected(cell) {
+                if (!selectedCells.includes(cell)) {
+                    let selectedFields = document.querySelector("#selectedFieldsRow" + cell.dataset.row);
+
+                    let newCell = document.createElement('td');
+                    newCell.innerHTML = cell.innerHTML;
+
+                    let newRow = document.createElement('tr');
+                    newRow.appendChild(newCell);
+
+                    selectedFields.appendChild(newRow);
+
+                    selectedCells.push(cell);
+                }
+            }
+
+        </script>
+
+</body>
+
+</html>

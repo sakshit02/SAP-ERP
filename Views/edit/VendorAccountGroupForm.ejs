@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+  <form class="form">
+    <div class="input-field">
+      <label>Account Group</label>
+      <input type="text" name="Account" placeholder="" size="2px" />
+    </div>
+
+    <div class="input-field">
+      <h3>General Data</h3>
+      <label>Name</label>
+      <input type="text" name="General" placeholder="" />
+
+      <div class="input-field">
+      <label>Number Range</label>
+      <input type="number" name="Number" placeholder="" size="2px" />
+      </div>
+
+      <div class="input-field">
+      <label>One-Time Account
+      <input type="checkbox" name="One-Time" id=""></label>
+      </div>
+    </div>
+
+      <h3>Field Status</h3>
+      <div class="input-field">
+          <label>General Data</label>
+      </div>
+      
+      <div class="input-field">
+          <label for="">Company Code Data</label>
+      </div>
+      
+      <div class="input-field">
+          <label for="">Purchasing Data</label>
+      </div>
+      
+      <div class="input-field">
+          <label for="">Purchasing Sub-Range</label>
+      </div>
+      
+      <div class="input-field">
+          <label>Purchasing Plant</label>
+      </div>
+      
+    </div>
+    <div class="input-field">
+      <h3>Data Retent. Levels: Purchasing</h3>
+
+      <div class="input-field">
+      <label>
+          <input type="checkbox" name="Vendor" placeholder="" />Vendor sub-range relevant</label>
+      </div>
+
+      <div class="input-field">
+      <label>
+          <input type="checkbox" name="plant" placeholder="" />Plant level relevant</label>
+      </div>
+    </div>
+
+    <div class="input-field">
+      <h3>Default Values</h3>
+      <label>
+          <input type="checkbox" name="Default" placeholder="" />Do not transfer any data</label>
+    </div>
+    </div>
+    </div>
+    <br><br><br>
+
+    <div class="input-field">
+      <h3>Partner Determ. procedure</h3>
+      <div class="input-field">
+      <label>Partner schema, purch. org.</label>
+      <input type="text" name="Purchasing" placeholder="" size="2px" />
+      </div>
+
+      <div class="input-field">
+      <label>Partner schema, sub-range</label>
+      <input type="text" name="sub-range" placeholder="" size="2px" />
+      </div>
+
+      <div class="input-field">
+      <label>Partner schema, plant level</label>
+      <input type="text" name="plant" placeholder="" size="2px" />
+      </div>
+    </div>
+  </form>
+
+ 
+
+
+</body>
+</html>
+
+

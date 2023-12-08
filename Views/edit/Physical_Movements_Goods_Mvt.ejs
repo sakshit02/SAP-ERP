@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <h2>Create Physical Inventory Document</h2>
+
+    <!-- new Entries -->
+    <div class="container1" style="overflow: scroll;">
+      <table>
+        <thead>
+        <tr>
+            <th>Movement Type</th>
+            <th>Movement Type Text</th>
+            <th>Generate Ph.Inv.Doc</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>201</td>
+            <td>GI for cost center</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+        <tr>
+            <td>202</td>
+            <td>RE for cost center</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>221</td>
+            <td>GI for project</td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>222</td>
+            <td>RE for project</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>231</td>
+            <td>GI for sales order</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>232</td>
+            <td>RE for sales order</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>241</td>
+            <td>GI for asset</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>242</td>
+            <td>RE for asset</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>251</td>
+            <td>GI for sales</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>252</td>
+            <td>RE for sales</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>261</td>
+            <td>GI for order</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>262</td>
+            <td>RE for order</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>281</td>
+            <td>GI for network</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>282</td>
+            <td>RE for network</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>291</td>
+            <td>GI all acc. assigmts</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>292</td>
+            <td>RE all acct assigmts</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>301</td>
+            <td>TF tfr.plnt.to plnt.</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>302</td>
+            <td>TR tfr.plnt.to plnt.</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>303</td>
+            <td>TF rem.fm.stor.to pl</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>304</td>
+            <td>TR rem.fm.stor.to pl</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>309</td>
+            <td>TF tfr.ps.mat.to mat</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>310</td>
+            <td>TR tfr.ps.mat.to mat</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>311</td>
+            <td>TF tfr. within plant</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>312</td>
+            <td>TR transfer in plant</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>313</td>
+            <td>TF rem.fm.str.to SLoc</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>314</td>
+            <td>TR rem.fm.str.to SLoc</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>317</td>
+            <td>Create struct. mat.</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>318</td>
+            <td>RE create struc. mat</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>319</td>
+            <td>Split structured mat</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>320</td>
+            <td>RE split struct.mat.</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>321</td>
+            <td>TF quality to unrest</td>
+            <td><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>322</td>
+            <td>TR quality to unrest</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>323</td>
+            <td>TF quality in plant</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>324</td>
+            <td>TR quality in plant</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>325</td>
+            <td>TF blocked in plant</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>326</td>
+            <td>TR blocked in plant</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>331</td>
+            <td>GI to sampling QI</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>332</td>
+            <td>RE to sampling QI</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>333</td>
+            <td>GI to sampling unre.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>334</td>
+            <td>RE to sampling unre.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>335</td>
+            <td>GI to sampl. blocked</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>336</td>
+            <td>RE to sampling blkd</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>343</td>
+            <td>TF blocked to unre.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>344</td>
+            <td>TR blocked to unre.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>349</td>
+            <td>TF blocked to qual.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>350</td>
+            <td>TR blocked to qual.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>351</td>
+            <td>TF to stck in trans.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>352</td>
+            <td>TR to stck in trans.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>411</td>
+            <td>TP own to own</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>412</td>
+            <td>Reversal own to own</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>413</td>
+            <td>TP SLoc to sls order</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>414</td>
+            <td>Rev. SLoc to sls ord</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>415</td>
+            <td>TP SLoc to project</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>416</td>
+            <td>Rev. SLoc to proj.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>441</td>
+            <td>TP unrstr.to tiedEmp</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>442</td>
+            <td>TP tiedEmp.to unrstr</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>453</td>
+            <td>TP returns to own</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>454</td>
+            <td>TP own to returns</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>455</td>
+            <td>TF st.tfr. returns</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>456</td>
+            <td>TR St.tfr. returns</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>457</td>
+            <td>TP Ret.to own QIS</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>458</td>
+            <td>TP Own QIS to ret.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>459</td>
+            <td>TP Ret.to own blckd</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>460</td>
+            <td>TP Own blckt to ret.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>541</td>
+            <td>GI whse to subc.stck</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>542</td>
+            <td>RE subctrStck toWhse</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>551</td>
+            <td>GI scrapping</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>552</td>
+            <td>RE scrapping</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>553</td>
+            <td>GI scrapping QI</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>554</td>
+            <td>RE scrapping QI</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>555</td>
+            <td>GI scrapping blocked</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>556</td>
+            <td>RE scrapping blocked</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>557</td>
+            <td>GI adjust. transit</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>558</td>
+            <td>RE adjust. transit</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>571</td>
+            <td>GI receipt assembly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>572</td>
+            <td>RE receipt assembly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>573</td>
+            <td>GI rcpt QI assembly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>574</td>
+            <td>RE rcpt QI assembly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>575</td>
+            <td>GI rcpt blkd assmbly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>576</td>
+            <td>RE rcpt blkd assmbly</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>601</td>
+            <td>GD goods issue:delvy</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>617</td>
+            <td>Cre. Str. Mat. Cons.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>618</td>
+            <td>RE Cr. Str. Mat. Con</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>619</td>
+            <td>Rem. Str. Mat. Cons.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>620</td>
+            <td>RE Rem. Str Mat Cons</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>621</td>
+            <td>GI ret.pack.:lending</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>622</td>
+            <td>GI ret.pack:ret.del.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>623</td>
+            <td>GI iss:cust.ret.pack</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>624</td>
+            <td>GI rcpt:cust.re.pack</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>631</td>
+            <td>GI consgmt: lending</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>632</td>
+            <td>GI consgmt:ret.delvy</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>633</td>
+            <td>GI iss: cust.consgmt</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>634</td>
+            <td>GI rcpt:cust.consgmt</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>717</td>
+            <td>GI InvDiff.: blocked</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>718</td>
+            <td>GR InvDiff.: blocked</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>833</td>
+            <td>Reval. iss. w. tax</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>834</td>
+            <td>R reval. iss. w tax</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>836</td>
+            <td>R reval. rec. w tax</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+          <tr>
+            <td>901</td>
+            <td>GI internal c.center</td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </tbody>
+
+    </table>
+    
+ </div>   
+ </div>
+
+
+    <!-- <button onclick="window.location.href='/AccessTable'">Access</button> -->
+
+</body>
+</html>
+
+

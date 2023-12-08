@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        body {
+           font-family: Arial, sans-serif;
+           background-color: #f4f4f4;
+           margin: 0;
+           padding: 0;
+       }
+   
+       h1 {
+           text-align: center;
+           background-color: #333;
+           color: white;
+           padding: 20px 0;
+           margin: 0;
+       }
+   
+       .container {
+           max-width: 800px;
+           margin: 20px auto;
+           padding: 20px;
+           background-color: white;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 20px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       th, td {
+           padding: 12px;
+           text-align: center;
+           border-bottom: 1px solid #ddd;
+       }
+   
+       th {
+           background-color: #333;
+           color: white;
+       }
+   
+       td {
+           cursor: pointer;
+       }
+   
+       input[type="text"] {
+           width: 80%;
+           padding: 8px;
+           border: 1px solid #ddd;
+           border-radius: 4px;
+           box-sizing: border-box;
+       }
+   
+       .edit-mode {
+           background-color: #f5f5f5;
+       }
+   
+       .edit-input {
+           width: 100%;
+       }
+   
+       .button-container {
+           display: flex;
+           justify-content: space-between;
+           margin-top: 20px;
+       }
+   
+       .add-button, .delete-button {
+           background-color: #4CAF50;
+           color: white;
+           border: none;
+           padding: 10px 20px;
+           cursor: pointer;
+           border-radius: 4px;
+       }
+   
+       .delete-button {
+           background-color: #f44336;
+       }
+   
+       .add-button:hover, .delete-button:hover {
+           background-color: #45a049;
+       }
+   </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+  <div>
+    <button onclick="window.location.href='/Languagetable'">Language</button>
+  <button onclick="window.location.href='/Countrytable'">Country</button>
+  <button onclick="window.location.href='/Currencytable'">Currency</button>
+  <button onclick="window.location.href='/Unittable'">Unit & Measurment</button>
+  <button onclick="window.location.href='/Statetable'">State</button>
+</div>
+
+
+
+  <div class="container" style="overflow-y: scroll; height: 530px;">
+    <table id="myTable">
+        <h1>Measurement Units</h1>
+<thead>
+    <tr>
+      <th>Base Unit</th>
+      <th>Measurement Unit</th>
+    </tr>
+</thead>
+
+<tbody id="tableBody">
+    <tr>
+      <td>"</td>
+      <td>Inch</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Square inch</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cubic inch</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>Percentage</td>
+    </tr>
+    <tr>
+      <td>%O</td>
+      <td>Per mille</td>
+    </tr>
+    <tr>
+      <td>000</td>
+      <td>Meter/Minute</td>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ACR</td>
+      <td>Acre</td>
+    </tr>
+    <tr>
+      <td>AU</td>
+      <td>Activity unit</td>
+    </tr>
+    <tr>
+      <td>BAG</td>
+      <td>Bag</td>
+    </tr>
+    <tr>
+      <td>BT</td>
+      <td>Bottle</td>
+    </tr>
+    <tr>
+      <td>C3S</td>
+      <td>Cubic centimeter/second</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>Canister</td>
+    </tr>
+    <tr>
+      <td>CAR</td>
+      <td>Carton</td>
+    </tr>
+    <tr>
+      <td>CCM</td>
+      <td>Cubic centimeter</td>
+    </tr>
+    <tr>
+      <td>CD3</td>
+      <td>Cubic decimeter</td>
+    </tr>
+    <tr>
+      <td>CL</td>
+      <td>Centiliter</td>
+    </tr>
+    <tr>
+      <td>CM</td>
+      <td>Centimeter</td>
+    </tr>
+    <tr>
+      <td>CM2</td>
+      <td>Square centimeter</td>
+    </tr>
+    <tr>
+      <td>CMS</td>
+      <td>Centimeter/second</td>
+    </tr>
+    <tr>
+      <td>CRT</td>
+      <td>Crate</td>
+    </tr>
+    <tr>
+      <td>CV</td>
+      <td>Case</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>Days</td>
+    </tr>
+    <tr>
+      <td>DAY</td>
+      <td>Days</td>
+    </tr>
+    <tr>
+      <td>DEG</td>
+      <td>Degree</td>
+    </tr>
+    <tr>
+      <td>DM</td>
+      <td>Decimeter</td>
+    </tr>
+    <tr>
+      <td>DR</td>
+      <td>Drum</td>
+    </tr>
+    <tr>
+      <td>DZ</td>
+      <td>Dozen</td>
+    </tr>
+    <tr>
+      <td>EA</td>
+      <td>each</td>
+    </tr>
+    <tr>
+      <td>EML</td>
+      <td>Enzyme Units / Milliliter</td>
+    </tr>
+    <tr>
+      <td>EU</td>
+      <td>Enzyme Units</td>
+    </tr>
+    <tr>
+      <td>FOZ</td>
+      <td>Fluid Ounce US</td>
+    </tr>
+    <tr>
+      <td>FT</td>
+      <td>Foot</td>
+    </tr>
+    <tr>
+      <td>FT2</td>
+      <td>Square foot</td>
+    </tr>
+    <tr>
+      <td>FT3</td>
+      <td>Cubic foot</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>Gram</td>
+    </tr>
+    <tr>
+      <td>G/L</td>
+      <td>gram act.ingrd / liter</td>
+    </tr>
+    <tr>
+      <td>GAI</td>
+      <td>Gram act. ingrd.</td>
+    </tr>
+    <tr>
+      <td>GAL</td>
+      <td>US gallon</td>
+    </tr>
+    <tr>
+      <td>GAU</td>
+      <td>Gram Gold</td>
+    </tr>
+    <tr>
+      <td>GJ</td>
+      <td>Gigajoule</td>
+    </tr>
+    <tr>
+      <td>GLI</td>
+      <td>Gram/liter</td>
+    </tr>
+    <tr>
+      <td>GM</td>
+      <td>Gram/Mol</td>
+    </tr>
+    <tr>
+      <td>GM2</td>
+      <td>Gram/square meter</td>
+    </tr>
+    <tr>
+      <td>GM3</td>
+      <td>Gram/Cubic meter</td>
+    </tr>
+    <tr>
+      <td>GOH</td>
+      <td>Gigaohm</td>
+    </tr>
+    <tr>
+      <td>GPH</td>
+      <td>Gallons per hour (US)</td>
+    </tr>
+    <tr>
+      <td>GPM</td>
+      <td>Gallons per mile (US)</td>
+    </tr>
+    <tr>
+      <td>GRO</td>
+      <td>Gross</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>Hour</td>
+    </tr>
+    <tr>
+      <td>HA</td>
+      <td>Hectare</td>
+    </tr>
+    <tr>
+      <td>HL</td>
+      <td>Hectoliter</td>
+    </tr>
+    <tr>
+      <td>HR</td>
+      <td>Hours</td>
+    </tr>
+    <tr>
+      <td>IB</td>
+      <td>Pikofarad</td>
+    </tr>
+    <tr>
+      <td>JKG</td>
+      <td>Joule/Kilogram</td>
+    </tr>
+    <tr>
+      <td>JKK</td>
+      <td>Spec. Heat Capacity</td>
+    </tr>
+    <tr>
+      <td>JMO</td>
+      <td>Joule/Mol</td>
+    </tr>
+    <tr>
+      <td>KAI</td>
+      <td>Kilogram act. ingrd.</td>
+    </tr>
+    <tr>
+      <td>KD3</td>
+      <td>Kilogram/cubic decimeter</td>
+    </tr>
+    <tr>
+      <td>KG</td>
+      <td>Kilogram</td>
+    </tr>
+    <tr>
+      <td>KGM</td>
+      <td>Kilogram/Mol</td>
+    </tr>
+    <tr>
+      <td>KGS</td>
+      <td>Kilogram/second</td>
+    </tr>
+    <tr>
+      <td>KGV</td>
+      <td>Kilogram/cubic meter</td>
+    </tr>
+    <tr>
+      <td>KIK</td>
+      <td>kg act.ingrd. / kg</td>
+    </tr>
+    <tr>
+      <td>KJK</td>
+      <td>Kilojoule/kilogram</td>
+    </tr>
+    <tr>
+      <td>KJM</td>
+      <td>Kilojoule/Mol</td>
+    </tr>
+    <tr>
+      <td>KM</td>
+      <td>Kilometer</td>
+    </tr>
+    <tr>
+      <td>KM2</td>
+      <td>Square kilometer</td>
+    </tr>
+    <tr>
+      <td>KMH</td>
+      <td>Kilometer/hour</td>
+    </tr>
+    <tr>
+      <td>KMN</td>
+      <td>Kelvin/Minute</td>
+    </tr>
+    <tr>
+      <td>KMS</td>
+      <td>Kelvin/Second</td>
+    </tr>
+    <tr>
+      <td>KPA</td>
+      <td>Kilopascal</td>
+    </tr>
+    <tr>
+      <td>KT</td>
+      <td>Kilotonne</td>
+    </tr>
+    <tr>
+      <td>KVA</td>
+      <td>Kilovoltampere</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>Liter</td>
+    </tr>
+    <tr>
+      <td>LB</td>
+      <td>US pound</td>
+    </tr>
+    <tr>
+      <td>LHK</td>
+      <td>Liter per 100 km</td>
+    </tr>
+    <tr>
+      <td>LM</td>
+      <td>Linear Meter</td>
+    </tr>
+    <tr>
+      <td>LMI</td>
+      <td>Liter/Minute</td>
+    </tr>
+    <tr>
+      <td>LMS</td>
+      <td>Liter/Molsecond</td>
+    </tr>
+    <tr>
+      <td>LPH</td>
+      <td>Liter per hour</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>Meter</td>
+    </tr>
+    <tr>
+      <td>M-2</td>
+      <td>1 / square meter</td>
+    </tr>
+    <tr>
+      <td>M/H</td>
+      <td>Meter/Hour</td>
+    </tr>
+    <tr>
+      <td>M/L</td>
+      <td>Mol per liter</td>
+    </tr>
+    <tr>
+      <td>M/M</td>
+      <td>Mol per cubic meter</td>
+    </tr>
+    <tr>
+      <td>M/S</td>
+      <td>Meter/second</td>
+    </tr>
+    <tr>
+      <td>M2</td>
+      <td>Square meter</td>
+    </tr>
+    <tr>
+      <td>M2S</td>
+      <td>Square meter/second</td>
+    </tr>
+    <tr>
+      <td>M3</td>
+      <td>Cubic meter</td>
+    </tr>
+    <tr>
+      <td>M3D</td>
+      <td>Cubic meter/day</td>
+    </tr>
+    <tr>
+      <td>M3H</td>
+      <td>Cubic meter/Hour</td>
+    </tr>
+    <tr>
+      <td>M3S</td>
+      <td>Cubic meter/second</td>
+    </tr>
+    <tr>
+      <td>MEJ</td>
+      <td>Megajoule</td>
+    </tr>
+    <tr>
+      <td>MG</td>
+      <td>Milligram</td>
+    </tr>
+    <tr>
+      <td>MGL</td>
+      <td>Milligram/liter</td>
+    </tr>
+    <tr>
+      <td>MGO</td>
+      <td>Megohm</td>
+    </tr>
+    <tr>
+      <td>MGQ</td>
+      <td>Milligram/cubic meter</td>
+    </tr>
+    <tr>
+      <td>MHV</td>
+      <td>Megavolt</td>
+    </tr>
+    <tr>
+      <td>MI</td>
+      <td>Mile</td>
+    </tr>
+    <tr>
+      <td>MI2</td>
+      <td>Square mile</td>
+    </tr>
+    <tr>
+      <td>MIN</td>
+      <td>Minute</td>
+    </tr>
+    <tr>
+      <td>MIS</td>
+      <td>Microsecond</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Milliliter</td>
+    </tr>
+    <tr>
+      <td>MLI</td>
+      <td>Milliliter act. ingr.</td>
+    </tr>
+    <tr>
+      <td>MM</td>
+      <td>Millimeter</td>
+    </tr>
+    <tr>
+      <td>MM2</td>
+      <td>Square millimeter</td>
+    </tr>
+    <tr>
+      <td>MM3</td>
+      <td>Cubic millimeter</td>
+    </tr>
+    <tr>
+      <td>MN</td>
+      <td>Meganewton</td>
+    </tr>
+    <tr>
+      <td>MNM</td>
+      <td>Millinewton/meter</td>
+    </tr>
+    <tr>
+      <td>MON</td>
+      <td>Months</td>
+    </tr>
+    <tr>
+      <td>MPG</td>
+      <td>Miles per gallon (US)</td>
+    </tr>
+    <tr>
+      <td>MPL</td>
+      <td>Millimol per liter</td>
+    </tr>
+    <tr>
+      <td>MPS</td>
+      <td>Millipascal seconds</td>
+    </tr>
+    <tr>
+      <td>MS2</td>
+      <td>Meter/second squared</td>
+    </tr>
+    <tr>
+      <td>MSC</td>
+      <td>Microsiemens per centim</td>
+    </tr>
+    <tr>
+      <td>MSE</td>
+      <td>Millisecond</td>
+    </tr>
+    <tr>
+      <td>MVA</td>
+      <td>Megavoltampere</td>
+    </tr>
+    <tr>
+      <td>MWH</td>
+      <td>Megawatt hour</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Nanoampere</td>
+    </tr>
+    <tr>
+      <td>NAM</td>
+      <td>Nanometer</td>
+    </tr>
+    <tr>
+      <td>NI</td>
+      <td>Kilonewton</td>
+    </tr>
+    <tr>
+      <td>NM</td>
+      <td>Newton/meter</td>
+    </tr>
+    <tr>
+      <td>NMM</td>
+      <td>Newton/Square millimeter</td>
+    </tr>
+    <tr>
+      <td>NS</td>
+      <td>Nanosecond</td>
+    </tr>
+    <tr>
+      <td>OCM</td>
+      <td>Spec. Elec. Resistance</td>
+    </tr>
+    <tr>
+      <td>OM</td>
+      <td>Spec. Elec. Resistance</td>
+    </tr>
+    <tr>
+      <td>OZ</td>
+      <td>Ounce</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>Points</td>
+    </tr>
+    <tr>
+      <td>PAA</td>
+      <td>Pair</td>
+    </tr>
+    <tr>
+      <td>PAC</td>
+      <td>Pack</td>
+    </tr>
+    <tr>
+      <td>PAL</td>
+      <td>Pallet</td>
+    </tr>
+    <tr>
+      <td>PAS</td>
+      <td>Pascal second</td>
+    </tr>
+    <tr>
+      <td>PC</td>
+      <td>Piece</td>
+    </tr>
+    <tr>
+      <td>PMI</td>
+      <td>1/minute</td>
+    </tr>
+    <tr>
+      <td>PMR</td>
+      <td>Permeation Rate SI</td>
+    </tr>
+    <tr>
+      <td>PPB</td>
+      <td>Parts per billion</td>
+    </tr>
+    <tr>
+      <td>PPM</td>
+      <td>Parts per million</td>
+    </tr>
+    <tr>
+      <td>PPT</td>
+      <td>Parts per trillion</td>
+    </tr>
+    <tr>
+      <td>PRC</td>
+      <td>Group proportion</td>
+    </tr>
+    <tr>
+      <td>PRM</td>
+      <td>Permeation Rate</td>
+    </tr>
+    <tr>
+      <td>PRS</td>
+      <td>Number of Persons</td>
+    </tr>
+    <tr>
+      <td>PS</td>
+      <td>Picosecond</td>
+    </tr>
+    <tr>
+      <td>PT</td>
+      <td>Pint, US liquid</td>
+    </tr>
+    <tr>
+      <td>QML</td>
+      <td>Kilomol</td>
+    </tr>
+    <tr>
+      <td>QT</td>
+      <td>Quart, US liquid</td>
+    </tr>
+    <tr>
+      <td>R-U</td>
+      <td>Nanofarad</td>
+    </tr>
+    <tr>
+      <td>RF</td>
+      <td>Millifarad</td>
+    </tr>
+    <tr>
+      <td>RHO</td>
+      <td>Gram/cubic centimeter</td>
+    </tr>
+    <tr>
+      <td>ROL</td>
+      <td>Role</td>
+    </tr>
+    <tr>
+      <td>S/M</td>
+      <td>Siemens per meter</td>
+    </tr>
+    <tr>
+      <td>TO</td>
+      <td>Tonne</td>
+    </tr>
+    <tr>
+      <td>TOM</td>
+      <td>Ton/Cubic meter</td>
+    </tr>
+    <tr>
+      <td>TON</td>
+      <td>US ton</td>
+    </tr>
+    <tr>
+      <td>TS</td>
+      <td>Thousands</td>
+    </tr>
+    <tr>
+      <td>VAL</td>
+      <td>Value-only material</td>
+    </tr>
+    <tr>
+      <td>VAM</td>
+      <td>Voltampere</td>
+    </tr>
+    <tr>
+      <td>WK</td>
+      <td>Weeks</td>
+    </tr>
+    <tr>
+      <td>WKY</td>
+      <td>Evaporation Rate</td>
+    </tr>
+    <tr>
+      <td>WMK</td>
+      <td>Heat Conductivity</td>
+    </tr>
+    <tr>
+      <td>YD</td>
+      <td>Yards</td>
+    </tr>
+    <tr>
+      <td>YD2</td>
+      <td>Square Yard</td>
+    </tr>
+    <tr>
+      <td>YD3</td>
+      <td>Cubic yard</td>
+    </tr>
+    <tr>
+      <td>YR</td>
+      <td>Years</td>
+    </tr>
+    <tr>
+      <td>kgb</td>
+      <td>Kilogram/US Barrel</td>
+    </tr>
+    <tr>
+      <td>pc</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>µA</td>
+      <td>Microampere</td>
+    </tr>
+    <tr>
+      <td>µF</td>
+      <td>Microfarad</td>
+    </tr>
+    <tr>
+      <td>µGL</td>
+      <td>Microgram/liter</td>
+    </tr>
+    <tr>
+      <td>µGQ</td>
+      <td>Microgram/cubic meter</td>
+    </tr>
+    <tr>
+      <td>µL</td>
+      <td>Microliter</td>
+    </tr>
+    <tr>
+      <td>µM</td>
+      <td>Micrometer</td>
+    </tr>
+</tbody>
+  </table>
+  </section>
+
+
+
+</body>
+</html>

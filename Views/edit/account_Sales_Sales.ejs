@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+     <style>
+
+
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>Maintain Field Status Group:Address</h2>
+        <div class="input-field">
+            <table>
+                <thead>
+                    <th></th>
+                    <th>Suppress</th>
+                    <th>Required Entry</th>
+                    <th>Optional Entry</th>
+                    <th>Display</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sales Group</td>
+                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Statistics Group</td>
+                        <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer Group</td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sales District</td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pricing Procedure</td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Price Group</td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>SPrice List Type</td>
+                        <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Unit Of Measure Group</td>
+                        <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Currency</td>
+                        <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Our Account With Customer</td>
+                        <td><input type="radio" name="row10" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row10" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row10" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row10" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Order Probability </td>
+                        <td><input type="radio" name="row11" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row11" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row11" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row11" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Cust. Scheme Prod. Proosal</td>
+                        <td><input type="radio" name="row12" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row12" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row12" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row12" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Default Prod. Proposal</td>
+                        <td><input type="radio" name="row13" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row13" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row13" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row13" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sales Office</td>
+                        <td><input type="radio" name="row14" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row14" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row14" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row14" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td><input type="radio" name="row15" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row15" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row15" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row15" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Exchange Rate Type</td>
+                        <td><input type="radio" name="row16" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row16" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row16" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row16" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Switch Off Rounding For Customer</td>
+                        <td><input type="radio" name="row17" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row17" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row17" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row17" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>ABC Class</td>
+                        <td><input type="radio" name="row18" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row18" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row18" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row18" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Agency Business</td>
+                        <td><input type="radio" name="row19" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row19" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row19" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row19" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Customer Hierarchy</td>
+                        <td><input type="radio" name="row20" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row20" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row20" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row20" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Document Index Active</td>
+                        <td><input type="radio" name="row21" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row21" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row21" id="" onclick="toggleRadio(this)"></td>
+                        <td><input type="radio" name="row21" id="" onclick="toggleRadio(this)"></td>
+                    </tr>
+                    
+                 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body> 
+<script>
+    function toggleRadio(element) {
+        // Uncheck other radio buttons in the same row
+        var rowRadios = document.querySelectorAll('input[name="' + element.name + '"]');
+        rowRadios.forEach(function(radio) {
+            if (radio !== element) {
+                radio.checked = false;
+            }
+        });
+    }
+</script>         
+</html>
+
+

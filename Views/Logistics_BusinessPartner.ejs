@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        .maindiv{
+            display: flex;
+        }
+
+body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        label {
+          display: block;
+          font-size: larger;
+          margin-bottom: 8px;
+          color: cadetblue;
+        }
+    
+        select {
+            background-color: beige;
+          padding: 5px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+.div1 , .div2{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: auto;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <h1>Business Partner</h1>
+<div class="maindiv">
+
+    
+    <div class="div1">
+        
+    
+        <label for="dropdown1">Customer</label>
+      <select id="dropdown1" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Customer_accountgrp">Account Group</option>
+        <option value="/numrange">Number Range</option>
+        <option value="/Sales_District">Sales District</option>
+        <option value="/Customer_Group">Customer Group</option>
+        <option value="/Price_Group">Price Group</option>
+        <option value="/Price_List">Price List</option>
+        <option value="/Delivery_Priorities">Delivery Priority</option>
+        <option value="/Shipping_Condition">Shipping Condition</option>
+        <option value="/Account_assignmentGrp">Account Assignment Group</option>
+        <option value="/Inco_Terms">Incoterms</option>
+      </select>
+    
+      <label for="dropdown2">Vendor</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/VendorAccountGroup">Account Group</option>
+        <option value="/VendorDefineScreen">Define Screen Layout</option>
+        <option value="/VendorDefineTransaction">Define Transaction Dependent Screen Layout</option>
+        <option value="/VendorDefineNumRange">Define Number Range</option>
+      </select>
+    
+
+    
+    </div>
+    
+
+    
+
+
+</div>
+
+<script>
+    function redirectPage(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+      window.location.href = selectedOption;
+    }
+  </script>
+</body>
+</html>
+
+

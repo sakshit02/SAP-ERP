@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>Maintain Field Status Group:Communication</h2>
+    <div class="input-field">
+        <table>
+            <thead>
+                <th></th>
+                <th>Suppress</th>
+                <th>Required Entry</th>
+                <th>Optional Entry</th>
+                <th>Display</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Telex, Fax, Tel.</td>
+                    <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Teletex</td>
+                    <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Telebox</td>
+                    <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Data Line</td>
+                    <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Language</td>
+                    <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Standard Comm.type</td>
+                    <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Internet Address</td>
+                    <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row7" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Internet Mail Address</td>
+                    <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row8" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Mobile Telephone</td>
+                    <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row9" id="" onclick="toggleRadio(this)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body> 
+<script>
+function toggleRadio(element) {
+    // Uncheck other radio buttons in the same row
+    var rowRadios = document.querySelectorAll('input[name="' + element.name + '"]');
+    rowRadios.forEach(function(radio) {
+        if (radio !== element) {
+            radio.checked = false;
+        }
+    });
+}
+</script>         
+</html>
+
+

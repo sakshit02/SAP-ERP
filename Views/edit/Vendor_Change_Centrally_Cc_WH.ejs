@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h1>Maintain Field Status Group: W/holding tax data, w/h tax 2</h1>
+    <div class="input-field">
+        <table>
+            <thead>
+                <th></th>
+                <th>Suppress</th>
+                <th>Required Entry</th>
+                <th>Optional Entry</th>
+                <th>Display</th>
+            </thead>
+            <tbody>
+                <!-- Your radio button rows here -->
+                <tr>
+                    <td>Withholding tax code, w/h tax 2</td>
+                    <td><input type="radio" name="row1" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row1" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Withholding tax exemp, w/h tax 2</td>
+                    <td><input type="radio" name="row2" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row2" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Withhold.tax country, w/h tax 2</td>
+                    <td><input type="radio" name="row3" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row3" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Withholding tax cat., w/h tax 2</td>
+                    <td><input type="radio" name="row4" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row4" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Withholding tax reg. number (2)</td>
+                    <td><input type="radio" name="row5" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row5" onclick="toggleRadio(this)"></td>
+                </tr>
+
+                <tr>
+                    <td>Withholding tax category</td>
+                    <td><input type="radio" name="row6" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" onclick="toggleRadio(this)"></td>
+                    <td><input type="radio" name="row6" onclick="toggleRadio(this)"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    function toggleRadio(element) {
+    // Uncheck other radio buttons in the same row
+    var rowRadios = document.querySelectorAll('input[name="' + element.name + '"]');
+    rowRadios.forEach(function(radio) {
+        if (radio !== element) {
+            radio.checked = false;
+        }
+    });
+}
+</script>
+
+</body>
+</html>
+
+

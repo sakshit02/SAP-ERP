@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+     <style>
+
+.btn {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: rgb(0,123,255);
+    width: 460px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>Transaction Dependent Field Selection (VENDOR)</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+    <div class="details ID">
+        <div class="fields">
+            <div class="input-field">
+                <label >Activity Type</label>
+                <input  name="vid" type="text"  style="margin-right: 800px;" placeholder="Create Vendor (Accounting)" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<div>
+    <h2>Select Group</h2>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_CompCode_Acc'" style="width: 200px; margin-left: 90px;">Account Managment</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_CompCode_Pay'" style="width: 200px; margin-left: 90px;">Payment Transactions</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_CompCode_Corr'" style="width: 200px; margin-left: 90px;">Correspondense</button></div>
+    <div><button class="btn" onclick="window.location.href='/Vendor_Create_CompCode_WH'" style="width: 200px; margin-left: 90px;">W/Holding tax data, w/h tax 2</button></div>
+</div>
+
+
+</body>
+</html>
+
+

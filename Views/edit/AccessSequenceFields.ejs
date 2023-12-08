@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body> 
+
+  <%-include ('partials/sidepanel'); %>
+ 
+    <div class="container">
+        <header>    &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Access</label>
+                            <input  name="company" type="text"  ><input  name="company" type="text"  >
+                        </div>
+                        <div class="input-field">
+                            <label>Table</label>
+                            <input name="Cname" type="text" placeholder="" >
+                        </div>
+                     
+                        <div class="title">Detailed Information </div>
+    
+                        <div class="input-field">
+                            <label>Street</label>
+                            <input name="Street" type="text" placeholder="" >
+                        </div>
+    
+
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+
+ 
+</body>
+</html>
+
+

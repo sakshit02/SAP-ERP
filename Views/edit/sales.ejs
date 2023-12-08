@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/companyform.css">
+
+    <title>Document</title>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+
+
+.container {
+    width: 1000px;
+    margin:0px;
+
+}
+
+header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 1000px;
+    background-color: #fff;
+}
+
+.input-field {
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    flex: 2;
+    
+}
+
+input {
+    flex: 4; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+        * {box-sizing: border-box}
+        /* Style tab links */
+        .tablink {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-size: 14px;
+          margin-right: 5px;
+          width: 180px;
+          overflow: hidden;
+        }
+        
+        .tablink:hover {
+          background-color: #777;
+        }
+        
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+          color: rgb(8, 8, 8);
+          display: none;
+          
+          height: 100%;
+          background-color: #fff;
+
+        }
+        table, th, td {
+            border:1px solid black;
+        }
+        .container1 {
+            width: 160vh;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        
+        </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+    <div class="container">
+        <header> Sales Order   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Sales order-001P</label>
+                            <input  name="vid" type="text"  style="margin-right: 2px;">
+                            <label>Net value</label>
+                            <input  name="vid" type="text"  ><input  name="vid" type="text" style="margin-right: 200px;" >
+                        </div>
+                        <div class="input-field">
+                            <label>Sold To Party</label>
+                            <input name="loc_code" type="text" placeholder="" style="margin-right: 300px;" >
+                        </div>
+                     
+                        <div class="title">Detailed Information </div>
+    
+                        <div class="input-field">
+                            <label>Ship To Party</label>
+                            <input name="city" type="text" placeholder="" >
+                        </div>
+    
+                        <div class="input-field">
+                            <label>PO Number</label>
+                            <input name="area" type="text" placeholder="" >
+                            <label>PO Date</label>
+                            <input name="area" type="date" placeholder="" >
+                        </div>
+
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+        <button class="tablink" onclick="openPage('Sales', this, 'red' )" id="defaultOpen">Sales</button>
+<button class="tablink" onclick="openPage('Item Overview', this, 'green')" >Item Overview</button>
+<button class="tablink" onclick="openPage('Item detail', this, 'blue')">Item Detail</button>
+<button class="tablink" onclick="openPage('Ordering Party', this, 'orange')">Ordering Party</button>
+<button class="tablink" onclick="openPage('Procurement', this, 'olive')">Procurement</button>
+<button class="tablink" onclick="openPage('Shipping', this, 'maroon')">Shipping</button>
+<button class="tablink" onclick="openPage('Reason for rejection', this, 'purple')">Reason for rejection</button>
+
+
+
+
+
+<!-- first tab --><br>
+<div id="Sales" class="tabcontent"><br><br>
+  <h3>Item Overview</h3>
+    <form action="">
+  <div class="input-field">
+        <label>Req.deliv.date</label>
+        <input name="delivery" type="text" placeholder="" size="2px">
+        &nbsp;&nbsp;
+        <input name="delivery" type="text" placeholder="">
+        <label>Deliver.Plant</label>
+        <input type="text" name="plant" placeholder="" size="2px">
+  </div>
+
+  <div class="input-field">
+    <label>Complete div.</label>
+    <input type="checkbox" name="division">
+    <label>Total Weight</label>
+    <input type="text" name="number" placeholder="">
+    <input type="text" name="weight" size="2px">
+  </div>
+
+  <div class="input-field">
+    <label>Delivery Block</label>
+    <select name="delivery">
+        <option value="">Select Billing Block</option>
+    </select>
+    <label>Volume</label>
+    <input type="text" name="volume" placeholder="">
+  </div>
+
+  <div class="input-field">
+    <label>Billing block</label>
+    <select name="billing" >
+        <option value="">Select Billing Block</option>
+    </select>
+    <label>Pricing Date</label>
+    <input type="date" name="pricing">
+  </div>
+
+  <div class="input-field">
+    <label>Payment Card</label>
+    <input type="text" name="payment" placeholder="">
+    <label>Exp.date</label>
+    <input type="date" name="exp">
+  </div>
+
+  <div class="input-field">
+    <label> Payment Terms</label>
+    <input type="text" name="payment" placeholder="" size="2px">
+    <label>Incoterms</label>
+    <input type="text" name="incoterms" placeholder="">
+  </div>
+
+  <div class="input-field">
+    <label>Order reason</label>
+    <select name="order" id=""></select>
+  </div>
+
+  <div class="input-field">
+    <label>Sales area</label>
+    <input type="text" name="sales"><span>/</span><input type="text" name="sales"><span>/</span><input type="text" name="sales">
+  </div>
+</form>
+<div>
+    <div class="container1" style="overflow: scroll;">
+        <table >
+            <thead>
+                <tr >
+                    <th>Item</th>
+                    <th>Material</th>
+                    <th>Order Quantity</th>
+                    <th>Sales unit</th>
+                    <th>Description</th>
+                    <th>Customer Material Info</th>
+                    <th>Item category</th>
+                    <th>DGInd.Profile</th>
+                    <th>HgLvIt</th>
+                    <th>Deliv.Date</th>
+                    <th>first Date</th>
+                    <th>Plnt</th>
+                    <th>Batch</th>
+                    <th>Condition Type</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Net Price</th>
+                    <th>Per</th>
+                    <th>unit of measure</th>
+                    <th>Net value</th>
+                    <th>Doc.currency</th>
+                    <th>Next Scale</th>
+                    <th>Catalog</th>
+                    <th>PayG</th>
+                    <th>GV%</th>
+                    <th>reason for Regection</th>
+                    <th>PO details</th>
+                    <th>PO Item</th>
+                    <th>Engin.Change</th>
+                    <th>ATP Quantity</th>
+                    <th>Delivery Block Status</th>
+                    <th>Billing Block Status</th>
+                    <th>Delivery Time</th>
+                    <th>Material group</th>
+                    <th>Condition Group</th>
+                    <th>Product Hierarchy</th>
+                    <th>Divison</th>
+                    <th>WBS Element</th>
+                    <th>Order</th>
+                    <th>Profit Center</th>
+                    <th>Material Pricing Grp</th>
+                    <th>Customer Grp</th>
+                    <th>Price List</th>
+                    <th>Price Group</th>
+                    <th>Sales district</th>
+                    <th>Purchase order date</th>
+                    <th>Purchase order type</th>
+                    <th>Purchase order number</th>
+                    <th>Purchase order item</th>
+                    <th>Storage Location</th>
+                    <th>Delivery priority</th>
+                    <th>Description</th>
+                    <th>Shipping point Recei</th>
+                    <th>Part.div./item</th>
+                    <th>route</th>
+                    <th>net weight</th>
+                    <th>Wweight Unit</th>
+                    <th>Gross weight</th>
+                    <th>Volume</th>
+                    <th>Volume Unit</th>
+                    <th>Inco terms</th>
+                    <th>Payable terms</th>
+                    <th>Billing Block</th>
+                    <th>Overall Status</th>
+                    <th>Description</th>
+                    <th>Exchange rate</th>
+                    <th>Pricing date</th>
+                    <th>Material Entered</th>
+                    <th>Usage</th>
+                    <th>Pricing ref.Matl</th>
+                    <th>Costing sheet</th>
+                    <th>overhead key</th>
+                    <th>receiving point</th>
+                    <th>Department</th>
+                    <th>Max.Part.Delevries</th>
+                    <th>Over delivery tolerance</th>
+                    <th>Fixed value date</th>
+                    <th>Add.value days</th>
+                    <th>Invoicing date</th>
+                    <th>Billing date</th>
+                    <th>Account assignment group</th>
+                    <th>Component Quantity</th>
+                    <th>Code</th>
+                    
+
+                </tr>
+                <tr >
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+      
+                    
+                    
+
+                </tr>
+                <tr >
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+    
+                  
+                  
+
+              </tr>
+              <tr >
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+  
+                
+                
+
+            </tr>
+            <tr >
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+
+              
+              
+
+          </tr>
+          <tr >
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+
+            
+            
+
+        </tr>
+            </thead>
+           
+        </table>
+
+       
+    </div>
+
+  
+
+   
+       
+</div>
+</div>
+<!-- second tab -->
+<div id="Item Overview" class="tabcontent"><br><br>
+  <h3>Item Overview</h3>
+  <form>
+    <div class="input-field">
+      <label>Req. deliv.date</label>
+      <input type="text" name="deliv" placeholder="" size="2px" />
+      <input type="date" name="date" />
+      <label>Deliver.Plant</label>
+      <input type="text" name="plant" placeholder="" />
+    </div>
+  </form>
+  <div>
+    <div class="container1" style="overflow: scroll;">
+        <table >
+            <thead>
+                <tr >
+                    <th>Item</th>
+                    <th>Material</th>
+                    <th>Order Quantity</th>
+                    <th>Sales unit</th>
+                    <th>Description</th>
+                    <th>Customer Material Info</th>
+                    <th>Item category</th>
+                    <th>DGInd.Profile</th>
+                    <th>HgLvIt</th>
+                    <th>Deliv.Date</th>
+                    <th>first Date</th>
+                    <th>Plnt</th>
+                    <th>Batch</th>
+                    <th>Condition Type</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Net Price</th>
+                    <th>Per</th>
+                    <th>unit of measure</th>
+                    <th>Net value</th>
+                    <th>Doc.currency</th>
+                    <th>Next Scale</th>
+                    <th>Catalog</th>
+                    <th>PayG</th>
+                    <th>GV%</th>
+                    <th>reason for Regection</th>
+                    <th>PO details</th>
+                    <th>PO Item</th>
+                    <th>Engin.Change</th>
+                    <th>ATP Quantity</th>
+                    <th>Delivery Block Status</th>
+                    <th>Billing Block Status</th>
+                    <th>Delivery Time</th>
+                    <th>Material group</th>
+                    <th>Condition Group</th>
+                    <th>Product Hierarchy</th>
+                    <th>Divison</th>
+                    <th>WBS Element</th>
+                    <th>Order</th>
+                    <th>Profit Center</th>
+                    <th>Material Pricing Grp</th>
+                    <th>Customer Grp</th>
+                    <th>Price List</th>
+                    <th>Price Group</th>
+                    <th>Sales district</th>
+                    <th>Purchase order date</th>
+                    <th>Purchase order type</th>
+                    <th>Purchase order number</th>
+                    <th>Purchase order item</th>
+                    <th>Storage Location</th>
+                    <th>Delivery priority</th>
+                    <th>Description</th>
+                    <th>Shipping point Recei</th>
+                    <th>Part.div./item</th>
+                    <th>route</th>
+                    <th>net weight</th>
+                    <th>Wweight Unit</th>
+                    <th>Gross weight</th>
+                    <th>Volume</th>
+                    <th>Volume Unit</th>
+                    <th>Inco terms</th>
+                    <th>Payable terms</th>
+                    <th>Billing Block</th>
+                    <th>Overall Status</th>
+                    <th>Description</th>
+                    <th>Exchange rate</th>
+                    <th>Pricing date</th>
+                    <th>Material Entered</th>
+                    <th>Usage</th>
+                    <th>Pricing ref.Matl</th>
+                    <th>Costing sheet</th>
+                    <th>overhead key</th>
+                    <th>receiving point</th>
+                    <th>Department</th>
+                    <th>Max.Part.Delevries</th>
+                    <th>Over delivery tolerance</th>
+                    <th>Fixed value date</th>
+                    <th>Add.value days</th>
+                    <th>Invoicing date</th>
+                    <th>Billing date</th>
+                    <th>Account assignment group</th>
+                    <th>Component Quantity</th>
+                    <th>Code</th>
+                    
+
+                </tr>
+                <tr >
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="text" placeholder=""></td>
+      
+                    
+                    
+
+                </tr>
+                <tr >
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+    
+                  
+                  
+
+              </tr>
+              <tr >
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+  
+                
+                
+
+            </tr>
+            <tr >
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+
+              
+              
+
+          </tr>
+          <tr >
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+
+            
+            
+
+        </tr>
+            </thead>
+           
+        </table>
+
+       
+    </div>
+   
+</div>
+</div>
+<!-- third tab -->
+<div id="Item detail" class="tabcontent"><br><br>
+  <h3>Item detail</h3>
+<form>
+    <div class="input-field">
+      <label>Sales Document Item</label>
+      <input type="text" name="sales" placeholder="" size="2px" />
+
+      <label>Item category</label>
+      <input type="text" name="plant" placeholder="" size="2px" />
+    </div>
+
+    <div class="input-field">
+      <label>Material</label>
+      <input type="text" name="material" placeholder="" />
+
+      <label></label>
+      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+    </div>
+
+    <div class="input-field">
+      <label></label>
+      <!-- <input type="text" name="ales" placeholder="" size="2px" /> -->
+
+      <label>Pricing date</label>
+      <input type="date" name="pricing" />
+    </div>
+
+    <div class="input-field">
+      <label>Order Quantity</label>
+      <input type="text" name="order" placeholder="" />
+      <input type="text" name="order" placeholder="" size="2px" />
+
+      <label></label>
+      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+    </div>
+
+    <div class="input-field">
+      <label>Batch</label>
+      <input type="text" name="batch" placeholder="" />
+
+      <label>Bus.transaction type</label>
+      <input type="text" name="bus" placeholder="" size="2px"/>
+    </div>
+
+    <div class="input-field">
+      <label>Reason for rejection</label>
+      <select name="reason" id=""></select>
+
+      <label></label>
+      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+    </div>
+
+    <div class="input-field">
+      <label>Unloading Point</label>
+      <input type="text" name="unloading" placeholder="" />
+
+      <label>Receaving Point</label>
+      <input type="text" name="reaceivie" placeholder="" />
+    </div>
+
+    <div class="input-field">
+      <label>Plant</label>
+      <input type="text" name="plant" placeholder="" size="2px" />
+
+    </div>
+  </form>
+  <div class="container1" style="overflow: scroll;">
+    <table >
+        <thead>
+            <tr >
+                <th>Item</th>
+                <th>Material</th>
+                <th>Order Quantity</th>
+                <th>Sales unit</th>
+                <th>Description</th>
+                <th>Customer Material Info</th>
+                <th>Item category</th>
+                <th>DGInd.Profile</th>
+                <th>HgLvIt</th>
+                <th>Deliv.Date</th>
+                <th>first Date</th>
+                <th>Plnt</th>
+                <th>Batch</th>
+                <th>Condition Type</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Net Price</th>
+                <th>Per</th>
+                <th>unit of measure</th>
+                <th>Net value</th>
+                <th>Doc.currency</th>
+                <th>Next Scale</th>
+                <th>Catalog</th>
+                <th>PayG</th>
+                <th>GV%</th>
+                <th>reason for Regection</th>
+                <th>PO details</th>
+                <th>PO Item</th>
+                <th>Engin.Change</th>
+                <th>ATP Quantity</th>
+                <th>Delivery Block Status</th>
+                <th>Billing Block Status</th>
+                <th>Delivery Time</th>
+                <th>Material group</th>
+                <th>Condition Group</th>
+                <th>Product Hierarchy</th>
+                <th>Divison</th>
+                <th>WBS Element</th>
+                <th>Order</th>
+                <th>Profit Center</th>
+                <th>Material Pricing Grp</th>
+                <th>Customer Grp</th>
+                <th>Price List</th>
+                <th>Price Group</th>
+                <th>Sales district</th>
+                <th>Purchase order date</th>
+                <th>Purchase order type</th>
+                <th>Purchase order number</th>
+                <th>Purchase order item</th>
+                <th>Storage Location</th>
+                <th>Delivery priority</th>
+                <th>Description</th>
+                <th>Shipping point Recei</th>
+                <th>Part.div./item</th>
+                <th>route</th>
+                <th>net weight</th>
+                <th>Wweight Unit</th>
+                <th>Gross weight</th>
+                <th>Volume</th>
+                <th>Volume Unit</th>
+                <th>Inco terms</th>
+                <th>Payable terms</th>
+                <th>Billing Block</th>
+                <th>Overall Status</th>
+                <th>Description</th>
+                <th>Exchange rate</th>
+                <th>Pricing date</th>
+                <th>Material Entered</th>
+                <th>Usage</th>
+                <th>Pricing ref.Matl</th>
+                <th>Costing sheet</th>
+                <th>overhead key</th>
+                <th>receiving point</th>
+                <th>Department</th>
+                <th>Max.Part.Delevries</th>
+                <th>Over delivery tolerance</th>
+                <th>Fixed value date</th>
+                <th>Add.value days</th>
+                <th>Invoicing date</th>
+                <th>Billing date</th>
+                <th>Account assignment group</th>
+                <th>Component Quantity</th>
+                <th>Code</th>
+                
+
+            </tr>
+            <tr >
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+  
+                
+                
+
+            </tr>
+            <tr >
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+
+              
+              
+
+          </tr>
+          <tr >
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+
+            
+            
+
+        </tr>
+        <tr >
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+
+          
+          
+
+      </tr>
+      <tr >
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+
+        
+        
+
+    </tr>
+        </thead>
+       
+    </table>
+
+   
+</div>
+</div>
+<!-- fourth tab -->
+<div id="Ordering Party" class="tabcontent"><br><br>
+  <h3>Ordering Party</h3>
+  <form>
+    <div class="input-field">
+      <label>Req. deliv.date</label>
+      <input type="text" name="deliv" placeholder="" size="2px" />
+      <input type="date" name="date" />
+      <label>Deliver.Plant</label>
+      <input type="text" name="plant" placeholder="" />
+    </div>
+
+    <div class="input-field">
+      <label>Pricing Date</label>
+      <input type="date" name="pricing" />
+    </div>
+  </form>
+  <div class="container1" style="overflow: scroll;">
+    <table >
+        <thead>
+            <tr >
+                <th>PO Item</th>
+                <th>Customer Material Info</th>
+                <th>Item</th>
+                <th>Order Quantity</th>
+                <th>Sales unit</th>
+                <th>Material</th>
+                <th>Description</th>
+                <th>Deliv.Date</th>
+                <th>first Date</th>
+                <th>Plnt</th>
+                <th>HgLvIt</th>
+                <th>Batch</th>
+                <th>Condition Type</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Net Price</th>
+                <th>Per</th>
+                <th>unit of measure</th>
+                <th>Net value</th>
+                <th>Next Scale</th>
+                <th>Billing Block</th>
+                <th>Payable terms</th>
+                <th>Inco terms</th>
+                <th>Rejection reason</th>
+                <th>WBS element</th>
+
+
+            </tr>
+            <tr >
+             
+               
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+  
+                
+                
+
+            </tr>
+            <tr >
+             
+               
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+
+              
+              
+
+          </tr>
+          <tr >
+             
+               
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+
+            
+            
+
+        </tr>
+        <tr >
+             
+               
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+
+          
+          
+
+      </tr>
+      <tr >
+             
+               
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+
+        
+        
+
+    </tr>
+        </thead>
+       
+    </table>
+</div>
+</div>
+
+<!-- Fifth tab -->
+<div id="Procurement" class="tabcontent"><br><br>
+    <h3>Procurement</h3>
+    <div class="container1" style="overflow: scroll;">
+      <table >
+          <thead>
+              <tr >
+                  <th>Item</th>
+                  <th>Material</th>
+                  <th>Plnt</th>
+                  <th>Confirmed Quantity</th>
+                  <th>Sales Unit</th>
+                  <th>Mat.Av.Dt</th>
+                  <th>Schedule Line Category</th>
+                  <th>Requirement Type</th>
+                  <th>Item Category</th>
+                  <th>Account Assgt Cat.</th>
+                  <th>Delivery date</th>
+                  <th>Delivery Date Format</th>
+                  <th>Note Schedule Lines</th>
+                  <th>ATP quantity</th>
+                  <th>Loading date</th>
+                  <th>Route</th>
+                  <th>Part.Dlv/item</th>
+                  <th>Delivery priority</th>
+                  <th>Description</th>
+                  <th>RejectionReason</th>
+                  <th>Shipping Point</th>
+                  <th>Delivery Block</th>
+                  <th>Order Quantity</th>
+                  
+
+  
+  
+              </tr>
+              <tr >
+               
+                 
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
+                
+    
+                  
+                  
+  
+              </tr>
+              <tr >
+               
+                 
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+              
+  
+                
+                
+
+            </tr>
+            <tr >
+               
+                 
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+            
+
+              
+              
+
+          </tr>
+          <tr >
+               
+                 
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+          
+
+            
+            
+
+        </tr>
+        <tr >
+               
+                 
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+        
+
+          
+          
+
+      </tr>
+          </thead>
+         
+      </table>
+  </div>
+  </div>
+<!-- Sixth tab -->
+<div id="Shipping" class="tabcontent"><br><br>
+  <h3>Shipping</h3>
+  <form>
+    <div class="input-field">
+      <label>Complete dlv.</label>
+      <input type="text" name="complete" placeholder="" size="1px" />
+      <label>Total Weight</label>
+      <input type="text" name="total" placeholder="" />
+      <input type="text" name="weight" placeholder="" size="1px" />
+    </div>
+
+    <div class="input-field">
+      <label>Delivery block</label>
+      <select name="delivery" id=""></select>
+      <label>Volume</label>
+      <input type="text" name="volume" placeholder="" />
+      <input type="text" name="volume" placeholder="" />
+    </div>
+
+    <div class="input-field">
+      <label>Overall status</label>
+      <input type="text" name="over" placeholder="" />
+      <label>Delivery status</label>
+      <input type="text" name="delivery" placeholder="" />
+    </div>
+  </form>
+  <div class="container1" style="overflow: scroll;">
+    <table >
+        <thead>
+            <tr >
+                <th>Item</th>
+                <th>Material</th>
+                <th>Delivery Group</th>
+                <th>Delivery Date for Group</th>
+                <th>Note Schedule lines</th>
+                <th>Delivery Date</th>
+                <th>Mat.Av.Dt</th>
+                <th>Loading Date</th>
+                <th>plnt</th>
+                <th>Shipping point</th>
+                <th>Route</th>
+                <th>Part.Dlv./item</th>
+                <th>Delivery Priority</th>
+                <th>Description</th>
+                <th>Delivery Block</th>
+                <th>Rejection Reason</th>
+                <th>DC</th>
+                <th>Confirmed quantity</th>
+                <th>Sales Unit</th>
+                <th>Order quantity</th>
+                <th>Schedule Lines Category</th>
+                  <th>Requirement type</th>
+                  <th>overall Delivery Status</th>
+                  <th>Delivery Status</th>
+                  <th>Delivery Block Status</th>
+               
+
+            </tr>
+            <tr >
+             
+               
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+              
+  
+                
+                
+
+            </tr>
+            <tr >
+             
+               
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+            
+
+              
+              
+
+          </tr>
+          <tr >
+             
+               
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+          
+
+            
+            
+
+        </tr>
+        <tr >
+             
+               
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+        
+
+          
+          
+
+      </tr>
+      <tr >
+             
+               
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+      
+
+        
+        
+
+    </tr>
+        </thead>
+       
+    </table>
+</div>
+</div>
+
+<!-- Seventh tab -->
+<div id="Reason for rejection" class="tabcontent"><br><br>
+  <h3>reason for rejection</h3>
+  <form>
+    <div class="">
+      <label for="orderreason">Order reason:</label>
+      <select name="orderreason" id="orderreason">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+  </form>
+  <div class="container1" style="overflow: scroll;">
+    <table >
+        <thead>
+            <tr >
+                <th>Item</th>
+                <th>Material</th>
+                <th>reason for rejection</th>
+                <th>Net Value</th>
+                <th>Description</th>
+                <th>plnt</th>
+                <th>PO Items</th>
+                <th>Customer Material Number</th>
+               
+            </tr>
+            <tr >
+
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+
+            </tr>
+            <tr >
+
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+
+          </tr>
+          <tr >
+
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+
+        </tr>
+        <tr >
+
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+
+      </tr>
+      <tr >
+
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+
+    </tr>
+    <tr >
+
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+
+  </tr>
+        </thead>
+       
+    </table>
+</div>
+</div>
+  </section>
+
+  <script>
+
+    
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+document.getElementById("defaultOpen").click();
+
+  </script>
+
+</body>
+</html>
+
+

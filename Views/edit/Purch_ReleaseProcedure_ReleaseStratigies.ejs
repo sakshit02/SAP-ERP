@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <div id="popupForm" class="popup">
+        <form id="entryForm">
+          <label for="releaseGroup">Release Group:</label>
+          <input type="text" id="releaseGroup" name="releaseGroup" maxlength="2" required>
+          <br>
+          <label for="releaseStrategy">Release Strategy:</label>
+          <input type="text" id="releaseStrategy" name="releaseStrategy" maxlength="2" required>
+          <br>
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" maxlength="20" required>
+          <br><br>
+          <label for="releasecode">Release Codes</label>
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br>
+          <input type="text" name="" id="">
+          <br><br>
+          <!-- Additional columns and fields can be added here -->
+      
+          <button type="button" class="btn" onclick="submitForm()">Submit</button>
+          <button type="button" class="btn cancel-btn" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+      
+      <div class="overlay" onclick="closeForm()"></div>
+      
+      <button class="btn" onclick="openForm()">New Entry</button>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Release Group</th>
+            <th>Release Strategy</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Table entries will be added dynamically here -->
+        </tbody>
+      </table>
+      
+      <script>
+        function openForm() {
+          document.getElementById("popupForm").style.display = "block";
+          document.querySelector(".overlay").style.display = "block";
+        }
+      
+        function closeForm() {
+          document.getElementById("popupForm").style.display = "none";
+          document.querySelector(".overlay").style.display = "none";
+        }
+      
+        function submitForm() {
+          var releaseGroup = document.getElementById("releaseGroup").value;
+          var releaseStrategy = document.getElementById("releaseStrategy").value;
+          var description = document.getElementById("description").value;
+      
+          if (!releaseGroup || !releaseStrategy || !description) {
+            alert("Please fill in all fields");
+            return;
+          }
+      
+          var tableBody = document.getElementById("tableBody");
+          var newRow = tableBody.insertRow(tableBody.rows.length);
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+          cell1.innerHTML = releaseGroup;
+          cell2.innerHTML = releaseStrategy;
+          cell3.innerHTML = description;
+      
+          document.getElementById("releaseGroup").value = "";
+          document.getElementById("releaseStrategy").value = "";
+          document.getElementById("description").value = "";
+      
+          closeForm();
+        }
+      </script>
+</html>
+
+

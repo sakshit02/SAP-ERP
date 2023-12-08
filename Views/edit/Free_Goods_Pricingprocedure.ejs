@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    
+    <div class="container">
+        <button  onclick="window.location.href='/FreeGoods_PricingNewEntry'" style="width: 140px;"> + New Entries</button>
+
+
+  
+    <div class="form first">
+    
+    
+        <div class="details ID">
+            <div class="fields">
+                <div class="input-field">
+                    <label>         Usage       :</label>
+                    <input  name="vid" type="text"  >
+                </div>
+                <div class="input-field">
+                    <label>Application :</label>
+                    <input name="loc_code" type="text" placeholder="" >
+                </div>
+             
+               
+
+            </div>
+        <table id="myTable">
+    <thead>
+        <tr>
+            <th>Procedure</th>
+            <th>Description</th>
+            <th>Transaction-Specific Pricing Procedure</th>
+            <th>Pricing Type</th>
+        </tr>
+    </thead>
+    
+
+    <tbody id="tableBody">
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td><input type="checkbox" placeholder=""></td>
+            <td>
+                <select>
+                    <option>                   </option>
+                    <option>1 Customer Reserve 1</option>
+                    <option>2 Customer Reserve 2</option>
+                    <option>3 Customer Reserve 3</option>
+                    <option>4 Customer Reserve 4</option>
+                    <option>5 Customer Reserve 5</option>
+                    <option>A Copy Price Components and Redetermine Scales</option>
+                    <option>B carry Out New Pricing</option>
+                    <option>c Copy Manual Pricing Elements and redetermine others</option>
+                    <option>D Copy pricing Elements unchanged</option>
+                    <option>E Adopt Price Components and Fix values</option>
+                    <option>F Copy pricing elements,turn value and fix</option>
+                    <option>G Copy Pricing elements unchanged and redetermine taxes</option>
+                    <option>H Redetermine Freight Conditions</option>
+                    <option>I Redetermine Rebate Conditions</option>
+                    <option>J Redetermine Confirmed purch. net price / value(KNTYP=d)</option>
+                    <option>K Adopt Price Components and cose. Redetermine taxes.</option>
+                    <option>M Copy Pricing elements,turn value </option>
+                    <option>N Transfer pricing Components unchanged,new cost</option>
+                    <option>O Redetermine varient Conditions (KNTYP=O)</option>
+                    <option>Q Redetermine Calculation conditions (KNTYP=Q)</option>  
+                    <option>R Apply price parts and bonus conditions </option> 
+                    <option>S ship & debit (IBU HiTec)</option>
+                    <option>U Redetermine precious metal conditions</option>
+                    <option>X customer reserve X</option>
+                    <option>Y Customer reserve Y</option>
+                    <option>Z Customer reserve Z</option>
+            </select>
+        </td>
+                    
+        </tr>
+       
+    </tbody>
+    </table><br>
+
+
+    <button onclick="window.location.href='/FreeGoods_ControldataTable'">Control Data</button>
+  </section>
+
+ 
+
+</body>
+</html>

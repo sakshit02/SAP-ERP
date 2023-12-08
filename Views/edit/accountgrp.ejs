@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body> 
+    
+  <%-include ('partials/sidepanel'); %>
+
+    <div class="container">
+        <header> Company   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            
+                            <label>Account Group</label>
+                            <input  name="vid" type="text"  style="margin-left: 60px;">
+                            <input  name="des" type="text"  style="margin-right: 500px;">
+                        </div>
+
+                        <div class="title">General Data </div>
+                        <div class="input-field">
+                            <label>Number Range</label>
+                            <input name="loc_code" type="text" placeholder="" style="margin-right: 500px;">
+                          
+                        </div>
+                        <div class="input-field">
+                           
+                            <label>One-Time Acct.</label>
+                            <input type="checkbox" style="margin-right: 700px;height: 20px;">
+                        </div>
+    
+                     
+                        <div class="title">Field Status </div>
+
+                        <label  style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href='/accountgrp_GeneralData'"> General Data</label>
+                        <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href='/accountgrp_CC'"> Company Code Data</label>
+                         <label style="background-color: rgb(83, 81, 81); color: white;" onclick="window.location.href='/accountgrp_SalesData'"> Sales Data</label>
+                        
+                        
+                       
+
+                        <div class="title">text Procedure </div>
+    
+                        <div class="input-field">
+                            <label>Central Text Determination Procedure</label>
+                            <input name="centeral" type="text" placeholder="" style="margin-right: 500px;">
+
+                        </div>
+                        <div class="input-field">
+                           
+                            <label>Text Determination Procedure</label>
+                            <input name="textDetermination" type="text" placeholder="" style="margin-right: 500px;">
+                        </div>
+    
+                        <div class="title">Sales and Distribution Data </div>
+                        <div class="input-field">
+                            <label>Customer Pricing Procedure</label>
+                            <input name="customerPrice" type="text" placeholder="" style="margin-right: 500px;">
+                        </div>
+    
+                        <div class="input-field">
+                            <label>Partner Determination Procedure</label>
+                            <input name="partnerDetermination" type="text" placeholder="" style="margin-right: 500px;">
+                        </div>
+    
+                        <div class="input-field">
+                            <label>Output Determination Procedure</label>
+                            <input name="outputDetermination" type="text" placeholder="" style="margin-right: 500px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Competitors</label>
+                            <input type="checkbox">
+                            <label>Sales Partner</label>
+                            <input type="checkbox">
+                        
+                            <div class="input-field">
+                            <label>Prospect</label>
+                            <input type="checkbox">
+                            <label>default SP</label>
+                            <input type="checkbox">
+                        </div>
+                           
+                        <div class="input-field">
+                            <label>Consumer</label>
+                            <input type="checkbox" style="margin-right: 500px;">
+                        </div>
+
+    
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

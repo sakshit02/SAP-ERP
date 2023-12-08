@@ -9,7 +9,45 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
+const validUsername = 'user';
+const validPassword = 'pass';
+
+app.get('/', (req, res) => {
+  res.render('login');
+});
+
+app.post('/login', (req, res) => {
+  const { role, username, password } = req.body;
+
+  if (username === validUsername && password === validPassword) {
+    if (role === 'display') 
+    {
+      res.render('Home');
+    } 
+
+    else if (role === 'change') 
+    {
+      res.render('changeHome');
+    }
+
+     else if (role === 'edit') 
+    {
+      res.render('editHome');
+    }
+     
+    else 
+    {
+      res.send('Invalid role');
+    }
+  } else {
+    res.send('Invalid username or password');
+  }
+});
+
 const routes = [
+  'editHome',
+  'edit/companyform',
+  'loginform',
   'AccessSequenceFields',
   'accountgrp',
   'assign-sales-dist-plant',
@@ -842,6 +880,61 @@ const routes = [
 
   'SD_RouteDet_Determination_Delivery_New',
 
+  //Logistyics
+  'Logistics_MaterialMaster',
+  'Logistics_MM_Config_Sequence',
+  'Logistics_MM_Config_AssignScreens',
+  'Logistics_MM_Config_MaintainScreens',
+  'Logistics_MM_Config_Transaction',
+'Logistics_BusinessPartner',
+
+
+
+'Logistics_BatchMngmnt',
+'Logistics_BM_BatchLvl',
+'Logistics_BM_StatusMngt',
+'Logistics_BM_PlantMngt',
+
+'Logistics_BM_FieldSelection',
+'Logistics_BM_ActivateDoc',
+
+'Logistics_BM_NumberAssgn',
+'Logistics_BM_AssignRange',
+'Logistics_BM_InternalBatch',
+'Logistics_BM_ExternalBatch',
+'Logistics_BM_SetupCustomer',
+
+'Logistics_BM_ProcessOrder',
+'Logistics_BM_GoodsMov',
+'Logistics_BM_Transaction',
+
+'Logistics_BM_InventoryMng',
+'Logistics_BM_Function',
+
+'Logistics_BM_WarehouceMng',
+'Logistics_BM_InitialStatus',
+
+'Logistics_BM_CondnTable',
+'Logistics_BM_AccessSequence',
+'Logistics_BM_StrategyTypes',
+'Logistics_BM_ProcedureDef',
+'Logistics_BM_Activation',
+'Logistics_BM_AutomaticDet',
+'Logistics_BM_DefineSelection',
+'Logistics_BM_Sort',
+'Logistics_BM_AllocationNumRange',
+
+'Logistics_BM_MakeSettings',
+
+'Logistics_BM_ActivateUnit',
+'Logistics_BM_EditUnit',
+'Logistics_BM_Proportional',
+'Logistics_BM_Conversion',
+
+'Logistics_BM_PeriodIndicator',
+'Logistics_BM_ExpDate',
+  'login',
+
 ];
 
 
@@ -1159,3 +1252,13 @@ app.post("/addCountry", (req, res) => {
   });
   res.render("succ");
 });
+
+
+
+
+
+
+
+// login
+
+

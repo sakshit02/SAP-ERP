@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>New Interval</th>
+                    <th>No</th>
+                    <th>From Number</th>
+                    <th>To Number</th>
+                    <th>Current Number</th>
+                    <th>Ext</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <button id="addRowButton">Add Row</button>
+        <button id="saveDataButton">Save Data</button>
+    </div>
+
+    <div class="container">
+        <h2></h2>
+        <table id="secondTable">
+            <thead>
+                <tr>
+                    <th>New Interval</th>
+                    <th>No</th>
+                    <th>From Number</th>
+                    <th>To Number</th>
+                    <th>Current Number</th>
+                    <th>Ext</th>
+                </tr>
+            </thead>
+            <tbody id="secondTableBody">
+                <!-- Data will be transferred here -->
+            </tbody>
+        </table>
+    </div>
+  </section>
+
+  <script>
+    
+document.getElementById("addRowButton").addEventListener("click", function() {
+            const tableBody = document.getElementById("tableBody");
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+
+            for (let i = 0; i < 6; i++) {
+                const cell = newRow.insertCell(i);
+                if (i === 5) {
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    cell.appendChild(checkbox);
+                } else {
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    cell.appendChild(input);
+                }
+            }
+        });
+
+        document.getElementById("saveDataButton").addEventListener("click", function() {
+            const firstTableBody = document.getElementById("tableBody");
+            const secondTableBody = document.getElementById("secondTableBody");
+
+            // Transfer data from the first table to the second table
+            for (let i = 0; i < firstTableBody.rows.length; i++) {
+                const newRow = secondTableBody.insertRow(secondTableBody.rows.length);
+
+                for (let j = 0; j < 6; j++) {
+                    const cell = newRow.insertCell(j);
+                    if (j === 5) {
+                        const checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+                        checkbox.checked = firstTableBody.rows[i].cells[j].querySelector("input[type='checkbox']").checked;
+                        cell.appendChild(checkbox);
+                    } else {
+                        cell.textContent = firstTableBody.rows[i].cells[j].querySelector("input[type='text']").value;
+                    }
+                }
+            }
+
+            // Remove all rows from the first table
+            while (firstTableBody.rows.length > 0) {
+                firstTableBody.deleteRow(0);
+            }
+        });
+  </script>
+
+</body>
+</html>
+
+

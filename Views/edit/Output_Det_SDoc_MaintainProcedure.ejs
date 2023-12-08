@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+     <style>
+       
+   
+       h1 {
+           text-align: center;
+           background-color: #333;
+           color: white;
+           padding: 20px 0;
+           margin: 0;
+       }
+   
+       .container {
+           max-width:1200px;
+           margin-left:276px ;
+           padding: 20px;
+           background-color: white;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       table {
+       
+           width: 800px;
+           border-collapse: collapse;
+           margin-top: 20px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+   
+       th, td {
+           padding: 12px;
+           text-align: center;
+           border-bottom: 1px solid #ddd;
+       }
+   
+       th {
+           background-color: #333;
+           color: white;
+       }
+   
+       td {
+           cursor: pointer;
+       }
+   
+       
+       .form {
+        width: 1000px;
+    background-color: #c9ebf3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    margin-bottom: 5px; 
+    
+    align-items: center; 
+}
+
+label {
+    font-weight: bold;
+    margin-right: 20px; 
+    width: 90px;
+}
+
+input {
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: white;
+    width: 260px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #58ece5;
+}
+ 
+   </style>
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+
+    
+    <div class="container">
+        <button onclick="window.location.href='/Output_Det_SDoc_MaintainProcedure_NewEntry'">New Entry +</button>
+
+
+  
+    <div class="form first">
+    
+    
+        <div class="details ID">
+            <div class="fields">
+                <div class="input-field">
+                    <label>         Usage       :</label>
+                    <input  name="vid" type="text"  >
+                </div>
+                <div class="input-field">
+                    <label>Application :</label>
+                    <input name="loc_code" type="text" placeholder="" >
+                </div>
+             
+               
+
+            </div>
+        <table id="myTable">
+    <thead>
+        <tr>
+            <th>Procedure</th>
+            <th>Description</th>
+           
+        </tr>
+    </thead>
+    
+
+    <tbody id="tableBody">
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+
+                    
+        </tr>
+  
+       
+    </tbody>
+    </table><br>
+
+
+    <button onclick="window.location.href='/Output_Det_SDoc_MaintainProcedure_ControldataTable'">Control Data</button>
+  </section>
+
+ 
+
+</body>
+</html>

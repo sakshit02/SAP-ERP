@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+   </head>
+<body>
+
+  
+    <%-include ('partials/sidepanel'); %>
+    <h1>Define Enterprise Structure</h1>
+  
+    <div id="body" >
+        <h2>change page</h2>
+      <div  style="height: 280px;width: 850px; overflow: auto">
+        <table class="datatable">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Menu Name</th>
+                    <th>Screen Code</th>
+                    <th>Create<input id="check_all1" type="checkbox" class="create-checkbox"></th>
+                    <th>Change<input id="check_all2" type="checkbox" class="change-checkbox"></th>
+                    <th>Delete<input id="check_all3" type="checkbox" class="delete-checkbox"></th>
+                    <th>Display<input id="check_all4" type="checkbox" class="display-checkbox"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd_col">
+                    <td>1</td>
+                    <td>Company</td>
+                    <td>GS10011</td>
+                    <td><input type="checkbox" name="row-check" value="1" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>2</td>
+                    <td>Credit Control Area</td>
+                    <td>GS20011</td>
+                    <td><input type="checkbox" name="row-check" value="2" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>3</td>
+                    <td>Company Code</td>
+                    <td>GS30011</td>
+                    <td><input type="checkbox" name="row-check" value="3" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>4</td>
+                    <td>Business Area</td>
+                    <td>GS40011</td>
+                    <td><input type="checkbox" name="row-check" value="4" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>5</td>
+                    <td>Functional Area</td>
+                    <td>GS50011</td>
+                    <td><input type="checkbox" name="row-check" value="5" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>6</td>
+                    <td>Profit Center</td>
+                    <td>GS60011</td>
+                    <td><input type="checkbox" name="row-check" value="6" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>7</td>
+                    <td>Plant</td>
+                    <td>GS70011</td>
+                    <td><input type="checkbox" name="row-check" value="7" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>8</td>
+                    <td>Division</td>
+                    <td>GS80011</td>
+                    <td><input type="checkbox" name="row-check" value="8" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>9</td>
+                    <td>Sales Organization</td>
+                    <td>GS90011</td>
+                    <td><input type="checkbox" name="row-check" value="9" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>10</td>
+                    <td>Distributional Channel</td>
+                    <td>GS100011</td>
+                    <td><input type="checkbox" name="row-check" value="10" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>11</td>
+                    <td>Sales Office</td>
+                    <td>GS11011</td>
+                    <td><input type="checkbox" name="row-check" value="11" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>12</td>
+                    <td>Sales Group</td>
+                    <td>GS12011</td>
+                    <td><input type="checkbox" name="row-check" value="12" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>13</td>
+                    <td>Storage Location</td>
+                    <td>GS13011</td>
+                    <td><input type="checkbox" name="row-check" value="13" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>14</td>
+                    <td>Purchasing Organization</td>
+                    <td>GS14011</td>
+                    <td><input type="checkbox" name="row-check" value="14" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="display-checkbox"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>15</td>
+                    <td>Shipping Point</td>
+                    <td>GS15011</td>
+                    <td><input type="checkbox" name="row-check" value="15" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="display-checkbox"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>16</td>
+                    <td>Loading Point</td>
+                    <td>GS16011</td>
+                    <td><input type="checkbox" name="row-check" value="16" class="create-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="change-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="delete-checkbox"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="display-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+  <div>
+    <h1>Assign Enterprise Structure</h1>
+  
+    <div id="body">
+      <div  style="height: 280px;width: 850px; overflow: auto">
+        <table class="datatable">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Menu Name</th>
+                    <th>Screen Code</th>
+                    <th>Create<input id="check_all5" type="checkbox" class="create-checkbox5"></th>
+                    <th>Change<input id="check_all6" type="checkbox" class="change-checkbox6"></th>
+                    <th>Delete<input id="check_all7" type="checkbox" class="delete-checkbo7"></th>
+                    <th>Display<input id="check_all8" type="checkbox" class="display-checkbox8"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd_col">
+                    <td>1</td>
+                    <td>Assig Company Code to Company</td>
+                    <td>GS17011</td>
+                    <td><input type="checkbox" name="row-check" value="1" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>2</td>
+                    <td>Assg Company Code to Credit Control Area</td>
+                    <td>GS18011</td>
+                    <td><input type="checkbox" name="row-check" value="2" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>3</td>
+                    <td>Assg Plant to Company Code</td>
+                    <td>GS19011</td>
+                    <td><input type="checkbox" name="row-check" value="3" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>4</td>
+                    <td>Assg Sales Org to Company Code</td>
+                    <td>GS200011</td>
+                    <td><input type="checkbox" name="row-check" value="4" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>5</td>
+                    <td>Assg Dist Channel to Sales Org</td>
+                    <td>GS21011</td>
+                    <td><input type="checkbox" name="row-check" value="5" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="5" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>6</td>
+                    <td>Assg Division to Sales Org</td>
+                    <td>GS22011</td>
+                    <td><input type="checkbox" name="row-check" value="6" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="6" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>7</td>
+                    <td>Setup Sales Area</td>
+                    <td>GS23011</td>
+                    <td><input type="checkbox" name="row-check" value="7" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="7" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>8</td>
+                    <td>Assign Sales Office to Sales Area</td>
+                    <td>GS24011</td>
+                    <td><input type="checkbox" name="row-check" value="8" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="8" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>9</td>
+                    <td>Assg Sales org, Dist Channel, Plant</td>
+                    <td>GS25011</td>
+                    <td><input type="checkbox" name="row-check" value="9" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="9" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>10</td>
+                    <td>Assign Sales Area to Credit Control Area</td>
+                    <td>GS26011</td>
+                    <td><input type="checkbox" name="row-check" value="10" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="10" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>11</td>
+                    <td>Assgn Purchasing Org to Company Code</td>
+                    <td>GS27011</td>
+                    <td><input type="checkbox" name="row-check" value="11" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="11" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>12</td>
+                    <td>Assgn Purchasing Org to Plant</td>
+                    <td>GS28011</td>
+                    <td><input type="checkbox" name="row-check" value="12" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="12" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>13</td>
+                    <td>Assign Standard Purchasing Org to Plant</td>
+                    <td>GS29011</td>
+                    <td><input type="checkbox" name="row-check" value="13" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="13" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>14</td>
+                    <td>Assign Purchasing Org to Reference Purchasing Org</td>
+                    <td>GS300011</td>
+                    <td><input type="checkbox" name="row-check" value="14" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="14" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>15</td>
+                    <td>Define Rules by Sales Area</td>
+                    <td>GS31011</td>
+                    <td><input type="checkbox" name="row-check" value="15" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="15" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>16</td>
+                    <td>Assign Business Area to Plant and Division</td>
+                    <td>GS32011</td>
+                    <td><input type="checkbox" name="row-check" value="16" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="display-checkbox8"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>17</td>
+                    <td>Assgn Business Area by Sales Area</td>
+                    <td>GS33011</td>
+                    <td><input type="checkbox" name="row-check" value="16" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="display-checkbox8"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>18</td>
+                    <td>Assign Shipping Point to Plant</td>
+                    <td>GS34011</td>
+                    <td><input type="checkbox" name="row-check" value="16" class="create-checkbox5"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="change-checkbox6"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="delete-checkbox7"></td>
+                    <td><input type="checkbox" name="row-check" value="16" class="display-checkbox8"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h1>Pricing</h1>
+  
+    <div id="body">
+      <div style="height: 180px;width: 850px; overflow: auto">
+        <table class="datatable">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Menu Name</th>
+                    <th>Screen Code</th>
+                    <th>Create<input id="check_all9" type="checkbox" class="create-checkbox9"></th>
+                    <th>Change<input id="check_all10" type="checkbox" class="change-checkbox10"></th>
+                    <th>Delete<input id="check_all11" type="checkbox" class="delete-checkbox11"></th>
+                    <th>Display<input id="check_all12" type="checkbox" class="display-checkbox12"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd_col">
+                    <td>1</td>
+                    <td>Condition Table</td>
+                    <td>GS35011</td>
+                    <td><input type="checkbox" name="row-check" value="1" class="create-checkbox9"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="change-checkbox10"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="delete-checkbox11"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="display-checkbox12"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>2</td>
+                    <td>Access Sequence</td>
+                    <td>GS36011</td>
+                    <td><input type="checkbox" name="row-check" value="2" class="create-checkbox9"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="change-checkbox10"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="delete-checkbox11"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="display-checkbox12"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>3</td>
+                    <td>Condition Type</td>
+                    <td>GS37011</td>
+                    <td><input type="checkbox" name="row-check" value="3" class="create-checkbox9"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="change-checkbox10"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="delete-checkbox11"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="display-checkbox12"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>4</td>
+                    <td>Pricing Procedure</td>
+                    <td>GS38011</td>
+                    <td><input type="checkbox" name="row-check" value="4" class="create-checkbox9"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="change-checkbox10"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="delete-checkbox11"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="display-checkbox12"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h1>Sales Document Header</h1>
+  
+    <div id="body">
+      <div  style="height: 280px;width: 850px; overflow: auto">
+        <table class="datatable">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Menu Name</th>
+                    <th>Screen Code</th>
+                    <th>Create<input id="check_all13" type="checkbox" class="create-checkbox13"></th>
+                    <th>Change<input id="check_all14" type="checkbox" class="change-checkbox14"></th>
+                    <th>Delete<input id="check_all15" type="checkbox" class="delete-checkbox15"></th>
+                    <th>Display<input id="check_all16" type="checkbox" class="display-checkbox16"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd_col">
+                    <td>1</td>
+                    <td>Sales Document Type(Header)</td>
+                    <td>GS39011</td>
+                    <td><input type="checkbox" name="row-check" value="1" class="create-checkbox13"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="change-checkbox14"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="delete-checkbox15"></td>
+                    <td><input type="checkbox" name="row-check" value="1" class="display-checkbox16"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>2</td>
+                    <td>Sales Doc Type</td>
+                    <td>GS400011</td>
+                    <td><input type="checkbox" name="row-check" value="2" class="create-checkbox13"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="change-checkbox14"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="delete-checkbox15"></td>
+                    <td><input type="checkbox" name="row-check" value="2" class="display-checkbox16"></td>
+                </tr>
+                <tr class="odd_col">
+                    <td>3</td>
+                    <td>Define no Range for Sales Doc</td>
+                    <td>GS41011</td>
+                    <td><input type="checkbox" name="row-check" value="3" class="create-checkbox13"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="change-checkbox14"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="delete-checkbox15"></td>
+                    <td><input type="checkbox" name="row-check" value="3" class="display-checkbox16"></td>
+                </tr>
+                <tr class="even_col">
+                    <td>4</td>
+                    <td>Assign Sales Area to Sales Doc. Type</td>
+                    <td>GS42011</td>
+                    <td><input type="checkbox" name="row-check" value="4" class="create-checkbox13"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="change-checkbox14"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="delete-checkbox15"></td>
+                    <td><input type="checkbox" name="row-check" value="4" class="display-checkbox16"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <script>
+    $(function() {
+        $("#check_all1").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".create-checkbox").prop("checked", true);
+            } else {
+                $(".create-checkbox").prop("checked", false);
+            }
+        });
+  
+        $("#check_all2").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".change-checkbox").prop("checked", true);
+            } else {
+                $(".change-checkbox").prop("checked", false);
+            }
+        });
+  
+        $("#check_all3").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".delete-checkbox").prop("checked", true);
+            } else {
+                $(".delete-checkbox").prop("checked", false);
+            }
+        });
+  
+        $("#check_all4").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".display-checkbox").prop("checked", true);
+            } else {
+                $(".display-checkbox").prop("checked", false);
+            }
+        });
+  
+        $("input:checkbox[name='row-check']").on("change", function () {
+            var total_check_boxes = $("input:checkbox[name='row-check']").length;
+            var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+  
+            if (total_check_boxes === total_checked_boxes) {
+                $("#check_all").prop("checked", true);
+            } else {
+                $("#check_all").prop("checked", false);
+            }
+        });
+    });
+  
+  
+  
+  
+    $(function() {
+        $("#check_all5").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".create-checkbox5").prop("checked", true);
+            } else {
+                $(".create-checkbox5").prop("checked", false);
+            }
+        });
+  
+        $("#check_all6").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".change-checkbox6").prop("checked", true);
+            } else {
+                $(".change-checkbox6").prop("checked", false);
+            }
+        });
+  
+        $("#check_all7").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".delete-checkbox7").prop("checked", true);
+            } else {
+                $(".delete-checkbox7").prop("checked", false);
+            }
+        });
+  
+        $("#check_all8").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".display-checkbox8").prop("checked", true);
+            } else {
+                $(".display-checkbox8").prop("checked", false);
+            }
+        });
+  
+        $("input:checkbox[name='row-check']").on("change", function () {
+            var total_check_boxes = $("input:checkbox[name='row-check']").length;
+            var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+  
+            if (total_check_boxes === total_checked_boxes) {
+                $("#check_all").prop("checked", true);
+            } else {
+                $("#check_all").prop("checked", false);
+            }
+        });
+    });
+  
+  
+  
+  
+  $(function() {
+        $("#check_all9").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".create-checkbox9").prop("checked", true);
+            } else {
+                $(".create-checkbox9").prop("checked", false);
+            }
+        });
+  
+        $("#check_all10").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".change-checkbox10").prop("checked", true);
+            } else {
+                $(".change-checkbox10").prop("checked", false);
+            }
+        });
+  
+        $("#check_all11").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".delete-checkbox11").prop("checked", true);
+            } else {
+                $(".delete-checkbox11").prop("checked", false);
+            }
+        });
+  
+        $("#check_all12").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".display-checkbox12").prop("checked", true);
+            } else {
+                $(".display-checkbox12").prop("checked", false);
+            }
+        });
+  
+        $("input:checkbox[name='row-check']").on("change", function () {
+            var total_check_boxes = $("input:checkbox[name='row-check']").length;
+            var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+  
+            if (total_check_boxes === total_checked_boxes) {
+                $("#check_all").prop("checked", true);
+            } else {
+                $("#check_all").prop("checked", false);
+            }
+        });
+    });
+  
+  
+  
+  
+  
+    $(function() {
+        $("#check_all13").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".create-checkbox13").prop("checked", true);
+            } else {
+                $(".create-checkbox13").prop("checked", false);
+            }
+        });
+  
+        $("#check_all14").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".change-checkbox14").prop("checked", true);
+            } else {
+                $(".change-checkbox14").prop("checked", false);
+            }
+        });
+  
+        $("#check_all15").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".delete-checkbox15").prop("checked", true);
+            } else {
+                $(".delete-checkbox15").prop("checked", false);
+            }
+        });
+  
+        $("#check_all16").on("click", function () {
+            if ($(this).prop("checked")) {
+                $(".display-checkbox16").prop("checked", true);
+            } else {
+                $(".display-checkbox16").prop("checked", false);
+            }
+        });
+  
+        $("input:checkbox[name='row-check']").on("change", function () {
+            var total_check_boxes = $("input:checkbox[name='row-check']").length;
+            var total_checked_boxes = $("input:checkbox[name='row-check']:checked").length;
+  
+            if (total_check_boxes === total_checked_boxes) {
+                $("#check_all").prop("checked", true);
+            } else {
+                $("#check_all").prop("checked", false);
+            }
+        });
+    });
+  
+  </script>
+  </body>
+  </html>
+  

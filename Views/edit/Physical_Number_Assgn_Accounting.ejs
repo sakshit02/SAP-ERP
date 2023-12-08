@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+     <style>
+        body{
+            background-color: white;
+        }
+
+.btn {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: rgb(78, 35, 235);
+    width: 460px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color:black;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color:white;
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 20 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: black;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+<div class="divvv">
+    <h1>Document Types</h1>
+    <h3>Set Up Document Type</h3>
+    <div><button class="btn"  onclick="window.location.href='/Physical_Number_Assgn_Accounting_Doc'">Financial Accounting Documents Type </button></div>
+    <div><button class="btn" onclick="window.location.href='/Physical_Number_Assgn_Accounting_Num'">Financial Accounting Number Ranges</button></div>
+    
+    <h3>Allocate Document Type to Transaction</h3>
+    <div><button class="btn" onclick="window.location.href='/Physical_Number_Assgn_Accounting_Issue'">Goods Issue Document type</button></div>
+    <div><button class="btn" onclick="window.location.href='/Physical_Number_Assgn_Accounting_Receipt'">Goods Receipt Document Type</button></div>
+    <div><button class="btn" onclick="window.location.href='/Physical_Number_Assgn_Accounting_Automatic'">Automatic Movements Document Type</button></div>
+    <div><button class="btn" onclick="window.location.href='/Physical_Number_Assgn_Accounting_Physical'">Physical Inventory Document type</button></div>
+</div>
+
+
+</body>
+</html>
+
+

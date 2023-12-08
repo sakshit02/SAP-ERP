@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+
+   </head>
+<body >
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <button>Select field</button>
+    <button>Technical view</button>
+    <button>Other Description</button>
+    <button>Field Attributes</button><br><bR>
+    <div class="container1" style="overflow-y: scroll; height: 500px;">
+      <table>
+        <tr>
+            <th>Selected Fields</th>
+            <th>FieldCatlg</th>
+        </tr>
+        <tr>
+          <td class="selectedFields" id="selectedFieldsRow1"></td>
+          <td class="fieldCatlg" data-row="1" ondblclick="copyToSelected(this)">Campaign ID</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow2"></td>
+          <td class="fieldCatlg" data-row="2" ondblclick="copyToSelected(this)">Customer</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow3"></td>
+          <td class="fieldCatlg" data-row="3" ondblclick="copyToSelected(this)">Distribuation Channel</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow4"></td>
+          <td class="fieldCatlg" data-row="4" ondblclick="copyToSelected(this)">Document Currency</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow5"></td>
+          <td class="fieldCatlg" data-row="5" ondblclick="copyToSelected(this)">Material</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow6"></td>
+          <td class="fieldCatlg" data-row="6" ondblclick="copyToSelected(this)">Plant</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow7"></td>
+          <td class="fieldCatlg" data-row="7" ondblclick="copyToSelected(this)">Price List</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow8"></td>
+          <td class="fieldCatlg" data-row="8" ondblclick="copyToSelected(this)">Sales Organization</td>
+      </tr>
+      <tr>
+          <td class="selectedFields" id="selectedFieldsRow9"></td>
+          <td class="fieldCatlg" data-row="9" ondblclick="copyToSelected(this)">Sales Unit</td>
+      </tr>
+     
+ 
+
+        
+    </table>
+    
+        
+
+        
+    
+    </div>
+    </div>
+
+
+  <script>
+ 
+    let selectedCells = [];
+
+function copyToSelected(cell) {
+if (!selectedCells.includes(cell)) {
+let selectedFields = document.querySelector("#selectedFieldsRow" + cell.dataset.row);
+
+let newCell = document.createElement('td');
+newCell.innerHTML = cell.innerHTML;
+
+let newRow = document.createElement('tr');
+newRow.appendChild(newCell);
+
+selectedFields.appendChild(newRow);
+
+selectedCells.push(cell);
+}
+}
+
+  </script>
+
+</body>
+</html>
+
+

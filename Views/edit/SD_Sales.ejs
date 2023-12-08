@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        .maindiv{
+            display: flex;
+        }
+
+body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        label {
+          display: block;
+          font-size: larger;
+          margin-bottom: 8px;
+          color: cadetblue;
+        }
+    
+        select {
+            background-color: beige;
+          padding: 5px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+.div1 , .div2{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <h1 style="color: black; margin: 0%; text-align: center;">Sales</h1>
+<div class="maindiv">
+
+    
+    <div class="div1">
+        
+    
+        <label for="dropdown1">Sales Document header</label>
+      <select id="dropdown1" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/SalesDocumentHeader1">Define Sales Document Types</option>
+        <option value="/SalesDocumentHeader2">Number Range</option>
+        <option value="/SalesDocumentHeader3">Assign Sales Area to Sales Document Types</option>
+      </select>
+    
+      <label for="dropdown2">Sales Document Item</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/saleDocumentItem_category">Define Item Category</option>
+        <option value="/saleDocumentItem_categoryGroups">Define Item Category Groups</option>
+        <option value="/saleDocumentItem_categoryUsage">Define Item Category Usage</option>
+        <option value="/saleDocumentItem_AssignCategory">Assign Item Categories</option>
+       
+      </select>
+    
+      <label for="dropdown3">Schedule Line</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/SubItem1">Define Schedule Line Categories </option>
+        <option value="/SubItem2">Schedule Line Categories</option>
+
+        
+      </select>
+    
+    
+      
+    
+    </div>
+    
+
+    
+
+
+</div>
+
+<script>
+    function redirectPage(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+      window.location.href = selectedOption;
+    }
+  </script>
+</body>
+</html>
+
+

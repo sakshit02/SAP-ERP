@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+     <style>
+       .popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 227, 227, 0.9);
+    z-index: 9999;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    background:  #7ca7e9;
+    padding: 20px;
+    border: 2px solid #7ca7e9;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form {
+    background-color: #c9ebf3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    margin-bottom: 5px; 
+    display: flex;
+    align-items: center; 
+}
+
+label {
+    font-weight: bold;
+    flex: 1;
+    margin-right: 10px; 
+}
+
+input {
+    flex: 2; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+        table, th, td {
+            
+            border:1px solid black;
+        }
+        .container1 {
+            width: 160vh;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            
+            width: 100;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color:bisque;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+    </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <h2>Condition type</h2>
+    <!-- new Entries -->
+    <button id="newEntriesButton" >New Entries</button>
+    <div id="popupContainer" class="popup-container">
+        <!-- Close button added here -->
+        <span class="close-button" onclick="hidePopup()">✖</span>
+
+        <div class="popup-content">
+        <h1>Condition Type Details</h1>
+        
+            <form action="/parkingformsent" method="POST">
+                <div class="form first">
+        
+        
+                    <div class="details ID">
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Condition Type</label>
+                                <input  name="company" type="text"  ><input  name="company" type="text"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Access Sequence</label>
+                                <input name="Cname" type="text" placeholder="" >
+                                
+                            </div>
+                           
+                         
+                            <div class="title">Control Data 1 </div>
+        
+                            <div class="input-field">
+                                <label>Condition class</label>
+                                <input name="Street" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Plus/minus</label>
+                                <input name="Cname" type="text" placeholder="" >
+                            </div>
+
+
+
+                            <div class="input-field">
+                                <label>Calculate type</label>
+                                <input name="Cname" type="text" placeholder="" >
+                            </div>
+        
+                            <div class="input-field">
+                                <label>Condition Category</label>
+                                <input name="PObox" type="text" placeholder="" >
+                            </div>
+        
+                            <div class="input-field">
+                                <label>Rounding Rule</label>
+                                <input name="Postal" type="text" placeholder="" >
+                            </div>
+        
+                            <div class="input-field">
+                                <label>strucCond.</label>
+                                <input name="City" type="number" placeholder="" >
+                            </div>
+                            <div class="title">Group Condition </div>
+        
+                            <div class="input-field">
+                                <label>Group Condition</label>
+                                <input name="Street" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>GrpCond.routine</label>
+                                <input name="Cname" type="text" placeholder="" >
+                            </div>
+                            <div class="input-field">
+                                <label>RoundDiffComp</label>
+                                <input name="Cname" type="text" placeholder="" >
+                            </div> 
+
+                            <div class="title">Changes which can be made </div>
+        
+                            <div class="input-field">
+                                <label>Manual entries</label>
+                                <input name="Street" type="text" placeholder="" >
+
+                               
+                            </div>
+                            <div class="input-field">
+                                <label>Header condition</label>
+                                <input name="Cname" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;
+
+                                <label>item condition</label>
+                                <input name="PObox" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;
+
+                                <label>delete</label>
+                                <input name="Postal" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;
+
+
+                                <label>value</label>
+                                <input name="City" type="checkbox" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Qty Relation</label>
+                                <input name="City" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+                                <label>Amount/percent</label>
+                                <input name="City" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+                                <label>Qty Relation</label>
+                                <input name="City" type="checkbox" placeholder="" >
+                            </div>
+
+
+
+                            <div class="title">Master data</div>
+        
+                            <div class="input-field">
+                                <label>Valid from</label>
+                                <input name="Street" type="date" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Pricing procedure</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Valid to</label>
+                                <input name="Cname" type="date" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Delete fr. DB</label>
+                                <input name="City" type="text" placeholder="" >
+
+
+                            </div>
+                            <div class="input-field">
+                                <label>ref.Con. Type</label>
+                                <input name="PObox" type="text" placeholder="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Condition index</label>
+                                <input name="City" type="checkbox" placeholder="" >
+
+                            </div>
+
+                            <div class="input-field">
+                                <label>Ref application</label>
+                                <input name="Postal" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                <label>Condition update</label>
+                                <input name="City" type="checkbox" placeholder="" >
+
+                            </div>
+
+
+                            <div class="title">Scales</div>
+        
+                            <div class="input-field">
+                                <label>Scale basis</label>
+                                <input name="Street" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Scale formula</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+      
+                                <label>Check Value</label>
+                                <input name="City" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                <label>Unit of meas.</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Scale Type</label>
+                                <input name="Cname" type="text" placeholder="" >
+
+                            </div>
+
+
+                            <div class="title">Scales</div>
+        
+                            <div class="input-field">
+                                <label>Scale basis</label>
+                                <input name="Street" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Scale formula</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+      
+                                <label>Check Value</label>
+                                <input name="City" type="text" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                <label>Unit of meas.</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Scale Type</label>
+                                <input name="Cname" type="text" placeholder="" >
+
+                            </div>
+
+
+
+                            <div class="title">Control Data 2</div>
+        
+                            <div class="input-field">
+                                <label>Currency Conv.</label>
+                                <input name="Street" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Exclusion</label>
+                                <input name="City" type="text" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+      
+                                <label>Accurals</label>
+                                <input name="City" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                <label>Varient Cond.</label>
+                                <input name="City" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Pricing Date</label>
+                                <input name="city" type="text"  placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Inv.list Cond.</label>
+                                <input name="Cname" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Qty Conversion</label>
+                                <input name="Cname" type="checkbox" placeholder="" >
+
+                            </div>
+                            <div class="input-field">
+                                <label>Int-comBillCond</label>
+                                <input name="Cname" type="checkbox" placeholder="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label>Rel.Acc.Assig</label>
+                                <input name="Cname" type="checkbox" placeholder="" >
+
+                            </div>
+
+                            <div class="title">Text determination</div>
+                            <div class="input-field">
+                                <label for="TextDetPrc">TextDetPrc</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <select id="TextDetPrc">
+                               <option >01 Price</option>
+                               <option>02 Discounts/surcharges</option>
+
+                                <label>text ID</label>
+                                <input name="Cname" type="text" placeholder="" >
+
+                            </div>
+
+                        </div>
+                    </div>
+        
+                           
+                        
+                        
+                    </div> 
+                </div>
+            
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="container1" style="overflow: scroll;">
+      <table>
+        <tr>
+            <th>Condition Type</th>
+            <th>Description</th>
+            <th>Condition Class</th>
+            <th>Calculation Type</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </table>
+    
+        
+
+        
+    
+    </div>
+    </div>
+
+
+    <script>
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById("popupContainer").style.display = "block";
+        }
+
+        // Function to hide the popup
+        function hidePopup() {
+            document.getElementById("popupContainer").style.display = "none";
+        }
+
+        // Attach click event listener to the "New Entries" button
+        document.getElementById("newEntriesButton").addEventListener("click", showPopup);
+    </script>
+
+
+</body>
+</html>
+
+

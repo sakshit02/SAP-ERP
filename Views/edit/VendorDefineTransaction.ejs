@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+     <style>
+
+
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 420px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+   
+    <h2>Maintain Field Status Group: Partner Usage</h2>
+ 
+        <div class="input-field">
+            <h3>Partner Usage</h3>
+            <table>
+                <thead>
+                    <th>Activity Type</th>
+                    
+                </thead>
+                <tbody>
+                    <!-- Your radio button rows here -->
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Create_Accounting'" >Create Vendor (Accounting)</button></td>
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Change_Accounting'" >Change Vendor (Accounting)</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Display_Accounting'" >Display Vendor (Accounting)</button></td>
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Create_Purchasing'" >Create Vendor (Purchasing)</button></td>
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Change_Purchasing'" >Change Vendor (Purchasing)</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Display_Purchasing'" >Display Vendor (Purchasing)</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Create_Centrally'" >Create Vendor (Centrally)</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Change_Centrally'" >Change Vendor (Centrally)</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button  onclick="window.location.href='/Vendor_Display_Centrally'" >Display Vendor (Centrally)</button></td>
+
+                    </tr>
+              
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+

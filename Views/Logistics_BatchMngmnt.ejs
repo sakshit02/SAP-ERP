@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+        .maindiv{
+            display: flex;
+        }
+
+body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        label {
+          display: block;
+          font-size: larger;
+          margin-bottom: 8px;
+          color: cadetblue;
+        }
+    
+        select {
+            background-color: beige;
+          padding: 5px;
+          width: 200px;
+          margin-bottom: 20px;
+        }
+.div1 , .div2{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: auto;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <h1>Business Partner</h1>
+<div class="maindiv">
+
+    
+    <div class="div1">
+        
+    
+        <label for="dropdown1">specify Batch Level And Activate Status Managment</label>
+      <select id="dropdown1" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_BatchLvl">Batch Level</option>
+        <option value="/Logistics_BM_StatusMngt">Batch Status Managment</option>
+        <option value="/Logistics_BM_PlantMngt">Plant With Batch Status Managment</option>
+      </select>
+    
+      <label for="dropdown2">Batch Master</label>
+      <select id="dropdown2" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_FieldSelection">Field Selection Batch Master</option>
+        <option value="/Logistics_BM_ActivateDoc">Activate Document Managment For Batches</option>
+      </select>
+
+      <label for="dropdown3">Batch Number Assignment</label>
+      <select id="dropdown3" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_NumberAssgn">Activate Internal Batch Number Assignment</option>
+        <option value="/Logistics_BM_AssignRange">Maintain Internal Batch Number Assignment Range</option>
+        <option value="/Logistics_BM_InternalBatch">Configure Customer Exits For Internal Batch Number Assignment</option>
+        <option value="/Logistics_BM_ExternalBatch">Maintain Number Range For External Batch Number Assignment</option>
+        <option value="/Logistics_BM_SetupCustomer">Setup Customer Exits For External Batch Number Assignment</option>
+
+      </select>
+      <label for="dropdown4">Creation Of New Batches</label>
+      <select id="dropdown4" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_ProcessOrder">Define Batch Creation For Production Order/Process Order</option>
+        <option value="/Logistics_BM_GoodsMov">Define Batch Creation For Goods Movements</option>
+        <option value="/Logistics_BM_Transaction">Define Initial Creation Of Data For Batch Master Transaction</option>
+      </select>
+      <label for="dropdown5">Batch Valuation</label>
+      <select id="dropdown5" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_InventoryMng">Valuation For Goods Movements In Inventory Management</option>
+        <option value="/Logistics_BM_Function">Valuation For Creation Of New Batches Using Function Module</option>
+       
+      </select>
+      
+
+</div>
+<div class="div2">
+    <label for="dropdown6">Batch Status Managment</label>
+      <select id="dropdown6" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_WarehouceMng">Activate Batch Status Checking In Warehouse Managment</option>
+        <option value="/Logistics_BM_InitialStatus">Customer Exit For Determining The Initial Status Of Batches</option>
+      </select>
+
+    <label for="dropdown7">Batch Determination & Batch Check</label>
+      <select id="dropdown7" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_CondnTable">Condition Tables</option>
+        <option value="/Logistics_BM_AccessSequence">Access Sequences</option>
+        <option value="/Logistics_BM_StrategyTypes">Strategy Types</option>
+        <option value="/Logistics_BM_ProcedureDef">Batch Search Procedure Defination</option>
+        <option value="/Logistics_BM_Activation">Batch Search Procedure Allocation And Check Activation </option>
+        <option value="/Logistics_BM_AutomaticDet">Activate Automatic Batch Determination In SD</option>
+        <option value="/Logistics_BM_DefineSelection">Define Selection Classes</option>
+        <option value="/Logistics_BM_Sort">Define Sort Rules</option>
+        <option value="/Logistics_BM_AllocationNumRange">Maintain Batch Allocation Strategy Number Range</option>
+
+      </select>
+
+      <label for="dropdown8">Batch Where Used List</label>
+      <select id="dropdown8" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_MakeSettings">Make Settings For Batch Where Used List</option>
+      
+      </select>
+
+      <label for="dropdown9">Batch Specific Material Units Of Measure</label>
+      <select id="dropdown9" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_ActivateUnit">Activate Batch Specific Material Unit Of Measure</option>
+        <option value="/Logistics_BM_EditUnit">Edit Batch Specific Material Unit Of Measure</option>
+        <option value="/Logistics_BM_Proportional">Calculate Proportional Factors </option>
+        <option value="/Logistics_BM_Conversion">Product Quantities Conversion</option>
+      </select>
+
+      <label for="dropdown10">Shelf Life Expiration Date</label>
+      <select id="dropdown10" onchange="redirectPage(this)">
+        <option value="">Choose Option</option>
+        <option value="/Logistics_BM_PeriodIndicator">Maintain Period Indicator</option>
+        <option value="/Logistics_BM_ExpDate">Set Expiration Date Check</option>
+        
+      </select>
+    </div>
+    
+</div>
+<script>
+    function redirectPage(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+      window.location.href = selectedOption;
+    }
+  </script>
+</body>
+</html>
+
+

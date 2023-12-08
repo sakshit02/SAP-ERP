@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar</title>
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+
+.button10 {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: rgb(43, 19, 173);
+    width: 460px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #58ece5;
+}
+.divvv{
+    
+    margin-top:60px ;
+    background-color: rgb(17,16,29);
+     width: 800px;
+     height: 620px;
+     box-shadow: 20 10 30 rgb(15, 15, 15);
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     padding-left: 80px;
+}
+h1,h3{
+    color: white;
+    margin-bottom:10px ;
+}
+       
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+<div class="divvv">
+    <h1>Goods Issue/Transfer Postings</h1>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Gen'">General Data</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Add'">Additional Account Assignment</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_MM'">Material Managment</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Acc'">Asset Accounting</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Real'">Real Estate Managment</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Transfer'">Transfer Postings</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_War'">Warehouse Managment</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Pay'">Payment Transactions</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Tax'">Taxes</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Foreign'">Foreign Payments</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Cons'">Consolidation</button></div>
+    <div><button class="button10" onclick="window.location.href='/Physical_Movements_ScLayout_Overview_Fin'">Fin.Assets Managment</button></div>
+    
+
+</div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+     <style>
+        
+        table, th, td {
+            border:1px solid black;
+        }
+        .container1 {
+            width: 160vh;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color:bisque;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+     </style>
+   </head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+
+    <button onclick="window.location.href='/Output_Det_Billing_MaintainProcedure_ControldataTable_NewEntry'">New Entry +</button>
+    <h2>Control Data</h2>
+    <form action="/parkingformsent" method="POST">
+        <div class="form first">
+
+
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Procedure</label>
+                        <input  name="vid" type=""  >
+                    </div>
+   
+                </div>
+                
+            </div> 
+        </div>
+    </form>
+
+    <div class="container1" style="overflow-y: scroll;">
+
+      <table>
+        <h3>Refrence Step Overview </h3>
+        <tr>
+           
+            <th>Step</th>
+            <th>Counter</th>
+            <th>Condition Type</th>
+            <th>Description</th>
+            
+            <th>Manaul</th>
+            <th>Requirement</th>
+           
+            
+        </tr>
+ 
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="checkbox"></td>
+            <td></td>
+            
+            
+        </tr>
+        
+       
+        
+    </table>
+    
+        
+
+        
+    
+    </div>
+    </div>
+
+
+    
+
+</body>
+</html>
+
+
