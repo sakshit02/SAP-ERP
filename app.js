@@ -896,6 +896,7 @@ const routes = [
 'Logistics_BM_PlantMngt',
 
 'Logistics_BM_FieldSelection',
+'Logistics_BM_FieldSelection_NewEntry',
 'Logistics_BM_ActivateDoc',
 
 'Logistics_BM_NumberAssgn',
