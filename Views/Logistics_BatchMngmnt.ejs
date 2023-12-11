@@ -55,7 +55,7 @@ body {
 <body>
     
     <%-include ('partials/sidepanel'); %>
-    <h1>Business Partner</h1>
+    <h1>Business Partner</h1> 
 <div class="maindiv">
 
     
@@ -82,10 +82,6 @@ body {
         <option value="">Choose Option</option>
         <option value="/Logistics_BM_NumberAssgn">Activate Internal Batch Number Assignment</option>
         <option value="/Logistics_BM_AssignRange">Maintain Internal Batch Number Assignment Range</option>
-        <option value="/Logistics_BM_InternalBatch">Configure Customer Exits For Internal Batch Number Assignment</option>
-        <option value="/Logistics_BM_ExternalBatch">Maintain Number Range For External Batch Number Assignment</option>
-        <option value="/Logistics_BM_SetupCustomer">Setup Customer Exits For External Batch Number Assignment</option>
-
       </select>
       <label for="dropdown4">Creation Of New Batches</label>
       <select id="dropdown4" onchange="redirectPage(this)">
@@ -98,8 +94,6 @@ body {
       <select id="dropdown5" onchange="redirectPage(this)">
         <option value="">Choose Option</option>
         <option value="/Logistics_BM_InventoryMng">Valuation For Goods Movements In Inventory Management</option>
-        <option value="/Logistics_BM_Function">Valuation For Creation Of New Batches Using Function Module</option>
-       
       </select>
       
 
@@ -108,8 +102,7 @@ body {
     <label for="dropdown6">Batch Status Managment</label>
       <select id="dropdown6" onchange="redirectPage(this)">
         <option value="">Choose Option</option>
-        <option value="/Logistics_BM_WarehouceMng">Activate Batch Status Checking In Warehouse Managment</option>
-        <option value="/Logistics_BM_InitialStatus">Customer Exit For Determining The Initial Status Of Batches</option>
+        <option value="/Logistics_BM_WarehouceMng">Activate Batch Status Checking In Warehouse Managment</option
       </select>
 
     <label for="dropdown7">Batch Determination & Batch Check</label>
