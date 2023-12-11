@@ -11,15 +11,15 @@
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+  
 
-     
+
    </head>
 <body >
     
     <%-include ('partials/sidepanel'); %>
 
-    <h2>Access Table</h2>
+    <h2>Access Field</h2>
     <form action="/parkingformsent" method="POST">
         <div class="form first">
 
@@ -27,7 +27,7 @@
             <div class="details ID">
                 <div class="fields">
                     <div class="input-field">
-                        <label>Access Sequence</label>
+                        <label>Access Field</label>
                         <input  name="vid" type=""  >
                     </div>
    
@@ -37,71 +37,88 @@
         </div>
     </form>
 
-    <div class="container1" style="height: 450px;">
+    <div class="container1" style="height: 430px;">
 
       <table>
         <tr>
-            <th>Access Number</th>
-            <th>Table Number</th>
-            <th>Description</th>
-            <th>Requirement</th>
-            <th>Exclusive</th>
+            <th>Condition</th>
+            <th>I/O</th>
+            <th>Document Structure</th>
+            <th>Document Field</th>
+            <th>Long Field Label</th>
+            <th>Spec. Val. Source</th>
+            <th>Initial value allowed</th>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
             <td><input type="checkbox"></td>
+            
         </tr>
         
     </table>
@@ -113,9 +130,8 @@
     </div>
     </div>
 
-    
-    
 
+    <input class="screencode" type="hidden" name="screenCode" value="123">
 </body>
 </html>
 

@@ -13,12 +13,12 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
 
-     
+    
    </head>
 <body >
     
     <%-include ('partials/sidepanel'); %>
-
+    <button onclick="window.location.href='/Logistics_BM_AccessTable_NewEntry'">New Entry +</button>
     <h2>Access Table</h2>
     <form action="/parkingformsent" method="POST">
         <div class="form first">
@@ -37,71 +37,48 @@
         </div>
     </form>
 
-    <div class="container1" style="height: 450px;">
+    <div class="container1" style="height: 400px;">
 
       <table>
         <tr>
             <th>Access Number</th>
             <th>Table Number</th>
             <th>Description</th>
-            <th>Requirement</th>
-            <th>Exclusive</th>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
         </tr>
         
     </table>
@@ -113,7 +90,7 @@
     </div>
     </div>
 
-    
+    <button onclick="window.location.href='/Logistics_BM_AccessFields'">Access Field</button>
     
 
 </body>
