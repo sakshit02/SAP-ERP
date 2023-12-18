@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/companyform.css">
 
-    <title>Document</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 
-
-    <style>
+     <style>
 
 
 .container {
@@ -90,19 +90,20 @@ button:hover {
         
         /* Style the tab content (and add height:100% for full page content) */
         .tabcontent {
-          color: rgb(8, 8, 8);
+          color: rgb(251, 247, 247);
           display: none;
           
           height: 100%;
-          background-color: #fff;
+          background-color: rgb(25, 24, 44);
+          width: 110%;
 
         }
         table, th, td {
             border:1px solid black;
         }
         .container1 {
-            width: 160vh;
-            margin: 20px auto;
+            width: 500px;
+            margin: auto;
             padding: 20px;
             background-color: white;
             border-radius: 5px;
@@ -156,7 +157,7 @@ button:hover {
         }
         
         
-        </style>
+        </style> 
    </head>
 <body>
   <%-include ('partials/sidepanel'); %>
@@ -200,7 +201,8 @@ button:hover {
                 </div> 
             </div>
         </form>
-        <button class="tablink" onclick="openPage('Sales', this, 'red' )" id="defaultOpen">Sales</button>
+        <!-- <button class="tablink" onclick="openPage('Sales', this, 'red' )" id="defaultOpen">Sales</button> -->
+<button class="tablink" onclick="openPage('Sales', this, 'red' )">Sales</button>
 <button class="tablink" onclick="openPage('Item Overview', this, 'green')" >Item Overview</button>
 <button class="tablink" onclick="openPage('Item detail', this, 'blue')">Item Detail</button>
 <button class="tablink" onclick="openPage('Ordering Party', this, 'orange')">Ordering Party</button>
@@ -213,70 +215,79 @@ button:hover {
 
 
 <!-- first tab --><br>
-<div id="Sales" class="tabcontent"><br><br>
+<div id="Sales" class="tabcontent container1"><br><br>
+
   <h3>Item Overview</h3>
-    <form action="">
+
+  <form action="/parkingformsent" method="POST">
+    <div class="form first">
+      <div class="details ID">
+          <div class="fields">
   <div class="input-field">
         <label>Req.deliv.date</label>
-        <input name="delivery" type="text" placeholder="" size="2px">
-        &nbsp;&nbsp;
+        <input name="delivery" type="text" placeholder="" >
         <input name="delivery" type="text" placeholder="">
-        <label>Deliver.Plant</label>
-        <input type="text" name="plant" placeholder="" size="2px">
+        <label style="margin-left: 50px;">Deliver.Plant</label>
+        <input type="text" name="plant" placeholder="" >
   </div>
 
   <div class="input-field">
     <label>Complete div.</label>
-    <input type="checkbox" name="division">
+    <input type="checkbox" name="division" style="margin-right: 80px;">
     <label>Total Weight</label>
     <input type="text" name="number" placeholder="">
-    <input type="text" name="weight" size="2px">
+    <input type="text" name="weight" >
   </div>
 
   <div class="input-field">
     <label>Delivery Block</label>
-    <select name="delivery">
+    <select name="delivery" style="margin-right: 150px;">
         <option value="">Select Billing Block</option>
     </select>
     <label>Volume</label>
-    <input type="text" name="volume" placeholder="">
+    <input type="text" name="volume" placeholder="" style="width: 500px;">
   </div>
 
   <div class="input-field">
     <label>Billing block</label>
-    <select name="billing" >
+    <select name="billing" style="margin-right: 150px;">
         <option value="">Select Billing Block</option>
     </select>
     <label>Pricing Date</label>
-    <input type="date" name="pricing">
+    <input type="date" name="pricing" style="width: 500px;">
   </div>
 
   <div class="input-field">
     <label>Payment Card</label>
-    <input type="text" name="payment" placeholder="">
+    <input type="text" name="payment" placeholder="" style="margin-right: 70px;">
     <label>Exp.date</label>
     <input type="date" name="exp">
   </div>
 
   <div class="input-field">
     <label> Payment Terms</label>
-    <input type="text" name="payment" placeholder="" size="2px">
+    <input type="text" name="payment" placeholder="" style="margin-right: 70px;">
     <label>Incoterms</label>
     <input type="text" name="incoterms" placeholder="">
   </div>
 
   <div class="input-field">
-    <label>Order reason</label>
-    <select name="order" id=""></select>
+    <label>Order reason
+    <select name="order" id="" style="margin-left: 40px;">
+      <option value="">Choose Order Reason...</option>
+    </select></label>
   </div>
 
   <div class="input-field">
-    <label>Sales area</label>
+    <label style="margin-right: 20px;">Sales area</label>
     <input type="text" name="sales"><span>/</span><input type="text" name="sales"><span>/</span><input type="text" name="sales">
   </div>
+          </div>
+      </div>
+    </div>
 </form>
 <div>
-    <div class="container1" style="overflow: scroll;">
+    <div class="container1" style="overflow-x: scroll;">
         <table >
             <thead>
                 <tr >
@@ -544,273 +555,7 @@ button:hover {
                   
 
               </tr>
-              <tr >
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-  
-                
-                
-
-            </tr>
-            <tr >
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-
               
-              
-
-          </tr>
-          <tr >
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-
-            
-            
-
-        </tr>
             </thead>
            
         </table>
@@ -827,17 +572,27 @@ button:hover {
 <!-- second tab -->
 <div id="Item Overview" class="tabcontent"><br><br>
   <h3>Item Overview</h3>
-  <form>
+
+    <form action="/parkingformsent" method="POST">
+      <div class="form first" style="width: 800px;">
+
+          <div class="details ID">
+
+    <div class="fields">
     <div class="input-field">
       <label>Req. deliv.date</label>
-      <input type="text" name="deliv" placeholder="" size="2px" />
-      <input type="date" name="date" />
+      <input type="text" name="deliv" placeholder="" />&nbsp;
+      <input type="date" name="date" style="margin-right: 30px;"/>
+
       <label>Deliver.Plant</label>
       <input type="text" name="plant" placeholder="" />
     </div>
+    </div>
+          </div>
+      </div>
   </form>
   <div>
-    <div class="container1" style="overflow: scroll;">
+    <div class="container1" style="overflow-y: scroll;">
         <table >
             <thead>
                 <tr >
@@ -927,273 +682,6 @@ button:hover {
                     
 
                 </tr>
-                <tr >
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-                    <td><input type="text" placeholder=""></td>
-      
-                    
-                    
-
-                </tr>
-                <tr >
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-    
-                  
-                  
-
-              </tr>
-              <tr >
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-  
-                
-                
-
-            </tr>
             <tr >
               <td><input type="text" placeholder=""></td>
               <td><input type="text" placeholder=""></td>
@@ -1383,14 +871,21 @@ button:hover {
 </div>
 <!-- third tab -->
 <div id="Item detail" class="tabcontent"><br><br>
+
   <h3>Item detail</h3>
-<form>
+  <form action="/parkingformsent" method="POST">
+
+    <div class="form first" style="width: 1000px;">
+
+      <div class="details ID">
+
+    <div class="fields">
     <div class="input-field">
       <label>Sales Document Item</label>
-      <input type="text" name="sales" placeholder="" size="2px" />
+      <input type="text" name="sales" placeholder=""  />
 
       <label>Item category</label>
-      <input type="text" name="plant" placeholder="" size="2px" />
+      <input type="text" name="plant" placeholder=""  />
     </div>
 
     <div class="input-field">
@@ -1398,12 +893,12 @@ button:hover {
       <input type="text" name="material" placeholder="" />
 
       <label></label>
-      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+      <!-- <input type="text" name="plant" placeholder=""  /> -->
     </div>
 
     <div class="input-field">
       <label></label>
-      <!-- <input type="text" name="ales" placeholder="" size="2px" /> -->
+      <!-- <input type="text" name="ales" placeholder=""  /> -->
 
       <label>Pricing date</label>
       <input type="date" name="pricing" />
@@ -1412,10 +907,10 @@ button:hover {
     <div class="input-field">
       <label>Order Quantity</label>
       <input type="text" name="order" placeholder="" />
-      <input type="text" name="order" placeholder="" size="2px" />
+      <input type="text" name="order" placeholder=""  />
 
       <label></label>
-      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+      <!-- <input type="text" name="plant" placeholder=""  /> -->
     </div>
 
     <div class="input-field">
@@ -1423,7 +918,7 @@ button:hover {
       <input type="text" name="batch" placeholder="" />
 
       <label>Bus.transaction type</label>
-      <input type="text" name="bus" placeholder="" size="2px"/>
+      <input type="text" name="bus" placeholder="" />
     </div>
 
     <div class="input-field">
@@ -1431,7 +926,7 @@ button:hover {
       <select name="reason" id=""></select>
 
       <label></label>
-      <!-- <input type="text" name="plant" placeholder="" size="2px" /> -->
+      <!-- <input type="text" name="plant" placeholder=""  /> -->
     </div>
 
     <div class="input-field">
@@ -1444,8 +939,11 @@ button:hover {
 
     <div class="input-field">
       <label>Plant</label>
-      <input type="text" name="plant" placeholder="" size="2px" />
+      <input type="text" name="plant" placeholder=""  />
 
+    </div>
+      </div>
+    </div>
     </div>
   </form>
   <div class="container1" style="overflow: scroll;">
@@ -1538,273 +1036,6 @@ button:hover {
                 
 
             </tr>
-            <tr >
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-  
-                
-                
-
-            </tr>
-            <tr >
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-
-              
-              
-
-          </tr>
-          <tr >
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-
-            
-            
-
-        </tr>
         <tr >
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
@@ -1993,10 +1224,16 @@ button:hover {
 <!-- fourth tab -->
 <div id="Ordering Party" class="tabcontent"><br><br>
   <h3>Ordering Party</h3>
-  <form>
+  <form action="/parkingformsent" method="POST">
+
+    <div class="form first">
+
+      <div class="details ID">
+
+    <div class="fields">
     <div class="input-field">
       <label>Req. deliv.date</label>
-      <input type="text" name="deliv" placeholder="" size="2px" />
+      <input type="text" name="deliv" placeholder=""  />
       <input type="date" name="date" />
       <label>Deliver.Plant</label>
       <input type="text" name="plant" placeholder="" />
@@ -2005,6 +1242,9 @@ button:hover {
     <div class="input-field">
       <label>Pricing Date</label>
       <input type="date" name="pricing" />
+    </div>
+    </div>
+      </div>
     </div>
   </form>
   <div class="container1" style="overflow: scroll;">
@@ -2036,111 +1276,9 @@ button:hover {
                 <th>Inco terms</th>
                 <th>Rejection reason</th>
                 <th>WBS element</th>
-
-
             </tr>
-            <tr >
-             
-               
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-  
-                
-                
-
-            </tr>
-            <tr >
-             
-               
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-
-              
-              
-
-          </tr>
-          <tr >
-             
-               
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-
-            
-            
-
-        </tr>
         <tr >
-             
-               
+                 
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
@@ -2198,10 +1336,7 @@ button:hover {
         <td><input type="text" placeholder=""></td>
         <td><input type="text" placeholder=""></td>
         <td><input type="text" placeholder=""></td>
-        <td><input type="text" placeholder=""></td>
-
-        
-        
+        <td><input type="text" placeholder=""></td> 
 
     </tr>
         </thead>
@@ -2240,107 +1375,8 @@ button:hover {
                   <th>Shipping Point</th>
                   <th>Delivery Block</th>
                   <th>Order Quantity</th>
-                  
-
-  
   
               </tr>
-              <tr >
-               
-                 
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                  <td><input type="text" placeholder=""></td>
-                
-    
-                  
-                  
-  
-              </tr>
-              <tr >
-               
-                 
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-              
-  
-                
-                
-
-            </tr>
-            <tr >
-               
-                 
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-            
-
-              
-              
-
-          </tr>
           <tr >
                
                  
@@ -2367,10 +1403,6 @@ button:hover {
             <td><input type="text" placeholder=""></td>
             <td><input type="text" placeholder=""></td>
             <td><input type="text" placeholder=""></td>
-          
-
-            
-            
 
         </tr>
         <tr >
@@ -2399,10 +1431,6 @@ button:hover {
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
-        
-
-          
-          
 
       </tr>
           </thead>
@@ -2413,7 +1441,13 @@ button:hover {
 <!-- Sixth tab -->
 <div id="Shipping" class="tabcontent"><br><br>
   <h3>Shipping</h3>
-  <form>
+  <form action="/parkingformsent" method="POST">
+
+    <div class="form first">
+
+      <div class="details ID">
+
+      <div class="fields">
     <div class="input-field">
       <label>Complete dlv.</label>
       <input type="text" name="complete" placeholder="" size="1px" />
@@ -2435,6 +1469,9 @@ button:hover {
       <input type="text" name="over" placeholder="" />
       <label>Delivery status</label>
       <input type="text" name="delivery" placeholder="" />
+    </div>
+      </div>
+      </div>
     </div>
   </form>
   <div class="container1" style="overflow: scroll;">
@@ -2466,74 +1503,8 @@ button:hover {
                   <th>overall Delivery Status</th>
                   <th>Delivery Status</th>
                   <th>Delivery Block Status</th>
-               
 
             </tr>
-            <tr >
-             
-               
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-              
-  
-                
-                
-
-            </tr>
-            <tr >
-             
-               
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-            
-
-              
-              
-
-          </tr>
-          <tr >
              
                
             <td><input type="text" placeholder=""></td>
@@ -2564,7 +1535,7 @@ button:hover {
             
             
 
-        </tr>
+       
         <tr >
              
                
@@ -2591,10 +1562,6 @@ button:hover {
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
           <td><input type="text" placeholder=""></td>
-        
-
-          
-          
 
       </tr>
       <tr >
@@ -2623,10 +1590,6 @@ button:hover {
         <td><input type="text" placeholder=""></td>
         <td><input type="text" placeholder=""></td>
         <td><input type="text" placeholder=""></td>
-      
-
-        
-        
 
     </tr>
         </thead>
@@ -2638,7 +1601,12 @@ button:hover {
 <!-- Seventh tab -->
 <div id="Reason for rejection" class="tabcontent"><br><br>
   <h3>reason for rejection</h3>
-  <form>
+  <form action="/parkingformsent" method="POST">
+    <div class="form first">
+
+        <div class="details ID">
+
+    <div class="fields">
     <div class="">
       <label for="orderreason">Order reason:</label>
       <select name="orderreason" id="orderreason">
@@ -2648,8 +1616,11 @@ button:hover {
         <option value="audi">Audi</option>
       </select>
     </div>
+    </div>
+        </div>
+    </div>
   </form>
-  <div class="container1" style="overflow: scroll;">
+  <div class="container1">
     <table >
         <thead>
             <tr >
@@ -2663,42 +1634,6 @@ button:hover {
                 <th>Customer Material Number</th>
                
             </tr>
-            <tr >
-
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
-
-            </tr>
-            <tr >
-
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-              <td><input type="text" placeholder=""></td>
-
-          </tr>
-          <tr >
-
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-            <td><input type="text" placeholder=""></td>
-
-        </tr>
         <tr >
 
           <td><input type="text" placeholder=""></td>

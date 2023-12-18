@@ -82,9 +82,9 @@ button:hover {
             border:1px solid black;
         }
         .container1 {
-            width: 160vh;
-            margin: 20px auto;
-            padding: 20px;
+          width: 1000px;
+          margin: 5px ;
+          padding: 20px;
             background-color: white;
             
             
@@ -102,7 +102,7 @@ button:hover {
         th, td {
             padding: 12px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid black;
         }
 
         th {
@@ -136,6 +136,16 @@ button:hover {
             margin-top: 20px;
         }
 
+
+        .tabcontent {
+          color: rgb(16, 15, 15);
+          display: none;
+          box-shadow: 5px;
+          height: 100%;
+          background-color: white;
+          width: 110%;
+
+        }
 
         /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');

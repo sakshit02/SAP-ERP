@@ -51,7 +51,7 @@ header {
 }
 
 label {
-    font-weight:lighter;
+    /* font-weight:lighter; */
     flex: 2;
    
 }
@@ -83,10 +83,10 @@ button:hover {
             border:1px solid black;
         }
         .container1 {
-            width: 160vh;
-            margin: 20px auto;
+            width: 1000px;
+            margin: 5px ;
             padding: 20px;
-            background-color: rgb(61, 60, 60);
+            background-color: rgb(25,24,44);
             
             
         }
@@ -355,7 +355,7 @@ button:hover {
 .home-section{
   position: relative;
   height: 100%;
-  background-color: rgb(63, 62, 62);
+  background-color: rgb(35, 33, 58);
   transition: all 0.5s ease;
   padding: 12px;
 }
@@ -437,5 +437,7 @@ button:hover {
 .search-container button:hover {
   background-color: #0056b3;
 }
+
+
 
   

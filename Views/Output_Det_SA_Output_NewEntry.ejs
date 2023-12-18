@@ -12,7 +12,7 @@
    
 
 
-    <style>
+    <!-- <style>
 
       /* itp.css */
 
@@ -157,7 +157,7 @@ button:hover {
         }
         
         
-        </style>
+        </style> -->
    </head>
 <body>
   <%-include ('partials/sidepanel'); %>
@@ -166,7 +166,7 @@ button:hover {
         </header>
     
         <form action="/parkingformsent" method="POST">
-            <div class="form first">
+            <div class="form first" style="width: 800px;">
     
     
                 <div class="details ID">
@@ -181,7 +181,7 @@ button:hover {
             </div>
         </form>
        
-<button class="tablink" onclick="openPage('General Data', this, 'red' )" id="defaultOpen">General Data</button>
+<button class="tablink" onclick="openPage('General Data', this, 'red' )" >General Data</button>
 <button class="tablink" onclick="openPage('Default Values', this, 'green')" >Default Values</button>
 <button class="tablink" onclick="openPage('Time', this, 'blue')">Time</button>
 <button class="tablink" onclick="openPage('Storage System', this, 'orange')">Storage System</button>
@@ -191,8 +191,8 @@ button:hover {
 
 
 <!-- first tab --><br>
-<div id="General Data" class="tabcontent"><br><br>
-    <div class="container">
+<div id="General Data" class="tabcontent container1"><br><br>
+    <div class="container1">
     
         <form action="/parkingformsent" method="POST">
             <div class="form first">
@@ -200,10 +200,10 @@ button:hover {
     
                 <div class="details ID">
                     <div class="fields">
-                        <div class="input-field">
+                        <div class="input-field" style="width: 500px;">
                             
                             <label>Access Sequence</label>
-                            <input  name="Access" type="text"  style="margin-right: 60px;">
+                            <input  name="Access" type="text"  >
                         </div>
 
                         <div class="title">Goods movements </div>
@@ -257,20 +257,20 @@ button:hover {
     </div>
 </div>
 <!-- second tab -->
-<div id="Default Values" class="tabcontent"><br><br>
-  <h3>Default Values</h3>
-  <div class="container">
+<div id="Default Values" class="tabcontent container1"><br><br>
+  <h2>Default Values</h2>
+  <div class="container1">
     
     <form action="/parkingformsent" method="POST">
-        <div class="form first">
+        <div class="form first" style="width: 500px;">
 
 
-            <div class="details ID">
+            <div class="details ID" >
                 <div class="fields">
                     <div class="input-field">
                         
                         <label>Dispatch Time</label>
-                        <input  name="Dispatch" type="text"  style="margin-right: 60px;">
+                        <input  name="Dispatch" type="text" >
                     </div>
 
                     <div class="input-field">
@@ -278,14 +278,10 @@ button:hover {
                         <label>Transmission Medium</label>
                         <input name="Transmission" type="checkbox" placeholder="" style="margin-right: 200px;">
                     
-                    </div>
-
-                    <div class="input-field">
-                    
                         <label>Partner function</label>
-                        <input name="partner" type="checkbox" placeholder="" style="margin-right: 180px;">
-                      
-                    </div>    
+                        <input name="partner" type="checkbox" placeholder="" style="margin-left: 50px;">
+                    </div>
+                    
                 </div>            
             </div> 
         </div>
@@ -298,7 +294,7 @@ button:hover {
   <div class="container">
     
     <form action="/parkingformsent" method="POST">
-        <div class="form first">
+        <div class="form first" style="width: 800px;">
 
 
             <div class="details ID">
@@ -306,20 +302,20 @@ button:hover {
                     <div class="input-field">
 
                         <label>Timing 1 (periodic job) not allowed</label>
-                        <input name="T_1" type="checkbox" placeholder="" style="margin-right: 200px;">
+                        <input name="T_1" type="checkbox" placeholder="" style="margin-right: 100px;">
                         
                         <label>Timing 2 (job and time entry) not allowed</label>
-                        <input name="T_2" type="checkbox" placeholder="" style="margin: 0px 60px;">
+                        <input name="T_2" type="checkbox" placeholder="" style="margin-left: 50px;">
 
                     </div>
 
                     <div class="input-field">
                     
                         <label>Timing 3 (application transaction) not allowed</label>
-                        <input name="T_3" type="checkbox" placeholder="" style="margin-right: 180px;">
+                        <input name="T_3" type="checkbox" placeholder="" style="margin-right: 100px;">
                       
                         <label>Timing 4 (immediate) not allowed</label>
-                        <input name="T_4" type="checkbox" placeholder="" style="margin: 0px 50px">
+                        <input name="T_4" type="checkbox" placeholder="" style="margin-left: 50px">
                       
                     </div>    
                 </div>            
@@ -329,26 +325,26 @@ button:hover {
 </div>
 </div>
 <!-- fourth tab -->
-<div id="Storage System" class="tabcontent"><br><br>
+<div id="Storage System" class="tabcontent container1"><br><br>
   <h3>Storage System</h3>
-  <div class="container">
+  <div class="container1">
     
     <form action="/parkingformsent" method="POST">
-        <div class="form first">
+        <div class="form first" style="width: 600px;">
 
 
             <div class="details ID">
                 <div class="fields">
                     <div class="input-field">
 
-                        <label>Storage Mode</label>
-                        <Select>
+                        <label>Storage Mode
+                        <Select style="margin-left: 25px;">
                             <option value="Storage Mode">Select Storage Mode</option>
                             <option value="1 Print only ">1 Print only</option>
                             <option value="2 Archive only">2 Archive only</option>
                             <option value="3 Print and Archive">3 Print and Archive</option>
                             <option value=" "> </option>
-                        </Select>
+                        </Select></label>
                     </div>
 
                     <div class="input-field">
@@ -370,15 +366,15 @@ button:hover {
     <div class="container">
     
         <form action="/parkingformsent" method="POST">
-            <div class="form first">
+            <div class="form first" style="width: 700px;">
     
     
                 <div class="details ID">
                     <div class="fields">
                         <div class="input-field">
     
-                            <label>Print Parameter</label>
-                            <Select>
+                            <label>Print Parameter
+                            <Select style="margin-left: 30px;">
                                 <option value="Storage Mode">Select Print Parameter</option>
                                 <option value="1 Sales organization ">1 Sales organization</option>
                                 <option value="2 Sales organization/Distribution channel/division">2 Sales organization/Distribution channel/division</option>
@@ -386,7 +382,7 @@ button:hover {
                                 <option value="4 Sales Group">4 Sales Group</option>
                                 <option value="5 Shipping Point">5 Shipping Point</option>
                                 <option value=" "> </option>
-                            </Select>
+                            </Select></label>
                         </div> 
                     </div>            
                 </div> 

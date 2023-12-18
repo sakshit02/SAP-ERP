@@ -81,11 +81,10 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-button {
+.btn {
     margin-top: 10px; 
     padding: 2px 2px;
-    background-color: white;
-    width: 260px;
+    background-color: rgb(0,123,255);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -102,21 +101,21 @@ button:hover {
   <%-include ('partials/sidepanel'); %>
 
     
-    <div class="container">
+    <div class="container1">
        
 
-<button type="submit" style="width: 60px;">Save</button>
+<button class="btn" type="submit">Save</button>
   
     <div class="form first">
     
     
         <div class="details ID">
             <div class="fields">
-                <div class="input-field">
+                <div class="input-field" style="width: 500px;">
                     <label>         Usage       :</label>
                     <input  name="vid" type="text"  >
                 </div>
-                <div class="input-field">
+                <div class="input-field" style="width: 500px;">
                     <label>Application :</label>
                     <input name="loc_code" type="text" placeholder="" >
                 </div>

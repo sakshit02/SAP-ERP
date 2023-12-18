@@ -83,11 +83,10 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-button {
+.btn {
     margin-top: 10px; 
     padding: 2px 2px;
-    background-color: white;
-    width: 260px;
+    background-color: rgb(0,123,255);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -104,8 +103,8 @@ button:hover {
   <%-include ('partials/sidepanel'); %>
 
     
-    <div class="container">
-        <button  onclick="window.location.href='/MaintainPricingNewEntry'" style="width: 140px;"> + New Entries</button>
+    <div class="container1">
+        <button class="btn" onclick="window.location.href='/MaintainPricingNewEntry'" >New Entry +</button>
 
 
   
@@ -114,11 +113,11 @@ button:hover {
     
         <div class="details ID">
             <div class="fields">
-                <div class="input-field">
-                    <label>         Usage       :</label>
+                <div class="input-field" style="width: 500px;">
+                    <label>Usage:</label>
                     <input  name="vid" type="text"  >
                 </div>
-                <div class="input-field">
+                <div class="input-field" style="width: 500px;">
                     <label>Application :</label>
                     <input name="loc_code" type="text" placeholder="" >
                 </div>

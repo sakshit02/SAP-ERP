@@ -143,6 +143,8 @@ const routes = [
   'Purchasing_DocumentTypes',
   'Purchasing_Charateristics',
   'Purchasing_Classes',
+  'Purchasing_ScreenLayout',
+  'Purchasing_ScreenLayoutNewEntry',
   'Sales_District',
   'SalesDistrictNewEntry',
   'Customer_Group',
@@ -886,7 +888,7 @@ const routes = [
   'Logistics_MM_Config_AssignScreens',
   'Logistics_MM_Config_MaintainScreens',
   'Logistics_MM_Config_Transaction',
-'Logistics_BusinessPartner',
+  'Logistics_BusinessPartner',
 
 
 
@@ -899,6 +901,7 @@ const routes = [
 'Logistics_BM_FieldSelection_NewEntry',
 'Logistics_BM_ActivateDoc',
 
+'Logistics_BM_ActivateInternal',
 'Logistics_BM_NumberAssgn',
 'Logistics_BM_AssignRange',
 'Logistics_BM_InternalBatch',
@@ -916,8 +919,46 @@ const routes = [
 'Logistics_BM_InitialStatus',
 
 'Logistics_BM_CondnTable',
+
+
 'Logistics_BM_AccessSequence',
+
+'Logistics_BM_Access_Inventory_AccessFields',
+'Logistics_BM_Access_Inventory_AccessSequence_NewEntry',
+'Logistics_BM_Access_Inventory_AccessSequence',
+'Logistics_BM_Access_Inventory_AccessTable_NewEntry',
+'Logistics_BM_Access_Inventory_AccessTable',
+'Logistics_BM_Access_Process_AccessFields',
+'Logistics_BM_Access_Process_AccessSequence_NewEntry',
+'Logistics_BM_Access_Process_AccessSequence',
+'Logistics_BM_Access_Process_AccessTable_NewEntry',
+'Logistics_BM_Access_Process_AccessTable',
+'Logistics_BM_Access_Production_AccessFields',
+'Logistics_BM_Access_Production_AccessSequence_NewEntry',
+'Logistics_BM_Access_Production_AccessSequence',
+'Logistics_BM_Access_Production_AccessTable_NewEntry',
+'Logistics_BM_Access_Production_AccessTable',
+'Logistics_BM_Access_Sales_AccessFields',
+'Logistics_BM_Access_Sales_AccessSequence_NewEntry',
+'Logistics_BM_Access_Sales_AccessSequence',
+'Logistics_BM_Access_Sales_AccessTable_NewEntry',
+'Logistics_BM_Access_Sales_AccessTable',
+'Logistics_BM_Access_Warehouse_AccessFields',
+'Logistics_BM_Access_Warehouse_AccessSequence_NewEntry',
+'Logistics_BM_Access_Warehouse_AccessSequence',
+'Logistics_BM_Access_Warehouse_AccessTable_NewEntry',
+'Logistics_BM_Access_Warehouse_AccessTable',
+
+
+
 'Logistics_BM_StrategyTypes',
+
+'Logistics_BM_Strategy_Inventory',
+'Logistics_BM_Strategy_Process',
+'Logistics_BM_Strategy_Production',
+'Logistics_BM_Strategy_Sales',
+'Logistics_BM_Strategy_Warehouse',
+
 'Logistics_BM_ProcedureDef',
 'Logistics_BM_Activation',
 'Logistics_BM_AutomaticDet',
