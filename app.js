@@ -1003,7 +1003,12 @@ const routes = [
 'Logistics_BM_Activation_Check_PullList',
 'Logistics_BM_Activation_Check_Repititive',
 
+'Logistics_BM_Activation_WM',
 
+'Logistics_BM_Activation_SD_NewEntry',
+'Logistics_BM_Activation_SD',
+'Logistics_BM_Activation_WM_Movemnt',
+'Logistics_BM_Activation_WM_WMNo',
 
 'Logistics_BM_AutomaticDet',
 'Logistics_BM_DefineSelection',

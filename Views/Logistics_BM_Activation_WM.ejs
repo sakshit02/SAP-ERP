@@ -52,11 +52,15 @@ h1,h3{
     
     <%-include ('partials/sidepanel'); %>
 <div class="divvv">
-    <h1>Activities</h1>
-    <h3>Name of Activity</h3>
-    <div><button class="btn" onclick="window.location.href='/Logistics_BM_Activation_Check'">Assign Search Procedure to Production and Activate Check</button></div>
-    <div><button class="btn" onclick="window.location.href='/Logistics_BM_Activation_SD'">Allocate Search Procedure/Activate Check</button></div>
-    <div><button class="btn" onclick="window.location.href='/Logistics_BM_Activation_WM'">Assign WM Search Procedure</button></div>
+    <h1>Batch Search Method for Warehouse Management</h1>
+
+    <div>Key Combination Warehouse Number
+        <button class="btn" onclick="window.location.href='/Logistics_BM_Activation_WM_WMNo'">Warehouse Number</button>
+    </div>
+    <br>
+    <div>Key Combination Warehouse No./Movement Type
+        <button class="btn" onclick="window.location.href='/Logistics_BM_Activation_WM_Movemnt'">Movement types</button>
+    </div>
 </div>
 
 
