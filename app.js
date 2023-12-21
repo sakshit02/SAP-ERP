@@ -1073,7 +1073,14 @@ const routes = [
 'Logistics_BM_Condn_Warehouse_DisplayTable',
 'Logistics_BM_Condn_Warehouse_Allowed_New',
 
+'Logistics_BM_AutomaticDet',
+'Logistics_BM_AutomaticDet_Sales',
+'Logistics_BM_AutomaticDet_Delivery',
 
+'Logistics_BM_Sort',
+'Logistics_BM_Sort_Create',
+'Logistics_BM_Sort_Change',
+'Logistics_BM_Sort_Display',
   'login',
 
 ];
