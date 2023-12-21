@@ -888,7 +888,12 @@ const routes = [
   'Logistics_MM_Config_AssignScreens',
   'Logistics_MM_Config_MaintainScreens',
   'Logistics_MM_Config_Transaction',
+
+
+
   'Logistics_BusinessPartner',
+  'Customer_accountgrp',
+  'Customer_accountgrpNewEntry',
 
 
 

@@ -12,92 +12,87 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+
 <body>
   <%-include ('partials/sidepanel'); %>
+  <div class="container">
 
-  <form class="form">
+  <form action="/parkingformsent" method="POST">
+    <div class="form first" style="width: 1000px;">
+      
+      <div class="details ID">
+        <div class="fields" >
     <div class="input-field">
       <label>Account Group</label>
-      <input type="text" name="Account" placeholder="" size="2px" />
+      <input type="text" name="Account" placeholder="" style="margin-right: 530px;" />
     </div>
 
+    <div class="title">General Data</div>
     <div class="input-field">
-      <h3>General Data</h3>
       <label>Name</label>
-      <input type="text" name="General" placeholder="" />
+      <input type="text" name="General" placeholder="" style="margin-right: 50px;"/>
 
-      <div class="input-field">
       <label>Number Range</label>
-      <input type="number" name="Number" placeholder="" size="2px" />
+      <input type="number" name="Number" placeholder="" style="margin-left: 50px;" />
       </div>
-
+      <br>
       <div class="input-field">
-      <label>One-Time Account
-      <input type="checkbox" name="One-Time" id=""></label>
+      <label>One-Time Account</label>
+      <input type="checkbox" name="One-Time" style="margin-right: 520px ;">
       </div>
-    </div>
-
-      <h3>Field Status</h3>
+    
+<br>
+    
+    <div class="title">Field Status</div>
       <div class="input-field">
-          <label>General Data</label>
+          <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href=''">General Data</label>
+
+          <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href=''">Company Code Data</label>
+     
+          <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href=''">Purchasing Data</label>
+      
+          <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href=''">Purchasing Sub-Range</label>
+     
+          <label style="background-color:  rgb(83, 81, 81); color: white;" onclick="window.location.href=''">Purchasing Plant</label>
       </div>
       
-      <div class="input-field">
-          <label for="">Company Code Data</label>
-      </div>
-      
-      <div class="input-field">
-          <label for="">Purchasing Data</label>
-      </div>
-      
-      <div class="input-field">
-          <label for="">Purchasing Sub-Range</label>
-      </div>
-      
-      <div class="input-field">
-          <label>Purchasing Plant</label>
-      </div>
-      
-    </div>
-    <div class="input-field">
-      <h3>Data Retent. Levels: Purchasing</h3>
+    
+<br>
+
+    <div class="title">Data Retent. Levels: Purchasing</div>
 
       <div class="input-field">
-      <label>
-          <input type="checkbox" name="Vendor" placeholder="" />Vendor sub-range relevant</label>
+      <label>Vendor sub-range relevant</label>
+      <input type="checkbox" name="Vendor" placeholder="" style="margin-right: 140px;"/>
+      
+      <label>Plant level relevant</label>
+      <input type="checkbox" name="plant" placeholder="" style="margin-right: 100px;" />
       </div>
+   
 
+    <div class="title">Default Values</div>
       <div class="input-field">
-      <label>
-          <input type="checkbox" name="plant" placeholder="" />Plant level relevant</label>
-      </div>
+      <label>Do not transfer any data</label>
+      <input type="checkbox" name="Default" placeholder="" style="margin-right: 600px;"/>
     </div>
+    
 
-    <div class="input-field">
-      <h3>Default Values</h3>
-      <label>
-          <input type="checkbox" name="Default" placeholder="" />Do not transfer any data</label>
-    </div>
-    </div>
-    </div>
-    <br><br><br>
-
-    <div class="input-field">
-      <h3>Partner Determ. procedure</h3>
+    <div class="title">Partner Determ. procedure</div>
       <div class="input-field">
       <label>Partner schema, purch. org.</label>
-      <input type="text" name="Purchasing" placeholder="" size="2px" />
-      </div>
-
-      <div class="input-field">
+      <input type="text" name="Purchasing" placeholder="" style="margin-right: 50px;" />
+      
       <label>Partner schema, sub-range</label>
-      <input type="text" name="sub-range" placeholder="" size="2px" />
+      <input type="text" name="sub-range" placeholder="" style="margin-left: 50px;" />
       </div>
 
-      <div class="input-field">
+      <div class="input-field" >
       <label>Partner schema, plant level</label>
-      <input type="text" name="plant" placeholder="" size="2px" />
+      <input type="text" name="plant" placeholder="" style="margin-right: 530px;" />
       </div>
+    </div>
+      </div>
+    </div>
     </div>
   </form>
 
