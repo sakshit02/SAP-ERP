@@ -992,6 +992,7 @@ const routes = [
 
 'Logistics_BM_Activation',
 
+'Logistics_BM_Activation_Check',
 'Logistics_BM_Activation_Check_KANBAN_NewEntry',
 'Logistics_BM_Activation_Check_KANBAN',
 'Logistics_BM_Activation_Check_Network_NewEntry',
@@ -1001,7 +1002,6 @@ const routes = [
 'Logistics_BM_Activation_Check_Production',
 'Logistics_BM_Activation_Check_PullList',
 'Logistics_BM_Activation_Check_Repititive',
-'Logistics_BM_Activation_Check',
 
 
 
