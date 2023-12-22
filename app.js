@@ -1011,6 +1011,12 @@ const routes = [
   'VendorDefineTransaction',
   'VendorSubRange_Add-PurchData',
   'VendorSubRange_PartnerUsage',
+
+
+  'Logistics_BM_DefineSelection',
+  'Logistics_BM_DefineSelection_Create',
+  'Logistics_BM_DefineSelection_Change',
+  'Logistics_BM_DefineSelection_Display',
 ];
 
 
