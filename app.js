@@ -1017,6 +1017,10 @@ const routes = [
   'Logistics_BM_DefineSelection_Create',
   'Logistics_BM_DefineSelection_Change',
   'Logistics_BM_DefineSelection_Display',
+  'Logistics_BM_ActivateUnit',
+  'Logistics_BM_EditUnit',
+  'Logistics_BM_Proportional',
+  'Logistics_BM_Conversion',
 ];
 
 
