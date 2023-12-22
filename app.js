@@ -1081,6 +1081,7 @@ const routes = [
 'Logistics_BM_Sort_Create',
 'Logistics_BM_Sort_Change',
 'Logistics_BM_Sort_Display',
+
   'login',
 
 ];
