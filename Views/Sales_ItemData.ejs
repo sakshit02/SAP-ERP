@@ -180,8 +180,6 @@ button:hover {
     
         <form action="/parkingformsent" method="POST">
             <div class="form first">
-    
-    
                 <div class="details ID">
                     <div class="fields">
                         <div class="input-field">
@@ -196,9 +194,6 @@ button:hover {
                             <label>Material</label>
                             <input name="loc_code" type="text" placeholder="" style="margin-right: 560px;max-width: 320px;" >
                         </div>
-                     
-                        
-
                     </div>
                     
                 </div> 
@@ -248,25 +243,41 @@ button:hover {
     };
 
     var salesBData = {
-      "SalesDocumentItem": "",
-      "ItemCategory": "",
-      "Material": "",
-      "Quantity": "",
-      "UnitPrice": ""
+        "ProdHierarchy": "",
+  "MaterialGroup": "",
+  "Division": "",
+  "CustomerGroup": "",
+  "PriceListType": "" ,
+  "MatPriceGrp": "", 
+  "CustPriceGroup": "", 
+  "SalesDistrict": "" ,
+     
     };
 
     var shippingData = {
-      "ShipmentID": "",
-      "Carrier": "",
-      "ShippingDate": "",
-      "Destination": ""
+        "ShipToParty": "",
+  "Plant": "",
+  "ShippingPoint": "",
+  "Route": "",
+  "NetWeight": "",
+  "DeliveryPrior": "",
+  "StorLocation": "",
+  "PartDlvItem": "",
+  "MaxPartDeliv": "",
     };
 
     var billingDocumentData = {
-      "BillingID": "",
-      "InvoiceDate": "",
-      "TotalAmount": "",
-      "DueDate": ""
+        "Payer": "", // Add this line
+  "Incoterms": "", // Add this line
+  "IncoLocation1": "", // Add this line
+  "IncoLocation2": "", // Add this line
+  "PaymentTerms": "", // Add this line
+  "BillingBlock": "", // Add this line
+  "InvoicingDates": "", // Add this line
+  "BillingDate": "", // Add this line
+  "AcctAssmtGrpMa": "", // Add this line
+  "PaymentMethod": "", // Add this line
+  "PostingPeriod": "" ,
     };
 
     var conditionsData = {
@@ -277,9 +288,9 @@ button:hover {
     };
 
     var accountAssignmentData = {
-      "AccountID": "",
-      "AccountType": "",
-      "Amount": ""
+        "Business Area": "",
+        "Profit Center": "",
+
     };
 
     var scheduleLinesData = {
@@ -304,31 +315,16 @@ button:hover {
       "Description": ""
     };
 
-   // Function to populate data for Sales A tab
-async function populateSalesA() {
-  var content = "<h2>Sales A</h2>";
+    
+    function populateSalesA() {
+      var content = "<h2>Sales A</h2>";
+      for (var key in salesAData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + salesAData[key] + "' ></div>";
+      }
+      document.getElementById("SalesA").innerHTML = content;
+    }
 
-  try {
-    const response = await fetch('/getSalesAData');
-    const salesAData = await response.json();
-
-    // Create a table dynamically based on the fetched data
-    content += "<table><tr><th>Label</th><th>Input</th></tr>";
-
-    salesAData.forEach((item) => {
-      content += `<tr><td>${item.label}</td><td>${item.input}</td></tr>`;
-    });
-
-    content += "</table>";
-  } catch (error) {
-    console.error(error);
-    content += "<p>Error fetching data from the server.</p>";
-  }
-
-  document.getElementById("SalesA").innerHTML = content;
-}
-
-    // Function to populate data for Sales B tab
+    
     function populateSalesB() {
       var content = "<h2>Sales B</h2>";
       for (var key in salesBData) {
@@ -337,7 +333,7 @@ async function populateSalesA() {
       document.getElementById("SalesB").innerHTML = content;
     }
 
-    // Function to populate data for Shipping tab
+   
     function populateShipping() {
       var content = "<h2>Shipping</h2>";
       for (var key in shippingData) {
@@ -346,7 +342,7 @@ async function populateSalesA() {
       document.getElementById("Shipping").innerHTML = content;
     }
 
-    // Function to populate data for Billing Document tab
+   
     function populateBillingDocument() {
       var content = "<h2>Billing Document</h2>";
       for (var key in billingDocumentData) {
@@ -355,7 +351,7 @@ async function populateSalesA() {
       document.getElementById("BillingDocument").innerHTML = content;
     }
 
-    // Function to populate data for Conditions tab
+    
     function populateConditions() {
       var content = "<h2>Conditions</h2>";
       for (var key in conditionsData) {
@@ -364,7 +360,7 @@ async function populateSalesA() {
       document.getElementById("Conditions").innerHTML = content;
     }
 
-    // Function to populate data for Account Assignment tab
+   
     function populateAccountAssignment() {
       var content = "<h2>Account Assignment</h2>";
       for (var key in accountAssignmentData) {
@@ -373,7 +369,7 @@ async function populateSalesA() {
       document.getElementById("AccountAssignment").innerHTML = content;
     }
 
-    // Function to populate data for Schedule Lines tab
+  
     function populateScheduleLines() {
       var content = "<h2>Schedule Lines</h2>";
       for (var key in scheduleLinesData) {
@@ -382,7 +378,7 @@ async function populateSalesA() {
       document.getElementById("ScheduleLines").innerHTML = content;
     }
 
-    // Function to populate data for Partner tab
+    
     function populatePartner() {
       var content = "<h2>Partner</h2>";
       for (var key in partnerData) {
@@ -391,7 +387,7 @@ async function populateSalesA() {
       document.getElementById("Partner").innerHTML = content;
     }
 
-    // Function to populate data for Texts tab
+    
     function populateTexts() {
       var content = "<h2>Texts</h2>";
       for (var key in textsData) {
@@ -400,7 +396,7 @@ async function populateSalesA() {
       document.getElementById("Texts").innerHTML = content;
     }
 
-    // Function to populate data for Status tab
+  
     function populateStatus() {
       var content = "<h2>Status</h2>";
       for (var key in statusData) {
@@ -409,7 +405,7 @@ async function populateSalesA() {
       document.getElementById("Status").innerHTML = content;
     }
 
-    // Call the respective function to populate data when a tab is opened
+    
     function openPage(pageName, elmnt, color) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -423,7 +419,7 @@ async function populateSalesA() {
       document.getElementById(pageName).style.display = "block";
       elmnt.style.backgroundColor = color;
 
-      // Call the respective function to populate data when a tab is opened
+    
       if (pageName === "SalesA") {
         populateSalesA();
       } else if (pageName === "SalesB") {
@@ -448,7 +444,7 @@ async function populateSalesA() {
      
     }
 
-    // Default tab to open
+   
     document.getElementById("defaultOpen").click();
   </script>
 
