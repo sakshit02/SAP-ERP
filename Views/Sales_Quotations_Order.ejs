@@ -88,7 +88,6 @@ button:hover {
           background-color: #777;
         }
         
-        /* Style the tab content (and add height:100% for full page content) */
         .tabcontent {
           color: rgb(251, 247, 247);
           display: none;
@@ -162,7 +161,7 @@ button:hover {
 <body>
   <%-include ('partials/sidepanel'); %>
     <div class="container">
-        <header> Sales Order   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        <header> Quotation   &nbsp;&nbsp;   <button type="submit">Submit</button>
         </header>
     
         <form action="/parkingformsent" method="POST">
@@ -172,7 +171,7 @@ button:hover {
                 <div class="details ID">
                     <div class="fields">
                         <div class="input-field">
-                            <label>Standard Order</label>
+                            <label>Quotation </label>
                             <input  name="vid" type="text"  style="margin-right: 22px;max-width: 150px;" >
                             <label>Net value</label>
                             <input  name="vid" type="text" style="max-width: 350px;" ><input  name="vid" type="text" style="margin-right: 200px;max-width: 50px; " >
@@ -291,7 +290,6 @@ button:hover {
         <table >
             <thead>
                 <tr >
-                    <th>button</th>
                     <th>Item</th>
                     <th>Material</th>
                     <th>Order Quantity</th>
@@ -379,7 +377,6 @@ button:hover {
 
                 </tr>
                 <tr >
-                  <td><button  onclick="window.location.href='/Sales_ItemData'">x</td>
                     <td><input type="text" placeholder=""></td>
                     <td><input type="text" placeholder=""></td>
                     <td><input type="text" placeholder=""></td>
@@ -469,7 +466,7 @@ button:hover {
 
                 </tr>
                 <tr >
-                  <td><button  onclick="window.location.href='/Sales_ItemData'">x</td>                  <td><input type="text" placeholder=""></td>
+                  <td><input type="text" placeholder=""></td>
                   <td><input type="text" placeholder=""></td>
                   <td><input type="text" placeholder=""></td>
                   <td><input type="text" placeholder=""></td>

@@ -1028,6 +1028,10 @@ const routes = [
   'Sales_Document',
   'Sales_Inquiry',
   'Sales_Inquiry_Order',
+  'Sales_Quotations',
+  'Sales_Quotations_Order',
+
+  'Sales_ItemData',
 ];
 
 
@@ -1068,9 +1072,17 @@ app.post("/addCountry", (req, res) => {
 
 
 
+app.get('/getSalesAData', async (req, res) => {
+  try {
+    const salesADataFromDB = await YourModel.find(); 
+    res.json(salesADataFromDB);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 
 
-// login
 
 

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/companyform.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+     <style>
+
+
+.container {
+    width: 1000px;
+    margin:0px;
+
+}
+
+header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 1000px;
+    background-color: #fff;
+}
+
+.input-field {
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    flex: 2;
+    
+}
+
+input {
+    flex: 4; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px; 
+    padding: 2px 2px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+        * {box-sizing: border-box}
+        /* Style tab links */
+        .tablink {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-size: 14px;
+          margin-right: 5px;
+          width: 180px;
+          overflow: hidden;
+        }
+        
+        .tablink:hover {
+          background-color: #777;
+        }
+        
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+          color: rgb(251, 247, 247);
+          display: none;
+          
+          height: 100%;
+          background-color: rgb(25, 24, 44);
+          width: 110%;
+
+        }
+        table, th, td {
+            border:1px solid black;
+        }
+        .container1 {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #addRowButton, #saveDataButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #addRowButton:hover, #saveDataButton:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        .tabcontent {
+            color: rgb(251, 247, 247);
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            height: 100%;
+            background-color: rgb(25, 24, 44);
+            width: 50%;
+        }
+
+        .input-field {
+            flex: 1; 
+            margin-bottom: 15px;
+        }
+        </style> 
+   </head>
+<body>
+  <%-include ('partials/sidepanel'); %>
+    <div class="container">
+        <header> Sales Item Data   &nbsp;&nbsp;   <button type="submit">Submit</button>
+        </header>
+    
+        <form action="/parkingformsent" method="POST">
+            <div class="form first">
+    
+    
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Sales Document Item</label>
+                            <input  name="vid" type="text"  style="margin-right: 560px;max-width: 320px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Item Category</label>
+                            <input  name="vid" type="text"  style="margin-right: 560px;max-width: 320px;">
+                        </div>
+                        <div class="input-field">
+                            <label>Material</label>
+                            <input name="loc_code" type="text" placeholder="" style="margin-right: 560px;max-width: 320px;" >
+                        </div>
+                     
+                        
+
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+        <button class="tablink" onclick="openPage('SalesA', this, 'red')">Sales A</button>
+        <button class="tablink" onclick="openPage('SalesB', this, 'green')">Sales B</button>
+        <button class="tablink" onclick="openPage('Shipping', this, 'blue')">Shipping</button>
+        <button class="tablink" onclick="openPage('BillingDocument', this, 'orange')">Billing Document</button>
+        <button class="tablink" onclick="openPage('Conditions', this, 'olive')">Conditions</button>
+        <button class="tablink" onclick="openPage('AccountAssignment', this, 'maroon')">Account Assignment</button>
+        <button class="tablink" onclick="openPage('ScheduleLines', this, 'purple')">Schedule Lines</button>
+        <button class="tablink" onclick="openPage('Partner', this, 'olive')">Partner</button>
+        <button class="tablink" onclick="openPage('Texts', this, 'olive')">Texts</button>
+        <button class="tablink" onclick="openPage('Status', this, 'olive')">Status</button>
+      </div>
+    </form>
+
+    <!-- Containers for tab content -->
+    <div id="SalesA" class="tabcontent"></div>
+    <div id="SalesB" class="tabcontent"></div>
+    <div id="Shipping" class="tabcontent"></div>
+    <div id="BillingDocument" class="tabcontent"></div>
+    <div id="Conditions" class="tabcontent"></div>
+    <div id="AccountAssignment" class="tabcontent"></div>
+    <div id="ScheduleLines" class="tabcontent"></div>
+    <div id="Partner" class="tabcontent"></div>
+    <div id="Texts" class="tabcontent"></div>
+    <div id="Status" class="tabcontent"></div>
+
+  </div>
+
+  <script>
+    //  JSON data for each tab
+    var salesAData = {
+        "Order Quantity": "",
+        "First Delivery Date": "",
+        "Delivery Time": "",
+        "Net Value": "",
+        "Pricing Date": "",
+        "Material Entered": "",
+        "EAN/UPC": "",
+        "Engineering Change": "",
+        "Usage": "",
+        "Reason for Rejection": "",
+
+    };
+
+    var salesBData = {
+      "SalesDocumentItem": "",
+      "ItemCategory": "",
+      "Material": "",
+      "Quantity": "",
+      "UnitPrice": ""
+    };
+
+    var shippingData = {
+      "ShipmentID": "",
+      "Carrier": "",
+      "ShippingDate": "",
+      "Destination": ""
+    };
+
+    var billingDocumentData = {
+      "BillingID": "",
+      "InvoiceDate": "",
+      "TotalAmount": "",
+      "DueDate": ""
+    };
+
+    var conditionsData = {
+      "ConditionID": "",
+      "Description": "",
+      "StartDate": "",
+      "EndDate": ""
+    };
+
+    var accountAssignmentData = {
+      "AccountID": "",
+      "AccountType": "",
+      "Amount": ""
+    };
+
+    var scheduleLinesData = {
+      "LineID": "",
+      "DeliveryDate": "",
+      "Quantity": ""
+    };
+
+    var partnerData = {
+      "PartnerID": "",
+      "Name": "",
+      "Type": ""
+    };
+
+    var textsData = {
+      "TextID": "",
+      "Content": ""
+    };
+
+    var statusData = {
+      "StatusID": "",
+      "Description": ""
+    };
+
+   // Function to populate data for Sales A tab
+async function populateSalesA() {
+  var content = "<h2>Sales A</h2>";
+
+  try {
+    const response = await fetch('/getSalesAData');
+    const salesAData = await response.json();
+
+    // Create a table dynamically based on the fetched data
+    content += "<table><tr><th>Label</th><th>Input</th></tr>";
+
+    salesAData.forEach((item) => {
+      content += `<tr><td>${item.label}</td><td>${item.input}</td></tr>`;
+    });
+
+    content += "</table>";
+  } catch (error) {
+    console.error(error);
+    content += "<p>Error fetching data from the server.</p>";
+  }
+
+  document.getElementById("SalesA").innerHTML = content;
+}
+
+    // Function to populate data for Sales B tab
+    function populateSalesB() {
+      var content = "<h2>Sales B</h2>";
+      for (var key in salesBData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + salesBData[key] + "' ></div>";
+      }
+      document.getElementById("SalesB").innerHTML = content;
+    }
+
+    // Function to populate data for Shipping tab
+    function populateShipping() {
+      var content = "<h2>Shipping</h2>";
+      for (var key in shippingData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + shippingData[key] + "' ></div>";
+      }
+      document.getElementById("Shipping").innerHTML = content;
+    }
+
+    // Function to populate data for Billing Document tab
+    function populateBillingDocument() {
+      var content = "<h2>Billing Document</h2>";
+      for (var key in billingDocumentData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + billingDocumentData[key] + "' ></div>";
+      }
+      document.getElementById("BillingDocument").innerHTML = content;
+    }
+
+    // Function to populate data for Conditions tab
+    function populateConditions() {
+      var content = "<h2>Conditions</h2>";
+      for (var key in conditionsData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + conditionsData[key] + "' ></div>";
+      }
+      document.getElementById("Conditions").innerHTML = content;
+    }
+
+    // Function to populate data for Account Assignment tab
+    function populateAccountAssignment() {
+      var content = "<h2>Account Assignment</h2>";
+      for (var key in accountAssignmentData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + accountAssignmentData[key] + "' ></div>";
+      }
+      document.getElementById("AccountAssignment").innerHTML = content;
+    }
+
+    // Function to populate data for Schedule Lines tab
+    function populateScheduleLines() {
+      var content = "<h2>Schedule Lines</h2>";
+      for (var key in scheduleLinesData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + scheduleLinesData[key] + "' ></div>";
+      }
+      document.getElementById("ScheduleLines").innerHTML = content;
+    }
+
+    // Function to populate data for Partner tab
+    function populatePartner() {
+      var content = "<h2>Partner</h2>";
+      for (var key in partnerData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + partnerData[key] + "' ></div>";
+      }
+      document.getElementById("Partner").innerHTML = content;
+    }
+
+    // Function to populate data for Texts tab
+    function populateTexts() {
+      var content = "<h2>Texts</h2>";
+      for (var key in textsData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + textsData[key] + "' ></div>";
+      }
+      document.getElementById("Texts").innerHTML = content;
+    }
+
+    // Function to populate data for Status tab
+    function populateStatus() {
+      var content = "<h2>Status</h2>";
+      for (var key in statusData) {
+        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + statusData[key] + "' ></div>";
+      }
+      document.getElementById("Status").innerHTML = content;
+    }
+
+    // Call the respective function to populate data when a tab is opened
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+      // Call the respective function to populate data when a tab is opened
+      if (pageName === "SalesA") {
+        populateSalesA();
+      } else if (pageName === "SalesB") {
+        populateSalesB();
+      } else if (pageName === "Shipping") {
+        populateShipping();
+      } else if (pageName === "BillingDocument") {
+        populateBillingDocument();
+      } else if (pageName === "Conditions") {
+        populateConditions();
+      } else if (pageName === "AccountAssignment") {
+        populateAccountAssignment();
+      } else if (pageName === "ScheduleLines") {
+        populateScheduleLines();
+      } else if (pageName === "Partner") {
+        populatePartner();
+      } else if (pageName === "Texts") {
+        populateTexts();
+      } else if (pageName === "Status") {
+        populateStatus();
+      }
+     
+    }
+
+    // Default tab to open
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+
+</html>
+
+
