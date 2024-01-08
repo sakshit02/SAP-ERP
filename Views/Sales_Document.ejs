@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/companyform.css">
+   
+    <link rel="stylesheet" href="../public/css/companyform.css">
+    <title>Document</title>
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .modal-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .close {
+            color: #888;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <%-include ('partials/sidepanel'); %>
+    <button onclick="openReferenceForm()">Create with Reference</button>
+
+    <form>
+        <div class="form first">
+            <div class="input-field">
+                <label>Order type</label>
+                <input name="vid" type="text" style="max-width: 50px;">
+                <button style="margin-right: 700px;" onclick="openModal('Shipping Details', event)">__</button>
+            </div>
+        </div>
+    </form>
+    <form action="/parkingformsent" method="POST" style="margin-top: 10px;">
+        <div class="form first">
+            <div class="details ID">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Sales Organization</label>
+                        <input  name="vid" type="text" style="margin-right: 700px; max-width: 50px;">
+                    </div>
+                    <div class="input-field">
+                        <label>Distribution Channel</label>
+                        <input name="loc_code" type="text" placeholder="" style="margin-right: 700px; max-width: 50px;">
+                    </div>             
+                    <div class="input-field">
+                        <label>Division</label>
+                        <input name="city" type="text" placeholder="" style="margin-right: 700px; max-width: 50px;">
+                    </div>
+                    <div class="input-field">
+                        <label>Sales Office</label>
+                        <input name="area" type="text" placeholder="" style="margin-right: 700px; max-width: 50px;">
+                    </div>
+                    <div class="input-field">
+                        <label>Sales Group</label>
+                        <input name="area" type="text" placeholder="" style="margin-right: 700px; max-width: 50px;">
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </form>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-columns">
+                <div>
+                    <h2>Column 1</h2>
+                </div>
+                <div>
+                    <h2>Column 2</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Reference Form -->
+    <div id="referenceForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReferenceForm()">&times;</span>
+            
+            <form>
+                <label style="color: black;">Quotation</label>
+                <input type="text">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, event) {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'block';
+            event.preventDefault();
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        function openReferenceForm() {
+            var referenceForm = document.getElementById('referenceForm');
+            referenceForm.style.display = 'block';
+        }
+
+        function closeReferenceForm() {
+            var referenceForm = document.getElementById('referenceForm');
+            referenceForm.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

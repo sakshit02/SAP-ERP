@@ -1022,6 +1022,12 @@ const routes = [
   'Logistics_BM_EditUnit_NewEntry',
   'Logistics_BM_Proportional',
   'Logistics_BM_Conversion',
+
+
+
+  'Sales_Document',
+  'Sales_Inquiry',
+  'Sales_Inquiry_Order',
 ];
 
 
