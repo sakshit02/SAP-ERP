@@ -178,7 +178,7 @@ button:hover {
         <header> Sales Item Data   &nbsp;&nbsp;   <button type="submit">Submit</button>
         </header>
     
-        <form action="/parkingformsent" method="POST">
+        <form action="" method="POST">
             <div class="form first">
                 <div class="details ID">
                     <div class="fields">
@@ -281,10 +281,17 @@ button:hover {
     };
 
     var conditionsData = {
-      "ConditionID": "",
+      "Inactive/Aative": "",
+      "Condition Type": "",
       "Description": "",
-      "StartDate": "",
-      "EndDate": ""
+      "Amount": "",
+      "Currency": "",
+      "Per": "",
+      "Unit of Measure": "",
+      "Condition value": "",
+      "currency": "",
+      
+
     };
 
     var accountAssignmentData = {
@@ -294,9 +301,13 @@ button:hover {
     };
 
     var scheduleLinesData = {
-      "LineID": "",
-      "DeliveryDate": "",
-      "Quantity": ""
+        "Period": "", 
+        "Delivery Date": "",
+        "Sales Unit": "",
+        "Delivery Block": "",
+        "Schedule Line Category": "",
+        "Purchase Requistion": "",
+        "Requisition Item": "",
     };
 
     var partnerData = {
@@ -353,12 +364,34 @@ button:hover {
 
     
     function populateConditions() {
-      var content = "<h2>Conditions</h2>";
-      for (var key in conditionsData) {
-        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + conditionsData[key] + "' ></div>";
-      }
-      document.getElementById("Conditions").innerHTML = content;
-    }
+  var conditionsData = [
+  { "Inactive/Aative": "", "Condition Type": "", "Description": "", "Amount": "", "Currency": "", "per": "", "Unit of Measure": "", "Condition value": "", "Currency": "" },
+    // Add more conditions as needed
+  ];
+
+  // Update the populateConditions function
+  var content = "<h2>Conditions</h2>";
+  content += "<table>";
+    content += "<tr><th>Inactive/Aative</th><th>Condition Type</th><th>Description</th><th>Amount</th><th>Currency</th><th>Per</th><th>Unit of Measure</th><th>Condition value</th><th>Currency</th></tr>";
+
+  for (var i = 0; i < conditionsData.length; i++) {
+    content += "<tr>";
+    content += "<td>" + conditionsData[i]["Inactive/Aative"] + "</td>";
+    content += "<td>" + conditionsData[i]["Condition Type"] + "</td>";
+    content += "<td>" + conditionsData[i]["Description"] + "</td>";
+    content += "<td>" + conditionsData[i]["Amount"] + "</td>";
+    content += "<td>" + conditionsData[i]["Currency"] + "</td>";
+    content += "<td>" + conditionsData[i]["per"] + "</td>";
+    content += "<td>" + conditionsData[i]["Unit of Measure"] + "</td>";
+    content += "<td>" + conditionsData[i]["Condition value"] + "</td>";
+    content += "<td>" + conditionsData[i]["Currency"] + "</td>";
+
+    content += "</tr>";
+  }
+
+  content += "</table>";
+  document.getElementById("Conditions").innerHTML = content;
+}
 
    
     function populateAccountAssignment() {
@@ -371,12 +404,25 @@ button:hover {
 
   
     function populateScheduleLines() {
-      var content = "<h2>Schedule Lines</h2>";
-      for (var key in scheduleLinesData) {
-        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + scheduleLinesData[key] + "' ></div>";
-      }
-      document.getElementById("ScheduleLines").innerHTML = content;
-    }
+  var content = "<h2>Schedule Lines</h2>";
+  content += "<table>";
+  content += "<tr><th>Period</th><th>Delivery Date</th><th>Sales Unit</th><th>Delivery Block</th><th>Schedule Line Category</th><th>Purchase Requisition</th><th>Requisition Item</th></tr>";
+
+  for (var i = 0; i < scheduleLinesData.length; i++) {
+    content += "<tr>";
+    content += "<td>" + scheduleLinesData[i]["Period"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Delivery Date"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Sales Unit"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Delivery Block"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Schedule Line Category"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Purchase Requisition"] + "</td>";
+    content += "<td>" + scheduleLinesData[i]["Requisition Item"] + "</td>";
+    content += "</tr>";
+  }
+
+  content += "</table>";
+  document.getElementById("ScheduleLines").innerHTML = content;
+}
 
     
     function populatePartner() {
