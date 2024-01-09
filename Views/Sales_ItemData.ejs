@@ -111,7 +111,7 @@ button:hover {
         }
 
         table {
-            width: 900px;
+            width: auto;
             border-collapse: collapse;
             margin-top: 20px;
             background-color: #fff;
@@ -170,6 +170,22 @@ button:hover {
             flex: 1; 
             margin-bottom: 15px;
         }
+
+
+        .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .table-container {
+        width: 300px; 
+    }
+
+    .content-box {
+        flex: 1; 
+        margin-left: 20px; 
+    }
+
         </style> 
    </head>
 <body>
@@ -300,30 +316,37 @@ button:hover {
 
     };
 
-    var scheduleLinesData = {
-        "Period": "", 
+    var scheduleLinesData = [
+    {
+        "Period": "",
         "Delivery Date": "",
         "Sales Unit": "",
         "Delivery Block": "",
         "Schedule Line Category": "",
         "Purchase Requistion": "",
         "Requisition Item": "",
-    };
+    },
+    
+];
 
     var partnerData = {
-      "PartnerID": "",
+      "Partner Function": "",
+      "Partner": "",
       "Name": "",
-      "Type": ""
+      "Street": "",
+      "Postal Code": "",
+      "City": "",
     };
 
     var textsData = {
-      "TextID": "",
-      "Content": ""
+      "Text Type": "",
+      
     };
 
     var statusData = {
-      "StatusID": "",
-      "Description": ""
+      "Overall Status": "",
+      "Delivery Status": "",
+     
     };
 
     
@@ -364,33 +387,39 @@ button:hover {
 
     
     function populateConditions() {
-  var conditionsData = [
-  { "Inactive/Aative": "", "Condition Type": "", "Description": "", "Amount": "", "Currency": "", "per": "", "Unit of Measure": "", "Condition value": "", "Currency": "" },
-    // Add more conditions as needed
-  ];
+    var content = "<h2>Conditions</h2>";
 
-  // Update the populateConditions function
-  var content = "<h2>Conditions</h2>";
-  content += "<table>";
+    // Add labels and inputs above the table
+    content += "<div class='input-field'><label>Quantity</label><input type='text'></div>";
+    content += "<div class='input-field'><label>Net</label><input type='text'></div>";
+    content += "<div class='input-field'><label>Tax</label><input type='text'></div>";
+
+    content += "<table>";
     content += "<tr><th>Inactive/Aative</th><th>Condition Type</th><th>Description</th><th>Amount</th><th>Currency</th><th>Per</th><th>Unit of Measure</th><th>Condition value</th><th>Currency</th></tr>";
 
-  for (var i = 0; i < conditionsData.length; i++) {
-    content += "<tr>";
-    content += "<td>" + conditionsData[i]["Inactive/Aative"] + "</td>";
-    content += "<td>" + conditionsData[i]["Condition Type"] + "</td>";
-    content += "<td>" + conditionsData[i]["Description"] + "</td>";
-    content += "<td>" + conditionsData[i]["Amount"] + "</td>";
-    content += "<td>" + conditionsData[i]["Currency"] + "</td>";
-    content += "<td>" + conditionsData[i]["per"] + "</td>";
-    content += "<td>" + conditionsData[i]["Unit of Measure"] + "</td>";
-    content += "<td>" + conditionsData[i]["Condition value"] + "</td>";
-    content += "<td>" + conditionsData[i]["Currency"] + "</td>";
+    // Sample data for demonstration
+    var conditionsData = [
+        { "Inactive/Aative": "", "Condition Type": "", "Description": " ", "Amount": "", "Currency": "", "per": "", "Unit of Measure": "", "Condition value": "", "Currency": "" },
+        // Add more conditions as needed
+    ];
 
-    content += "</tr>";
-  }
+    for (var i = 0; i < conditionsData.length; i++) {
+        content += "<tr>";
+        content += "<td>" + conditionsData[i]["Inactive/Aative"] + "</td>";
+        content += "<td>" + conditionsData[i]["Condition Type"] + "</td>";
+        content += "<td>" + conditionsData[i]["Description"] + "</td>";
+        content += "<td>" + conditionsData[i]["Amount"] + "</td>";
+        content += "<td>" + conditionsData[i]["Currency"] + "</td>";
+        content += "<td>" + conditionsData[i]["per"] + "</td>";
+        content += "<td>" + conditionsData[i]["Unit of Measure"] + "</td>";
+        content += "<td>" + conditionsData[i]["Condition value"] + "</td>";
+        content += "<td>" + conditionsData[i]["Currency"] + "</td>";
 
-  content += "</table>";
-  document.getElementById("Conditions").innerHTML = content;
+        content += "</tr>";
+    }
+
+    content += "</table>";
+    document.getElementById("Conditions").innerHTML = content;
 }
 
    
@@ -404,42 +433,79 @@ button:hover {
 
   
     function populateScheduleLines() {
-  var content = "<h2>Schedule Lines</h2>";
-  content += "<table>";
-  content += "<tr><th>Period</th><th>Delivery Date</th><th>Sales Unit</th><th>Delivery Block</th><th>Schedule Line Category</th><th>Purchase Requisition</th><th>Requisition Item</th></tr>";
+    var content = "<h2>Schedule Lines</h2>";
+    content += "<table>";
+    content += "<tr><th>Period</th><th>Delivery Date</th><th>Sales Unit</th><th>Delivery Block</th><th>Schedule Line Category</th><th>Purchase Requisition</th><th>Requisition Item</th></tr>";
 
-  for (var i = 0; i < scheduleLinesData.length; i++) {
-    content += "<tr>";
-    content += "<td>" + scheduleLinesData[i]["Period"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Delivery Date"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Sales Unit"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Delivery Block"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Schedule Line Category"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Purchase Requisition"] + "</td>";
-    content += "<td>" + scheduleLinesData[i]["Requisition Item"] + "</td>";
-    content += "</tr>";
-  }
+    for (var i = 0; i < scheduleLinesData.length; i++) {
+        content += "<tr>";
+        content += "<td>" + scheduleLinesData[i]["Period"] + "</td>";
+        content += "<td>" + scheduleLinesData[i]["Delivery Date"] + "</td>";
+        content += "<td>" + scheduleLinesData[i]["Sales Unit"] + "</td>";
 
-  content += "</table>";
-  document.getElementById("ScheduleLines").innerHTML = content;
+        content += "<td><select>";
+        content += "<option value='Option 1'>Option 1</option>";
+        content += "<option value='Option 2'>Option 2</option>";
+        content += "<option value='Option 3'>Option 3</option>";
+
+        content += "</select></td>";
+
+        content += "<td>" + scheduleLinesData[i]["Schedule Line Category"] + "</td>";
+        content += "<td>" + scheduleLinesData[i]["Purchase Requisition"] + "</td>";
+        content += "<td>" + scheduleLinesData[i]["Requisition Item"] + "</td>";
+        content += "</tr>";
+    }
+
+    content += "</table>";
+    document.getElementById("ScheduleLines").innerHTML = content;
 }
 
     
-    function populatePartner() {
-      var content = "<h2>Partner</h2>";
-      for (var key in partnerData) {
-        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + partnerData[key] + "' ></div>";
-      }
-      document.getElementById("Partner").innerHTML = content;
+function populatePartner() {
+        var content = "<h2>Partner</h2>";
+        content += "<table>";
+        content += "<tr><th>Partner Function</th><th>Partner</th><th>Name</th><th>Street</th><th>Postal Code</th><th>City</th></tr>";
+        content += "<tr>";
+        content += "<td><select>";
+        content += "<option value='Option 1'>Option 1</option>";
+        content += "<option value='Option 2'>Option 2</option>";
+        content += "<option value='Option 3'>Option 3</option>";
+        // Add more options as needed
+        content += "</select></td>";
+        content += "<td><input type='text' value='" + partnerData["Partner"] + "' ></td>";
+        content += "<td><input type='text' value='" + partnerData["Name"] + "' ></td>";
+        content += "<td><input type='text' value='" + partnerData["Street"] + "' ></td>";
+        content += "<td><input type='text' value='" + partnerData["Postal Code"] + "' ></td>";
+        content += "<td><input type='text' value='" + partnerData["City"] + "' ></td>";
+        content += "</tr>";
+        content += "</table>";
+        document.getElementById("Partner").innerHTML = content;
     }
+
 
     
     function populateTexts() {
-      var content = "<h2>Texts</h2>";
-      for (var key in textsData) {
-        content += "<div class='input-field'><label>" + key + "</label><input type='text' value='" + textsData[key] + "' ></div>";
-      }
-      document.getElementById("Texts").innerHTML = content;
+        var content = "<h2>Texts</h2>";
+        content += "<div class='flex-container'>"; // Use a flex container to position elements side by side
+
+        // Adjust the width of the table by setting the style attribute
+        content += "<div class='table-container' style='width: 300px;'>"; // Adjust the width as needed
+        content += "<table>";
+        content += "<tr><th>Text Type</th></tr>";
+        content += "<tr>";
+        content += "<td><input type='text' value='' placeholder='Enter Text Type'></td>";
+        content += "</tr>";
+        content += "</table>";
+        content += "</div>";
+
+        // Add a content box (textarea) for user input on the right side
+        content += "<div class='content-box'>";
+        content += "<label>Content</label>";
+        content += "<textarea rows='4' cols='50'></textarea>";
+        content += "</div>";
+        content += "</div>";
+
+        document.getElementById("Texts").innerHTML = content;
     }
 
   
